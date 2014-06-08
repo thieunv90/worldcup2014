@@ -11,6 +11,14 @@ gem 'devise', '>= 3.0'
 # gem 'sportdb', '~> 1.8.28'
 # gem 'sportdb-admin', '~> 0.3.0'
 
+#########################
+## add logos n flags
+
+gem 'worlddb-flags', '0.1.0'  # use bundled country flags
+
+gem 'sportdb-logos',    '0.1.0',  git: 'https://github.com/sportlogos/sport.db.logos.ruby.git', branch: 'gh-pages'
+gem 'footballdb-logos', '0.1.0',  git: 'https://github.com/sportlogos/football.db.logos.ruby.git', branch: 'gh-pages'
+
 # For background job
 gem 'delayed_job_active_record'
 gem 'devise-async'

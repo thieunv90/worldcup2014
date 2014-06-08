@@ -2,6 +2,7 @@
 %table
   - last_play_at = Time.local( 1999, 1, 1 )
   - games.each do |game|
+    - game.play_at = game.play_at + 15.hours
     - unless last_play_at.year   == game.play_at.year  &&
     - last_play_at.month  == game.play_at.month &&
     - last_play_at.day    == game.play_at.day
