@@ -1,0 +1,20 @@
+%h2= @game.play_at_local.strftime('%A, %d. %B %Y')
+= render partial: 'game', locals: { game: @game }
+%br
+%div
+  %h4 Statistics
+%br
+%div
+  - if !user_signed_in?
+    = "You must login to bet this match"
+  - else
+    - if @game.locked?
+      = "This match was occured."
+    - else
+      %h4 Betting:
+      = form_tag match_betting_path(@game), :method => :post, :class => 'form-horizontal match_betting_form'
+      .form-group
+        %label.col.col-md-1.control-label Bet:
+        .col.col-md-5
+          = select_tag "user_scores", options_from_collection_for_select(@scores, "id", "name"), :multiple => true, :class => 'form-control'
+      %button.btn.btn-primary{type: "submit"} Submit

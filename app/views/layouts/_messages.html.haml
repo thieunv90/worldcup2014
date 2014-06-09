@@ -1,0 +1,11 @@
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    %div{:class => "alert alert-#{name == :notice ? "success" : "danger"}"}
+      %a.close{"data-dismiss" => "alert"} ×
+      = content_tag :div, msg, :id => "flash_#{name}"
+  - elsif msg.is_a?(Array)
+    %div{:class => "alert alert-#{name == :notice ? "success" : "danger"}"}
+      %a.close{"data-dismiss" => "alert"} ×
+      - msg.each do |m|
+        = content_tag :div, m, :id => "flash_#{name}"
+        %br

@@ -5,3 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Create scores
+(0..15).each do |i|
+  for j in 0..i do
+    Score.find_or_create_by_name("#{i} - #{j}")
+  end
+end
+
+# Create users
+admin = User.find_by_email("admin@example.com")
+if !admin
+  admin = User.new(email: "admin@example.com", password: "12345678", password_confirmation: "12345678", admin: true)
+  admin.save
+end
+for i in 1..5 do
+  user = User.find_by_email("user#{i}@example.com")
+  if !user
+    user = User.new(email: "user#{i}@example.com", password: "12345678", password_confirmation: "12345678")
+    user.save
+  end
+end

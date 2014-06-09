@@ -2,17 +2,16 @@
 %table
   - last_play_at = Time.local( 1999, 1, 1 )
   - games.each do |game|
-    - game.play_at = game.play_at + 15.hours
-    - unless last_play_at.year   == game.play_at.year  &&
-    - last_play_at.month  == game.play_at.month &&
-    - last_play_at.day    == game.play_at.day
+    - unless last_play_at.year   == game.play_at_local.year  &&
+    - last_play_at.month  == game.play_at_local.month &&
+    - last_play_at.day    == game.play_at_local.day
       %tr{style: "background-color: silver;"}
-        %td{colspan: "10"}= game.play_at.strftime('%A, %d. %B %Y')
+        %td{colspan: "10"}= game.play_at_local.strftime('%A, %d. %B %Y')
     %tr{style: "vertical-align: middle;"}
       %td
-        = game.play_at.strftime('%H:%M')
+        = game.play_at_local.strftime('%H:%M')
       %td{style: "text-align: right;"}
-        = link_to game.team1.title, live_game_path( game.id )
+        = link_to game.team1.title, match_game_path( game.id )
         = "(#{game.team1.title2})" if game.team1.title2.present?
       %td
         = logo_for_team( game.team1 )
@@ -21,7 +20,7 @@
       %td
         = logo_for_team( game.team2 )
       %td
-        = link_to game.team2.title, live_game_path( game.id )
+        = link_to game.team2.title, match_game_path( game.id )
         = "(#{game.team2.title2})" if game.team2.title2.present?
       %td
         (#{game.round.title})
