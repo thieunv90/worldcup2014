@@ -15,9 +15,7 @@
         = "(#{game.team1.title2})" if game.team1.title2.present?
       %td
         = logo_for_team( game.team1 )
-      %td
-        \-
-      %td
+        = display_score(game)
         = logo_for_team( game.team2 )
       %td
         = link_to game.team2.title, match_game_path( game.id )

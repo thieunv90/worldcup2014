@@ -1,0 +1,26 @@
+- if current_user.admin?
+  = form_tag match_update_score_path(@game), :method => :post, :class => 'form-horizontal match_update_score_form'
+  .form-group
+    %label.col.col-md-1.control-label Score:
+    .col.col-md-5
+      = select_tag "score_id", options_for_select(@scores, @game.score_id), :class => 'form-control'
+  .form-group
+    %label.col.col-md-1.control-label Result:
+    .col.col-md-5
+      = radio_button_tag "result", @game.team1_id, @game.winner == @game.team1_id
+      = "#{@game.team1.title} win"
+  .form-group
+    %label.col.col-md-1.control-label
+    .col.col-md-5
+      = radio_button_tag "result", @game.team2_id, @game.winner == @game.team2_id
+      = "#{@game.team2.title} win"
+  .form-group
+    %label.col.col-md-1.control-label
+    .col.col-md-5
+      = radio_button_tag "result", nil, @game.winner == nil
+      = "Draw"
+  %div{style: "margin-left: 110px;"}
+    %button.btn.btn-primary{type: "submit"} Submit
+    = link_to "Back", match_game_path(@game), :class => "btn btn-default"
+- else
+  = "You don't have permission to access this page!"

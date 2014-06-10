@@ -15,6 +15,9 @@ Worldcup2014::Application.routes.draw do
   get 'match',          :to => 'match#index'
   get 'match/:game_id', :to => 'match#show', :as => :match_game
   post 'match/:game_id', :to => 'match#betting', :as => :match_betting
+  match 'match/:game_id/update_score', :to => 'match#update_score', :as => :match_update_score
+
+  post 'scores/:score_id/get_score', :to => 'scores#get_score', :as => :get_score
 
   root :to => 'home#index'
 end

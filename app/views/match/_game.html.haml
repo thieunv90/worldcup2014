@@ -5,7 +5,9 @@
       %span{style: "font-size: 160%;"}= game.team1.title
       = logo_for_team( game.team1 )
     %td
-      %span{style: "font-size: 160%;"}= "-:-"
+      %span{style: "font-size: 160%;"}= display_score(game)
     %td
       = logo_for_team( game.team2 )
       %span{style: "font-size: 160%;"}= game.team2.title
+- if user_signed_in? && current_user.admin?
+  %p= link_to "Update Score", match_update_score_path(game)

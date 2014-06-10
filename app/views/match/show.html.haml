@@ -2,19 +2,42 @@
 = render partial: 'game', locals: { game: @game }
 %br
 %div
-  %h4 Statistics
+  %h4 Statistics:
+  - @statistics.each do |user_id, scores|
+    - score_ids = scores.map(&:score_id)
+    - user = User.find(user_id)
+    %li
+      - if user_signed_in? && user == current_user
+        %strong= "#{User.find(user_id).display_name}: #{Score.where(id: score_ids).collect{|s| s.name}.join(', ')} (You)"
+      - else
+        = "#{User.find(user_id).display_name}: #{Score.where(id: score_ids).collect{|s| s.name}.join(', ')}"
 %br
 %div
+  %h4 Total Money:
+  %li= "Total money from previous match: #{number_with_delimiter(@money_from_previous_match, delimiter: '.')} VNĐ"
+  %li= "Total money users betting: #{number_with_delimiter(@money_users_bet, delimiter: '.')} VNĐ"
+  %li= "Total money NUS Technology Company contributing: #{number_with_delimiter(@money_company_contribute, delimiter: '.')} VNĐ"
+  %div{style: "font-size: 160%; color: blue;"}= "==> Total money bet on this match: #{number_with_delimiter(@total_money, delimiter: '.')} VNĐ"
+- if @game.locked?
+  %div
+    %h4 Result:
+    - if @no_winner
+      = "No winner!"
+    - else
+      %p{style: "color: green; font-size: 150%;"}= "The winners of this match: #{@winners}"
+      %p{style: "color: teal; font-size: 120%;"}= "Each people got: #{number_with_delimiter(@amount_of_money, delimiter: '.')} VNĐ"
+%div
+  %h4 Betting:
   - if !user_signed_in?
     = "You must login to bet this match"
   - else
     - if @game.locked?
       = "This match was occured."
-    - else
-      %h4 Betting:
+    - elsif !current_user.admin?
       = form_tag match_betting_path(@game), :method => :post, :class => 'form-horizontal match_betting_form'
       .form-group
         %label.col.col-md-1.control-label Bet:
         .col.col-md-5
-          = select_tag "user_scores", options_from_collection_for_select(@scores, "id", "name"), :multiple => true, :class => 'form-control'
-      %button.btn.btn-primary{type: "submit"} Submit
+          = select_tag "user_scores", options_for_select(@scores, @selected_scores), :multiple => true, :disabled => @disabled, :class => 'form-control'
+      %div{style: "margin-left: 110px;"}
+        %button.btn.btn-primary{type: "submit"} Submit

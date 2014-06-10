@@ -1,3 +1,7 @@
 %h3= "NUS Betting - FIFA World Cup 2014"
 %div
   = render partial: 'games_upcoming', locals: { games: @upcoming_games }
+%div
+  = render 'top_five'
+%div
+  = render 'bottom_five'
