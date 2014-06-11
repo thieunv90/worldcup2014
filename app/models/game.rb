@@ -6,7 +6,7 @@ class Game < ActiveRecord::Base
   attr_accessible :play_at, :deadline, :score1, :score2, :score_id, :locked, :winner
 
   def play_at_local
-    self.play_at + 10.hours
+    self.play_at + 3.hours
   end
 
 end
