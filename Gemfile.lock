@@ -52,6 +52,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    daemons (1.1.9)
     delayed_job (4.0.1)
       activesupport (>= 3.0, < 4.2)
     delayed_job_active_record (4.0.1)
@@ -66,6 +67,7 @@ GEM
     devise-async (0.9.0)
       devise (~> 3.2)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (2.1.0)
     haml (4.0.5)
       tilt
@@ -134,6 +136,10 @@ GEM
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
+    thin (1.6.2)
+      daemons (>= 1.0.9)
+      eventmachine (>= 1.0.0)
+      rack (>= 1.0.0)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -165,5 +171,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sportdb-logos (= 0.1.0)!
   therubyracer
+  thin
   uglifier (>= 1.0.3)
   worlddb-flags (= 0.1.0)
