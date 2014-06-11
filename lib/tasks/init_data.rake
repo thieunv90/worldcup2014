@@ -1,4 +1,10 @@
 namespace :db do
+  desc "Update time zone for each match"
+  task :update_time_zone, [:role] => :environment do
+    Game.where(id: [8, 20, 44, 4, 34, 40, 17, 29]).update_all(time_zone: -4)
+    another_games_ids = Game.all.map(&:id) - [8, 20, 44, 4, 34, 40, 17, 29]
+    Game.where(id: another_games_ids).update_all(time_zone: -3)
+  end
   desc "Add deadline time to each match"
   task :update_deadline, [:role] => :environment do
     Game.all.each do |game|
@@ -18,7 +24,8 @@ namespace :db do
     Round.where(pos: (1..15).to_a).update_all(amount: 10000)
     Round.where(pos: 16).update_all(amount: 20000)
     Round.where(pos: 17).update_all(amount: 30000)
-    Round.where(pos: [18, 19]).update_all(amount: 40000)
+    Round.where(pos: 18).update_all(amount: 40000)
+    Round.where(pos: 19).update_all(amount: 50000)
     Round.where(pos: 20).update_all(amount: 50000)
   end
 end

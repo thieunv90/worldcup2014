@@ -6,8 +6,8 @@ class MatchController < ApplicationController
     @game = Game.find(params[:game_id])
     @scores = Score.all.collect{|s|[s.name, s.id]}
     @selected_scores = current_user.user_scores.where(game_id: @game.id).collect{|a|a.score_id} if user_signed_in?
-    # @disabled = (@game.deadline.to_date == Date.today && Time.now.hour < @game.deadline.hour) ? false : true
-    @disabled = false
+    @disabled = (@game.deadline.to_date == Date.today && Time.now.hour < @game.deadline.hour) ? false : true
+    # @disabled = false
 
     # Statistics
     @statistics = @game.user_scores.group_by(&:user_id)
@@ -34,13 +34,14 @@ class MatchController < ApplicationController
   def betting
     game = Game.find(params[:game_id])
     unit_price = game.round.amount
-
+    p "@@@"
+    p game.deadline
     unless params[:user_scores].blank?
       if params[:user_scores].size > 3
         flash[:error] = "Cannot bet greater than 3 scores!"
       elsif params[:user_scores].size > 0
-        # if game.deadline.to_date == Date.today && Time.now.hour < game.deadline.hour
-        if true
+        if game.deadline.to_date == Date.today && Time.now.hour < game.deadline.hour
+        # if true
           existing_scores = current_user.user_scores.where(game_id: game.id)
           unless existing_scores.blank?
             existing_scores.delete_all
@@ -64,15 +65,13 @@ class MatchController < ApplicationController
       end
     else
       existing_scores = current_user.user_scores.where(game_id: game.id)
-      # if !existing_scores.blank? && game.deadline.to_date == Date.today && Time.now.hour < game.deadline.hour
-      if !existing_scores.blank? && true
+      if !existing_scores.blank? && game.deadline.to_date == Date.today && Time.now.hour < game.deadline.hour
+      # if !existing_scores.blank? && true
         existing_scores.delete_all
         # Update budget
         user_budget = Budget.where(user_id: current_user.id, game_id: game.id).first
         user_budget.update_attributes(total_money_bet: 0)
         flash[:notice] = "Successfully!"
-      else
-        flash[:error] = "Cannot bet for this match!"
       end
     end
     redirect_to :back

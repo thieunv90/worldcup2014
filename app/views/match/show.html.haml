@@ -41,3 +41,4 @@
           = select_tag "user_scores", options_for_select(@scores, @selected_scores), :multiple => true, :disabled => @disabled, :class => 'form-control'
       %div{style: "margin-left: 110px;"}
         %button.btn.btn-primary{type: "submit"} Submit
+        = link_to "Back to Main page", root_path, :class => 'btn btn-default'

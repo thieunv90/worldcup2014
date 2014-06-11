@@ -1,3 +1,4 @@
+# encoding: utf-8
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -14,15 +15,17 @@
 end
 
 # Create users
-admin = User.find_by_email("admin@example.com")
+staffs = ["anvh","anvt","binhnt","chanhlh","chientx","cuonglt","duongdn","hanght","hiennv","hiepnh","hoahm","huongdt","locnpq","locnpq","minhha","namtv","nguyenhtt","nhannm","nhannv","sinhnt","thaodth","thaotp","thamdt","thieunv","thuyltt","vietba","vietth"]
+staffs_fullname = ["Võ Hoài An", "Võ Tiến An", "Nguyễn Thanh Bình", "Lê Hoàng Chánh", "Trần Xuân Chiến", "Lâm Thanh Cường", "Đoàn Nguyên Dương", "Hoàng Thị Hằng", "Nguyễn Văn Hiến", "Nguyễn Hoàng Hiệp", "Hoàng Minh Hòa", "Đặng Thị Hưởng", "Nguyễn Phan Quốc Lộc", "Nguyễn Phúc Lộc", "Hỷ A Minh", "Trần Văn Năm", "Hà Thị Thảo Nguyên", "Nguyễn Minh Nhân", "Nguyễn Văn Nhân", "Nguyễn Trường Sinh", "Đinh Thị Hiếu Thảo", "Trần Phước Thảo", "Đỗ Thị Thắm", "Nguyễn Văn Thiệu", "Lê Thị Thanh Thúy", "Bùi Âu Việt", "Trần Hoàng Việt"]
+admin = User.find_by_email("admin@nustechnology.com")
 if !admin
-  admin = User.new(email: "admin@example.com", password: "1234567890", password_confirmation: "1234567890", admin: true)
+  admin = User.new(email: "admin@nustechnology.com", password: "~!@@!~", password_confirmation: "~!@@!~", admin: true, full_name: "NUS Technology Company")
   admin.save
 end
-for i in 1..20 do
-  user = User.find_by_email("user#{i}@example.com")
+staffs.each_with_index do |staff, index|
+  user = User.find_by_email("#{staff}@nustechnology.com")
   if !user
-    user = User.new(email: "user#{i}@example.com", password: "12345678", password_confirmation: "12345678")
+    user = User.new(username: "#{staff}", email: "#{staff}@nustechnology.com", password: "123", password_confirmation: "123", full_name: "#{staffs_fullname[index]}")
     user.save
   end
 end
