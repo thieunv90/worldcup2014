@@ -7,9 +7,9 @@ class Game < ActiveRecord::Base
 
   def play_at_local
     if self.time_zone == -3
-      self.play_at + 3.hours
+      self.play_at + 10.hours
     elsif self.time_zone == -4
-      self.play_at + 4.hours
+      self.play_at + 11.hours
     end
   end
 
