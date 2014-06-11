@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/sportlogos/football.db.logos.ruby.git
+  revision: 23b39b269966583e0b2adc6354b9c9f7bce7e4fe
+  branch: gh-pages
+  specs:
+    footballdb-logos (0.1.0)
+
+GIT
+  remote: https://github.com/sportlogos/sport.db.logos.ruby.git
+  revision: dcef9a88c6a36539d24243b6ebef63fb804c5b9b
+  branch: gh-pages
+  specs:
+    sportdb-logos (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -127,6 +141,7 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    worlddb-flags (0.1.0)
 
 PLATFORMS
   ruby
@@ -136,10 +151,13 @@ DEPENDENCIES
   delayed_job_active_record
   devise (>= 3.0)
   devise-async
+  footballdb-logos (= 0.1.0)!
   haml-rails
   jquery-rails
   pg
   rails (= 3.2.15)
   sass-rails (~> 3.2.3)
+  sportdb-logos (= 0.1.0)!
   therubyracer
   uglifier (>= 1.0.3)
+  worlddb-flags (= 0.1.0)

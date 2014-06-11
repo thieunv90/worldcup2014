@@ -10,6 +10,7 @@ gem 'pg'
 gem 'devise', '>= 3.0'
 # gem 'sportdb', '~> 1.8.28'
 # gem 'sportdb-admin', '~> 0.3.0'
+gem 'rails_12factor', group: :production
 
 #########################
 ## add logos n flags
