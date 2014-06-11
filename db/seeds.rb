@@ -15,7 +15,7 @@
 end
 
 # Create users
-staffs = ["anvh","anvt","binhnt","chanhlh","chientx","cuonglt","duongdn","hanght","hiennv","hiepnh","hoahm","huongdt","locnpq","locnpq","minhha","namtv","nguyenhtt","nhannm","nhannv","sinhnt","thaodth","thaotp","thamdt","thieunv","thuyltt","vietba","vietth"]
+staffs = ["anvh","anvt","binhnt","chanhlh","chientx","cuonglt","duongdn","hanght","hiennv","hiepnh","hoahm","huongdt","locnpq","locnp","minhha","namtv","nguyenhtt","nhannm","nhannv","sinhnt","thaodth","thaotp","thamdt","thieunv","thuyltt","vietba","vietth"]
 staffs_fullname = ["Võ Hoài An", "Võ Tiến An", "Nguyễn Thanh Bình", "Lê Hoàng Chánh", "Trần Xuân Chiến", "Lâm Thanh Cường", "Đoàn Nguyên Dương", "Hoàng Thị Hằng", "Nguyễn Văn Hiến", "Nguyễn Hoàng Hiệp", "Hoàng Minh Hòa", "Đặng Thị Hưởng", "Nguyễn Phan Quốc Lộc", "Nguyễn Phúc Lộc", "Hỷ A Minh", "Trần Văn Năm", "Hà Thị Thảo Nguyên", "Nguyễn Minh Nhân", "Nguyễn Văn Nhân", "Nguyễn Trường Sinh", "Đinh Thị Hiếu Thảo", "Trần Phước Thảo", "Đỗ Thị Thắm", "Nguyễn Văn Thiệu", "Lê Thị Thanh Thúy", "Bùi Âu Việt", "Trần Hoàng Việt"]
 admin = User.find_by_email("admin@nustechnology.com")
 if !admin
