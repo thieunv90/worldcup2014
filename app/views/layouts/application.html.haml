@@ -1,18 +1,16 @@
 !!!
 %html
   %head
-    %title NUS Betting - FIFA World Cup 2014
+    %title NUS Technology - Đồng hành cùng World cup 2014 - Rinh quà khủng
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    #header
-      - if user_signed_in?
-        %span= "Welcome, #{current_user.display_name}!"
-        %span{style: 'margin-left: 10px;'}= link_to "Profile", authentication_path
-        %span{style: 'margin-left: 10px;'}= link_to "Logout", destroy_user_session_path, :method => :delete
-      - else
-        %span= link_to "Login", new_user_session_path
-    #content
-      = render 'layouts/messages'
-      = yield
+    #page
+      #wrapper_page
+        = render 'layouts/header'
+        #wrapper_container
+          #container
+            = render 'layouts/messages'
+            = yield
+        = render 'layouts/footer'

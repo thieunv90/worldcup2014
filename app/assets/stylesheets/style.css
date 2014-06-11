@@ -1,0 +1,6811 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0px; padding:0px}
+body{color:#333; font:400 12px arial; text-align:left; background:#fff}
+a{color:#000; text-decoration:none; outline:none;}
+a:hover{text-decoration:none; color:#004f8b;}
+img{border:0px; font-size:0; line-height:0; max-width:100%;}
+ul, li{ list-style-type:none;}
+input, textarea{font-family:arial; font-size:11px; border:none; background:none;}
+.clear{clear:both; font-size:0; line-height:0;}
+.left{float:left;}
+.right{float:right;}
+html {
+    -webkit-text-size-adjust: none;
+}
+.hiddenweb{
+  display:none;
+}
+#page{
+  position:relative;
+  z-index:1;
+  width:100%;
+  float:left;
+  background:#fff url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_body.jpg) no-repeat center top;
+}
+#wrapper_page{
+  width:980px;
+  margin:0 auto;
+}
+#container{
+  margin:10px 0 10px;
+}
+#wrapper_header,
+#wrapper_container,
+#wrapper_footer
+{
+  width:100%;
+  float:left;
+}
+.logo_web{
+  margin:30px 0 0 0;
+}
+.banner_728x90{
+  height:90px;
+  margin:10px 0 0 0;
+  font-size:0;
+  line-height:0;
+}
+#footer{width:980px; margin:0 auto;padding:1px 0px 0px;}
+.footerMenu{width:960px;background:#f4f4f4;float:left;overflow:hidden;padding:0px 0px 13px 20px;}
+.ulBlockMenu{display: inline-block;
+    list-style-type: none;
+    margin: 16px 0 0;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: top;
+    width: 156px;
+  float:left;
+}
+.ulBlockMenu li{width:100%;float:left;}
+.liFollow{width:100%;float:left;height:17px;}
+.liFollow h2{width:100%;float:left;height:14px;margin:0px 0px 3px;}
+.liFollow a{font:12px arial;color:#606060;text-decoration:none;float:left;}
+.liFollow a:hover{text-decoration:underline;}
+.liFirst a{font:bold 12px/20px arial;color:#000;text-decoration:none;float:left;}
+.liFirst a:hover{color:#9F224E;}
+.liFirst h2{width:100%;height:20px;margin:0px 0px 5px;}
+.lineFmenu{width:960px;float:left;padding:0px 0px 5px;overflow:hidden;}
+.ft-bot{width:100%;padding:0px 0px 20px;border-top:1px solid #d7dbe3;float:left; background:#fff;}
+.ft-botm{width:370px;padding:18px 0px 0 10px;float:left; font:400 11px arial;}
+.ft-botl{width:200px;padding:10px 0px 0px 10px;float:left;}
+ft-botm p,.ft-botr p{margin:0px;padding:0px;font:11px arial;color:#686e7a;}
+.ft-botm p span,.ft-botr p span{font-weight:bold;}
+.ft-botr{padding:18px 10px 0px 0px;float:right;text-align:right;}
+.ft-botr a{font:11px arial;color:#686E7A;text-decoration:none;padding:0px 4px;}
+.ft-botr a:hover{
+  color:#004f8b;
+}
+/*generral stucture*/
+.width_common{
+  width:100%;
+  float:left;
+}
+.no_wrap{
+  white-space:nowrap;
+}
+.txt_666{
+  color:#666;
+}
+.header_logo{
+  margin:0 0 10px;
+}
+.box_category,
+.space_box{
+  margin:0 0 15px;
+}
+#main_menu{
+  width:100%;
+  float:left;
+  height:30px;
+  background:#328005;
+}
+#main_menu a{
+  float:left;
+  height:30px;
+  display:block;
+  padding:0 18px;
+  color:#fff;
+  font:400 14px/30px arial;;
+}
+#main_menu a.active,
+#main_menu a:hover{
+  background:#00aced;
+  color:#fff;
+}
+.line_gray{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/line_1x1.gif) repeat-y;
+}
+.line_page{
+  background-position:670px 0;
+}
+.line_mid_col{
+  background-position:470px 0;
+}
+#col_left{
+  width:660px;
+  float:left;
+}
+#col_right{
+  width:300px;
+  float:right;
+}
+.content_slider{
+  width:96%;
+  float:left;
+  background:#fff;
+  margin:0 0 0 2%;
+  padding:5px 0;
+}
+.block_slder_top{
+  width:100%;
+  float:left;
+  position:relative;
+  background:#dedede;
+
+  border-top:1px solid #cbcbcb;
+  border-bottom:1px solid #cbcbcb;
+}
+.block_slder_top .item_slider{
+  width:94%;
+  float:left;
+  padding:0 3%;
+}
+.block_slder_top .top_time{
+  background:#dedede;
+  font:700 12px arial;;
+  padding:5px 3% 5px 5%;
+  width:92%;
+  float:left;
+}
+.block_slder_top .doidau{
+  background:#f4f4f4;
+  font:400 12px arial;;
+  padding:0 3% 10px 5%;
+  width:92%;
+  float:left;
+}
+.block_slder_top .doidau p{
+  width:100%;
+  float:left;
+  padding:5px 0 0 0;
+}
+.block_slder_top .btn_control_tv_slider{
+  width:12px;
+  height:75px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_next_pre_top_slider.gif) no-repeat;
+  top:0;
+}
+.block_slder_top .prev_slider{
+  left:0;
+  background-position:0 center;
+}
+.block_slder_top .next_slider{
+  right:0;
+  background-position:-12px center ;
+}
+#spotlight{
+  position:relative;
+}
+.block_image{
+  width:100%;
+  float:left;
+  text-align:center;
+  font-size:0;
+  line-height:0;
+}
+.block_title{
+  position:absolute;
+  width:96%;
+  bottom:0;
+  left:0;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_stranparent.png);
+  padding:10px 2%;
+  color:#fff;
+}
+.txt_title{
+  padding:0 0 5px;
+}
+.txt_title a{
+  font:700 20px arial;
+  color:#fff;
+}
+.block_mid_col_left{
+  width:460px;
+  float:left;
+}
+.block_mid_col_right{
+  width:180px;
+  float:right;
+}
+.block_image_news .thumb{
+  position:relative;
+  font-size:0;
+  line-height:0;
+}
+.list_news .block_image_news .thumb{
+  width:47.82%;
+  float:left;
+  margin:0 10px 10px 0;
+
+}
+.block_image_news .thumb img{
+  width:100%;
+}
+.block_image_news .title_news a{
+  font:700 16px arial;
+  color:#333;
+}
+.block_image_news .news_lead{
+  padding:10px 0 0 0;
+}
+.list_dot,
+.list_dot a{
+  font:700 11px arial;
+  color:#666;
+}
+.list_dot a:first-child{
+  padding:0 0 0 10px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/dot_gray_3x3.gif) no-repeat left 5px;
+}
+.list_news li{
+  width:100%;
+  float:left;
+  padding:0 0 7px 0;
+  margin:0 0 10px 0;
+  border-bottom:1px dotted #cacaca;
+}
+.list_news li:last-child{
+  border:none;
+  padding:0;
+}
+.icon_thumb_videophoto{
+  width:28px;
+  display:block;
+  height:28px;
+  position:absolute;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/icon_video_photo_28.png) no-repeat;
+  left:0;
+  bottom:0;
+}
+.icon_video{
+  background-position:0 0;
+}
+.thumb:hover .icon_video{
+  background-position:0 -28px;
+}
+.icon_photo{
+  background-position:-28px 0;
+}
+.thumb:hover .icon_photo{
+  background-position:-28px -28px;
+}
+/*icon*/
+.icon_content{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_title.png) no-repeat;
+  display:inline-block;
+  font-size:0!important;
+  line-height:0!important;
+}
+.icon_title_coment{
+  width:14px;
+  height:12px;
+  background-position:-23px 1px;
+}
+.icon_title_0{
+  display:none;
+}
+.icon_title_2{
+  width:14px;
+  height:12px;
+  background-position:-46px 2px;
+}
+.icon_title_4{
+  width:14px;
+  height:12px;
+  background-position:0px 2px;
+}
+.icon_title_6{
+  width:33px;
+  height:11px;
+  background-position:0px -11px;
+}
+.icon_title_8{
+  width:23px;
+  height:11px;
+  background-position:0px -22px;
+}
+.icon_title_10{
+  width:42px;
+  height:11px;
+  background-position:0px -33px;
+}
+.icon_title_12{
+  width:42px;
+  height:11px;
+  background-position:0px -44px;
+}
+.icon_title_14{
+  width:60px;
+  height:11px;
+  background-position:0px -55px;
+}
+.icon_title_16{
+  width:14px;
+  height:11px;
+  background-position:0px -66px;
+}
+.icon_title_18{
+  width:33px;
+  height:11px;
+  background-position:0px -77px;
+}
+.icon_title_20{
+  width:33px;
+  height:11px;
+  background-position:0px -88px;
+}
+.icon_title_22{
+  width:52px;
+  height:11px;
+  background-position:0px -99px;
+}
+.icon_title_24{
+  width:49px;
+  height:11px;
+  background-position:0px -110px;
+}
+.icon_title_26{
+  width:57px;
+  height:11px;
+  background-position:0px -121px;
+}
+.icon_title_28{
+  width:57px;
+  height:11px;
+  background-position:0px -132px;
+}
+.icon_title_30{
+  width:74px;
+  height:11px;
+  background-position:0px -143px;
+}
+.icon_title_128{
+  width:36px;
+  height:11px;
+  background-position:0px -157px;
+}
+.icon_taitro {
+  font-size:0;
+  line-height:0;
+  float:right;
+  width:auto;
+}
+/*pagination*/
+.pagination_news a{
+  float:left;
+  display:inline-block;
+  height:22px;
+  border:1px solid #d6d6d6;
+  padding:0px 10px;
+  color:#000;
+  font:400 11px/24px arial;
+  border-radius:3px;
+  margin:0 0 0 6px;
+}
+.pagination_news a:hover,
+.pagination_news a.active{
+  background:#c8c8c8;
+  font-weight:700;
+}
+.pagination_news span{
+    margin:0 0 0 10px;
+}
+.pagination_news a img{
+  float:left;
+}
+.pagination_news a.pagination_btn{
+  padding:0;
+  border:none;
+  height:24px;
+  width:24px;
+}
+.pagination_news a.pa_prev:hover,
+.pa_prev{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/pagination_prev.gif) no-repeat left top;
+}
+.pagination_news a.pa_next:hover,
+.pa_next{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/pagination_next.gif) no-repeat left top;
+}
+.block_mid_col_left .pagination_news{
+  width:100%;
+  float:left;
+  padding:10px 0 0 0;
+  border-top:1px dotted #cacaca;
+  text-align:right;
+}
+.title_box_category{
+  height:28px;
+  background:#95bb26;
+  overflow:hidden;
+  border-top:2px solid #7b9b1e;
+}
+.txt_main_category{
+  float:left;
+  margin:0 0 0 10px;
+  display:inline;
+  font:700 14px/28px arial;
+  color:#9f224e;
+}
+.title_box_category .line_top_box{
+  color:#333333;
+  font:700 14px/30px arial;
+  height:28px;
+  display:block;
+  float:left;
+}
+.txt_main_category span,
+.txt_main_category a{
+  color:#333333;
+  font:700 14px/28px arial;
+  height:28px;
+  display:block;
+  float:left;
+}
+.content_box_category {
+  margin:10px 0 0;
+}
+.news_box_300 .title_news{
+  width:100%;
+  float:left;
+  margin:0 0 10px;
+}
+.news_box_300 .block_thumb_lead{
+  width:100%;
+  float:left;
+}
+.news_box_300 .block_thumb_lead .news_lead{
+  padding:0;
+}
+.news_box_300 .thumb{
+  width:46.67%;
+  margin:0 10px 10px 0;
+  float:left;
+}
+.news_box_300 .list_dot{
+  width:100%;
+  float:left;
+  color:#666;
+}
+.list_tin_300 li{
+  width:100%;
+  float:left;
+  padding:0 0 7px 0;
+  margin:0 0 10px 0;
+  border-bottom:1px dotted #cacaca;
+}
+.news_box_300 .block_image_news .title_news a{
+  font:700 14px arial;
+}
+.txt_view_more{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/icon_view_more_thethao.gif) no-repeat right 6px;
+  float:right;
+  padding:0 10px 0 0;
+}
+.txt_view_more a{
+  font:400 11px arial;
+}
+.block_mid_col_right .title_news{
+  padding:10px 3%;
+  width:94%;
+  float:left;
+  background:#f4f4f4;
+}
+.block_mid_col_right .block_image_news .title_news a{
+  font:700 14px arial;
+}
+.block_mid_col_right .txt_view_more{
+  margin:10px 0 0 0;
+  background-color:#fff;
+  padding-left:5px;
+}
+.line_view_more{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/line_1x1.gif) repeat-x left 17px;
+  width:100%;
+  float:left;
+}
+.block_slder_bottom{
+  background:#f3f3f3;
+  width:100%;
+  float:left;
+  position:relative;
+  min-height:103px;
+}
+.block_slder_bottom .item_slider{
+  float:left;
+}
+.block_slder_bottom .item_slider img{
+  width:100%;
+  max-width:none;
+}
+.block_slder_bottom .content_slider{
+  background:#f3f3f3;
+  width:90%;
+  margin:0 0 0 5%;
+  padding:20px 0 0 0;
+  max-height:103px;
+  overflow:hidden;
+}
+.block_slder_bottom{
+  width:100%;
+  float:left;
+}
+.block_slder_bottom .btn_control_tv_slider{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_next_pre_bottom_slider.gif) no-repeat;
+  width:45px;
+  height:103px;
+  top:0;
+}
+.block_slder_bottom .next_slider:hover,
+.block_slder_bottom .next_slider{
+  background-position:-45px 0;
+}
+#box_lichsu{
+  margin:10px 0 0 ;
+}
+/*tin tuc*/
+#box_news_top{
+  border-bottom:1px solid #e2e2e3;
+  padding-bottom:12px;
+  margin-bottom:12px;
+}
+.line_col_midnews_top{
+  background-position:470px 0;
+}
+.box_hot_news{
+  float:left;
+  width:460px;
+}
+.box_hot_news .list_news_dot_3x3_300{
+  margin:0;
+  padding:0;
+  border:none;
+  width:100%;
+  float:left;
+}
+.box_hot_news .list_news_dot_3x3_300 li{
+  padding:0 0 0px 10px;
+  background-position:0 6px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/dot_gray_3x3.gif) no-repeat 0 5px;
+}
+.box_hot_news .list_news_dot_3x3_300 li a{
+  font:700 12px arial;
+  color:#666;
+}
+.block_news_big{
+  width:100%;
+  float:left;
+  overflow:hidden;
+  margin-bottom:5px;
+  text-align:center;
+  position:relative;
+  background:#eee;
+}
+#box_news_top .news_lead,
+#box_news_top .title_news{
+  width:100%;
+  float:left;
+  padding:0 0 5px 0;
+}
+#news_home.list_news .title_news{
+  padding:0 0 5px 0;
+}
+#box_news_top .title_news a{
+  font:700 14px arial;
+  color:#333;
+}
+.title_news a.txt_link:hover{
+  color:#004f8b;
+}
+.box_hot_news .title_news{
+  padding:0 0 5px 0;
+}
+#box_news_top .box_hot_news .title_news a{
+  color:#328005;
+  font:700 20px arial;
+}
+.box_sub_hot_news{
+  width:180px;
+  float:right;
+}
+.box_sub_hot_news ul{
+  /*max-height:420px;
+  overflow-y:scroll;*/
+  width:165px;
+  float:left;
+}
+.box_sub_hot_news li{
+  width:100%;
+  float:left;
+  border-bottom:1px dotted #e2e2e3;
+  margin:0 0 5px 0;
+}
+.box_sub_hot_news li.end{
+  border:none;
+  margin:0;
+}
+.box_sub_hot_news li .thumb{
+  display:none;
+  width:47.82%;
+  float:left;
+  margin:0 10px 0 0;
+}
+.box_sub_hot_news li .thumb img{
+  width:100%;
+}
+.box_sub_hot_news .scroll-pane {
+    height: 390px;
+    width: 178px;
+}
+/*page anh*/
+.thumb_relative,.thumb_140{
+  width:100%;
+  float:left;
+  position:relative;
+  margin-bottom:10px;
+}
+.list_photo_dulich{
+  width:100%;
+  float:left;
+  border-bottom:1px dotted #e2e2e3;
+  margin:0 0 10px;
+  padding:10px 0 0 0;
+}
+.list_photo_dulich li{
+  width:31.5%;
+  margin:0 0 10px 1%;
+  display:inline-block;
+  vertical-align:top;
+}
+.list_photo_dulich li .title_news a{
+  font:700 14px arial;
+  color:#333;
+}
+*+html .list_photo_dulich li{
+  float:left;
+  height:180px;
+  overflow:hidden;
+}
+.news_box_300 .only_title .title_news{
+  width:auto;
+  float:none;
+}
+.block_top_left_video{
+  width:660px;
+  float:left;
+}
+.block_top_right_video{
+  float:right;
+  width:300px;
+}
+/*video page*/
+.cross_line{
+  width:100%;
+  float:left;
+  height:1px;
+  background:#cacaca;
+  font-size:0;
+  line-height:0;
+  margin:0 0 10px;
+}
+.block_top_video{
+  margin:0 0 10px 0;
+}
+.block_flash_video{
+  overflow:hidden;
+  cursor:pointer;
+  width:100%;
+  float:left;
+  position:relative;
+  font-size:0;
+  background:#000;
+}
+.videoname{
+  width:100%;
+  float:left;
+  padding:5px 0 0;
+}
+.icon_bloclvideo{
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+}
+.icon_bloclvideo .img_icon{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/ico-play-60x60.png) no-repeat scroll left top;
+    display: inline-block;
+    height: 60px;
+    vertical-align: middle;
+    width: 60px;
+}
+.icon_bloclvideo:hover .img_icon{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/ico-play-60x60.png) no-repeat scroll right top;
+}
+.icon_bloclvideo .image_icon_center{
+  display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.thumb_image{
+  position:relative;
+  width:100%;
+  float:left;
+}
+.thumb_image img{
+  float:left;
+}
+.videoname .title_news a{
+  font:700 20px/30px arial;
+  color:#333;
+}
+.videoname .news_lead{
+  font:400 12px/18px arial;
+}
+.block_top_video .list_tin_300 li:last-child{
+  padding:0;
+  margin:0;
+  border:none;
+}
+/*detail page*/
+#box_details_news #boxthamdoykien{
+  margin:0 0 10px 0;
+  display:block;
+}
+.block_100 #boxthamdoykien {
+  float:left;
+  margin:0;
+}
+#boxthamdoykien .vote_3col td{
+  width:32%;
+  vertical-align:top;
+  margin:0 1% 0 0;
+}
+#boxthamdoykien .vote_2col td{
+  width:48%;
+  vertical-align:top;
+  margin:0 2% 0 0;
+}
+#boxthamdoykien .title_box_category{
+  margin:0;
+}
+#boxthamdoykien .content_box_category{
+  background:#f5f5f5;
+}
+.block_padding_10{
+  padding:10px;
+}
+#boxthamdoykien  .title_thamdo{
+  font:700 12px arial;
+  padding:0 0 10px 0;
+  border-bottom:1px solid #dadada;
+  margin-bottom:10px;
+  text-align:left;
+}
+#boxthamdoykien .input_servey{
+  float:left;
+  margin:0 5px 0 0;
+}
+#boxthamdoykien  .tb_servey{
+  text-align:left;
+}
+#boxthamdoykien  .tb_servey td{
+  padding:0 0 9px 0;
+}
+#boxthamdoykien .tb_servey tr:last-child td{
+  padding:0;
+}
+#boxthamdoykien  .btn_bieuquyet{
+  padding:5px 7px;/*fix btn cho box 160*/
+  border:none;
+  background:#858585;
+  color:#fff;
+  font:700 11px arial;
+  cursor:pointer;
+}
+*+html #boxthamdoykien .btn_bieuquyet{
+  float:left;
+}
+#box_details_news #boxthamdoykien .txt_xemketqua,
+#boxthamdoykien .txt_xemketqua{
+  font:400 11px arial;
+  color:#9a1f44;
+}
+*+html #boxthamdoykien .txt_xemketqua{
+  padding:6px 0 0 3px;
+  float:left;
+}
+/*detail fck*/
+.block_timer_share{
+  width:100%;
+  float:left;
+}
+#box_details_news #breackcumb_portal{
+    padding-bottom:5px;
+    padding-top:10px;
+}
+#box_details_news .block_timer{
+  font:400 11px arial;
+  padding:5px 0 0 0;
+}
+#box_details_news .content_news{
+    padding:0 0 10px 0;
+    overflow:hidden;
+}
+#box_details_news .title_news{ margin-top:10px;color:#333;}
+#box_details_news .title_news a.title_topic{ color:#333;}
+#box_details_news .title_news,  #box_details_news .relative_news{
+    width:100%;
+    float:left;
+    padding-bottom:10px;
+  color:#333;
+}
+#box_details_news .title_news h1{
+    font:400 28px/32px arial;
+}
+#box_details_news .short_intro,.relative_news{
+    font-weight:700;
+}
+#box_details_news .short_intro{
+    font:700 14px/18px arial;
+    width:100%;
+    float:left;
+    padding-bottom:10px;
+    color:#444;
+}
+#box_details_news .short_intro a,
+#box_details_news .fck_detail a{
+    color: #004f8b;
+}
+#box_details_news .relative_new{
+    width:100%;
+    float:left;
+    padding-bottom:5px;
+}
+#box_details_news .relative_new .list_news_dot_3x3_300{
+  margin:0;
+  border:none;
+  padding:0;
+  color:#666;
+}
+#box_details_news .relative_new .list_news_dot_3x3_300 li{
+  padding:0 0 5px 10px;
+  background-position:0 6px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/dot_gray_3x3.gif) no-repeat left 5px;
+}
+#box_details_news .fck_detail{
+    width:100%;
+    float:left;
+    overflow:hidden;
+    font:400 14px arial;
+    padding:0 0 10px 0;
+  color:#333;
+}
+#box_details_news .fck_detail table caption{
+  caption-side:bottom;
+  font:400 14px arial;
+    color: #333;
+  background:#f5f5f5;
+  padding:10px;
+  text-align:left;
+}
+#box_details_news .fck_detail table.tplCaption td{
+  line-height:0;
+  padding:0;
+}
+#box_details_news .fck_detail table.tplCaption td td{
+  line-height:auto;
+}
+#box_details_news .fck_detail table img{
+/*max-width:480px;*/
+}
+#box_details_news .fck_detail table{
+margin-bottom:10px;
+  max-width:100%;
+  margin:0 auto 10px;
+}
+#box_details_news .fck_detail ul,
+#box_details_news .fck_detail ul li{
+    list-style-type:disc;
+    margin-left:7px;
+}
+#box_details_news .fck_detail ol{
+    list-style: decimal;
+    padding:0 0 0 30px;
+    margin:0
+}
+#box_details_news .fck_detail ol li{
+    list-style-type:decimal;
+    margin-left:7px;
+}
+#box_details_news .fck_detail td{
+  padding:2px;
+
+}
+#box_details_news .fck_detail table.tplCaption td.caption,
+#box_details_news .fck_detail table.tplCaption td.Image,
+#box_details_news .fck_detail table.tplCaption td.Image,
+#box_details_news .fck_detail table.tplCaption td .Image,
+#box_details_news .fck_detail .tplCaption .Image{
+   font:400 12px arial;
+    color: #333;
+  background:#f5f5f5;
+  padding:10px;
+}
+
+#box_details_news .fck_detail table.tbl_insert .Normal{
+  padding:0;
+  background:none;
+  color:#333;
+}
+#box_details_news .fck_detail table.tbl_insert td{
+  border:none;
+  padding:5px;
+}
+#box_details_news .fck_detail p.Image{ margin:0;
+  padding:5px;
+
+}
+#box_details_news .fck_detail .Normal,
+#box_details_news .fck_detail p{
+    margin:0 0 1em 0;
+    line-height:18px;
+}
+#box_details_news .fck_detail p.subtitle{
+  font-weight:700;
+}
+#box_details_news .fck_detail p{
+  /*  margin-top:0 !important;*/
+}
+#box_details_news .fck_detail table td.Image p{ margin:0 0 1em;}
+
+#box_details_news .fck_detail .ContractNo{ display:none;}
+#box_details_news .fck_detail table td.PnDTitle {
+    color: #FFFFFF;
+    font-family: 'Verdana';
+    font-size: 8pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+#box_details_news .news_same_title{
+    padding:20px 0 0 0;
+}
+#box_details_news .txt_title_same{
+    padding-bottom:5px;
+    border-bottom :1px solid #e5e5e5;
+    width:100%;
+    font:700 12px arial;
+}
+#box_details_news .news_same_title ul{
+    padding:10px 0 00;
+}
+#box_details_news .news_same_title li{
+    width:460px;
+    overflow:hidden;
+}
+#detail_page_live.line_col,
+#detail_page.line_col {
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_1x1_gray.gif) repeat-y 68.37% 0 ;
+    margin-bottom: 20px;
+}
+figure { width:98%; margin:0 auto;padding:0;}
+.video-js {
+width: 100%!important;
+height: 100%;
+}
+#col_660{
+  width:67.35%;
+}
+#col_300{
+  width:30.61%;
+}
+.block_share a{
+  float:left;
+  margin:0 0 0 5px;
+}
+.block_share .drash_share{
+  float:left;
+  color:#e6e6e6;
+  margin:0 0 0 5px;
+}
+.relative_new p .icon_tinlienquan {
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_dot_gray_3x3.gif) no-repeat left 6px;
+    display: inline-block;
+    height: 12px;
+    width: 5px;
+}
+.line_col_480{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_1x1_gray.gif) repeat-y 74.25% 0;
+}
+.block_col_480{
+  width:100%;
+  float:left;
+}
+.social_share {
+  margin-bottom:15px;
+}
+#social_like{
+  margin:0;
+}
+.item_social,
+.social_share .item_social{
+  float:left;
+  margin:0 10px 0 0;
+  z-index:9;
+  position:relative;
+}
+.social_twitter{
+  width:80px;
+}
+.social_share .btn_quantam{
+  display:block;
+  height:20px;
+  width:75px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/btn_quantam.gif) no-repeat 0 0;
+  float:left;
+  margin:0;
+}
+.social_share .btn_quantam.dislike{
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/btn_quantam.gif) no-repeat 0 bottom;
+}
+.social_share .btn_phanhoi{
+  display:block;
+  height:20px;
+  width:75px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/btn_phanhoi.gif) no-repeat 0 0;
+  float:left;
+}
+.social_share .number_count{
+  height:20px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_arrow_social_like.gif) no-repeat left top;
+  padding:0 0 0 7px;
+  float:left;
+  margin:0 0 0 4px;
+}
+.social_share .number_count span{
+  float:left;
+  height:20px;
+  display:block;
+  background:#f5f5f5;
+  color:#656565;
+  font:400 11px/20px arial;
+  padding:0 5px 0 3px;
+}
+title_div_fbook{
+  margin-bottom:25px;
+  display:none;
+}
+.title_div_fbook.title_div_fbook{
+  margin:10px 0 0 0;
+}
+.div-fbook{
+  display:none;
+}
+.div-fbook .item_social{
+  float:left;
+  margin:0 0 0 10px ;
+}
+#box_tinkhac .title_box_category{
+  margin:0;
+}
+#box_tinkhac .content_box_category .list_news_dot_3x3{
+  margin:0;
+  border:none;
+  padding:0;
+}
+#box_tinkhac .content_box_category .list_news_dot_3x3 a{
+  font:400 16px arial;
+  background-position: 0 6px;
+  color:#000;
+}
+#box_tinkhac .content_box_category .list_news_dot_3x3 span.txt_666{
+  font:400 14px arial;
+}
+
+/*comment*/
+
+#box_comment .txt_title_comment_detal{
+    font:700 12px arial;
+    padding-bottom: 5px;
+}
+#box_comment .txt_title_comment_detail{
+    font:700 12px arial;
+    padding-bottom: 5px;
+}
+#box_comment .txt_blue:hover b{
+    text-decoration:underline;
+}
+#box_comment .more_bottom_detal{ padding-bottom:10px; }
+
+.block_input_comment .input_comment textarea{
+    font:400 12px/18px arial;
+    background:#fff;
+    border:1px solid #c5c5c5;
+    width:98.5%;
+    color:#666;
+    overflow: hidden;
+  padding:5px 0 0 1%;
+  float:right;
+  height:50px;
+}
+.block_input_comment .confirm_comment{
+    padding:5px 0 0 0;
+}
+.block_input_comment .btn_send_comment{
+    background:#9d234c;
+    padding: 4px 18px 4px 17px;
+    font:700 12px arial;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+  float:right;
+  margin:10px 0 0 0;
+}
+.block_input_comment .txt_check{
+    margin:1px 5px 0 0;
+    float:left;
+}
+#box_comment .title_show{
+    color:#333333;
+    background:#eeeeee;
+    position:relative;
+  height:26px;
+  width:100%;
+  float:left;
+}
+#box_comment .title_show .ykien_vne{
+  font:400 14px/26px arial;
+  color:#9d234c;
+  padding:0 0 0 10px;
+}
+
+#box_comment .title_show .txt_songuoithich{
+  color:#666666;
+  font:400 11px/26px arial;
+}
+
+#box_comment .title_show  p b{
+    color:#000;
+}
+#box_comment .comment_item{
+    padding:10px 10px 5px;
+}
+
+#box_comment .comment_item .user_status .left.txt_11{
+  font-size:12px;
+}
+#box_comment .comment_item p{
+    padding-bottom:2px;
+    line-height:18px;
+  font-size:13px;
+}
+#box_comment .comment_item p .fullname a{
+    color:#000;
+}
+
+#box_comment .comment_item p .fullname a:hover{
+    color:#004f8b;
+}
+#box_comment .hight_light{
+    background:#f8f8f8
+}
+#box_comment .comment_item .txt_view_more{
+    text-align:right;
+    margin:0;
+    padding:0;
+  background:none;
+}
+#box_comment .comment_item .txt_view_more a{
+    color:#004f8b;
+    text-decoration:underline;
+}
+#box_comment .comment_item .txt_view_more a:hover{
+    color:#666;
+}
+#box_comment .more_bottom_detal{
+    padding:10px 0 0 0;
+}
+#box_comment .more_bottom_detal b{
+    color:#333;
+}
+#box_comment .more_bottom_detal .txt_view_more a:hover b{
+    color:#004f8b;
+}
+#box_comment .more_bottom_detail {padding: 10px 0px}
+#box_comment .sub_comment{
+  float:right;
+  width:95%;
+  padding:5px 0 0 0;
+}
+#box_comment a.link_thich {
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/dot_blue.gif) no-repeat scroll right 7px;
+    color: #004F8B !important;
+    margin-right: 4px;
+    padding-right: 6px;
+}
+#box_comment a.link_thich.unlike{
+    color:#858585 !important;
+}
+#box_comment .counter_world{
+  font:400 11px arial;
+  color:#666666;
+}
+#box_comment .view_more_coment{
+  width:100%;
+  float:left;
+  height:26px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_1x1_gray.gif) repeat-x left 13px;
+  margin:10px 0;
+}
+#box_comment .view_more_coment a{
+  background:#eeeeee;
+  padding:0 20px;
+  font:700 11px/26px arial;
+  color:#666;
+  text-align:center;
+  display:inline-block;
+  margin:0 0 0 280px;
+}
+#box_comment .sub_comment .input_comment{
+  padding:0 0 10px 0;
+  background:none;
+  margin-bottom:10px;
+  border-bottom:1px dotted #e2e2e3
+}
+.btn_traloi{
+  display:inline-block;
+  float:left;
+  width:50px;
+  height:24px;
+  padding:1px 0 0 20px;
+  color:#004074;
+  font:700 12px/25px arial;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_btn_traloi.gif);
+  margin:0 0.5em 0 0;
+    color: #004074;
+}
+.btn_like{
+  display:inline-block;
+  float:left;
+  height:25px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_90x25.gif) no-repeat right -25px;
+  padding:0 2px 0 0;
+    color: #004074;
+}
+.btn_like span{
+  display:inline-block;
+  float:left;
+  height:24px;
+  padding:1px 5px 0 28px;
+  font:700 12px/25px arial;
+  color:#004074;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_90x25.gif) no-repeat left top;
+}
+.btn_like.unlike span{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_90x25.gif) no-repeat left -50px;
+  color:#666;
+}
+.numb_like{
+  display:inline-block;
+  float:left;
+  height:25px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_num_like_90x25.gif) no-repeat right bottom;
+  padding:0 2px 0 0;
+  margin:0 0 0 5px;
+}
+.numb_like span{
+  display:inline-block;
+  float:left;
+  height:24px;
+  padding:1px 5px 0 10px;
+  font:400 11px/25px Palatino Linotype;
+  color:#000;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_num_like_90x25.gif) no-repeat left top;
+}
+/*end comemnt*/
+.block_relative{
+  position:relative;
+}
+.txt_blue {
+    color: #004f8b!important;
+}
+.icon_portal{
+    display:inline-block;
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_portal.gif) no-repeat;
+}
+.icon_feedback {
+    background-position: -545px 1px;
+    height: 14px;
+    width: 13px;
+}
+*+html .icon_feedback{
+    background-position: -545px -1px;
+}
+.icon_like {
+    height: 14px;
+    width: 13px;
+   background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_line_vne.gif) no-repeat 0px 3px ;
+   cursor:pointer;
+}
+.icon_like.unline:hover{
+   background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_line_vne.gif) no-repeat -19px 3px ;
+}
+.icon_like.unline{
+   background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_line_vne.gif) no-repeat right 3px ;
+}
+
+*+html .icon_like{
+   background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_line_vne.gif) no-repeat 0px -1px ;
+}
+*+html .icon_like:hover,
+*+html .icon_like.unline{
+   background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_line_vne.gif) no-repeat right -1px ;
+}
+#box_comment .subcomment_item{
+  padding-top:5px;
+  margin-bottom:5px;
+  border-top:1px dotted #e2e2e3;
+}
+#box_comment .subcomment_item.end{
+  border:none;
+  padding:0;
+  margin:0;
+}
+.block_input_comment{
+  border-top:1px solid #dedede;
+}
+#comment_reply_wrapper{
+  border:none;
+  padding:0 0 5px;
+}
+.input_comment{
+  padding:10px;
+  background:#f5f5f5;
+  position:relative;
+  z-index:2;
+  margin:1px 0 0 0;
+}
+.google_name{
+   cursor: pointer;
+    font: 700 14px arial;
+    min-width: 80px;
+    padding: 5px;
+}
+
+.block_action_google ul {
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.block_action_google li a {
+    color: #666;
+    display: block;
+    font: 400 14px/21px arial;
+    height: 21px;
+    padding: 5px 0 0 5px;
+}
+.block_action_google li a:hover{
+  color:#000;
+}
+.like_google{
+  background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #F5F5F5;
+    position: absolute;
+    right: 75px;
+    top: 5px;
+    width: auto;
+    z-index: 99;
+}
+.like_google.active{
+  border:1px solid #CCCCCC;
+  background:#fff;
+}
+.like_google .google_name img.google_active {
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_google_coment.gif) no-repeat -72px 0;
+    float: left;
+    margin: 0 5px 0 0;
+}
+.like_google .google_name img.google_active.inactive{
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_google_coment.gif) no-repeat -105px 0;
+  float: left;
+    margin: 0 5px 0 0;
+}
+.like_google .google_name img.facebook_active{
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_google_coment.gif) no-repeat 0 0;
+  float: left;
+    margin: 0 5px 0 0;
+}
+.like_google .google_name img.facebook_active.inactive{
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_google_coment.gif) no-repeat -36px 0;
+  float: left;
+    margin: 0 5px 0 0;
+}
+.google_name #open_id_name{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_arrow_xam_4x7.gif) no-repeat right 5px ;
+    display: inline-block;
+    margin: 5px 0 0;
+    padding: 0 10px 0 0;
+    white-space: nowrap;
+}
+.block_action_google {
+    display: block;
+    float: left;
+    width: 100%;
+  border-top:1px solid #CCCCCC;
+  display:none;
+}
+
+*+html .input_comment{
+  width:95%;
+  float:left;
+  padding:10px 2%;
+  position:static;
+}
+*+html .block_btn_send{
+  width:200px;
+}
+
+.block_turn_back_news{
+    font:700 14px arial;
+    background:#f0f0f0;
+    padding:10px 0;
+    border-bottom:1px solid #fff;
+    position:relative;
+}
+.block_turn_back_news p{
+    padding:0 0 0 15px;
+}
+.block_turn_back_news a{
+    color:#28aa47;
+}
+.block_turn_back_news .icon_turnback{
+    position:absolute;
+    left:-5px;
+    top:10px;
+}
+.title_box_detailpage{
+  border-bottom:1px solid #eee;
+}
+.title_box_detailpage .txt_main_category{
+  margin:0;
+}
+.title_box_detailpage .txt_main_category a{
+  color:#fff;
+  background:#00aced;
+  text-align:center;
+  padding:0 30px;
+}
+#box_tinkhac_detail .list_10tinkhac{
+  border-top:1px dotted #E2E2E3;
+}
+#box_tinkhac_detail .list_news li{
+  width:48%;
+  margin:0 2% 0 0;
+  border-bottom:none;
+}
+#box_tinkhac_detail .list_news{
+  width:50%;
+  float:left;
+}
+#box_tinkhac_detail .list_news li{
+  width:47.8%;
+}
+*+html #box_tinkhac_detail .list_news{
+  width:49.8%;
+}
+#box_tinkhac_detail .list_news li.end{
+  margin:0;
+  padding-bottom:10px;
+}
+#box_tinkhac_detail .list_news_dot_3x3_300{
+  margin:0;
+  padding:5px 0 0 0;
+  border:none;
+}
+.w320{
+  width:320px;
+}
+#box_tinkhac_detail .content_box_category .list_news_dot_3x3_300 li{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/dot_gray_3x3.gif) no-repeat left 5px;
+  padding:0 0 0 10px;
+  margin:0 0 5px;
+}
+#box_tinkhac_detail .list_news li a,
+#box_tinkhac_detail .content_box_category .list_news_dot_3x3_300 li a{
+  font:400 14px arial;
+  color:#000;
+}
+#box_tinkhac_detail .thumb_160{
+  margin:0 0 5px;
+  position:relative;
+}
+#box_tinkhac_detail .list_news li a:hover,
+#box_tinkhac_detail .content_box_category .list_news_dot_3x3_300 li a:hover{
+  color:#004f8b;
+}
+#box_tinkhac_detail .list_news li .news_lead{
+  padding:5px 0 0 0;
+}
+.block_tag .txt_tag{
+  background:#f1f1f1 url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_icon_tag.gif) no-repeat left top;
+  padding:0 10px 0 20px;
+  height:20px;
+  color:#939393;
+  float:left;
+  font:400 11px/20px arial;
+  margin:0 5px 0 0;
+}
+.block_tag .tag_item{
+  display:inline-block;
+  height:20px;
+  font:400 11px/20px arial;
+  color:#656565;
+  padding:0 10px;
+  white-space:nowrap;
+  background:#f1f1f1;
+  margin:0 5px 5px 0;
+  float:left;
+}
+.block_tag .tag_item:hover{
+  background:#e2e2e2;
+}
+.space_bottom_20{
+  margin-bottom:20px;
+}
+#box_comment{
+  padding:10px 0 0 0;
+}
+#box_comment .pagination_news{
+  padding:20px 0 0;
+}
+.icon_show_full_comment{
+  width:12px;
+  height:12px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/btnadd.gif) no-repeat left 1px;
+  display:inline-block;
+  margin:0px 0 0 3px;
+  line-height:12px
+}
+.icon_show_full_comment:hover{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/btnadd_hover.gif) no-repeat left 1px;
+}
+.icon_show_full_comment.icon_tru{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/btnadd2.gif) no-repeat left 1px;
+}
+.icon_show_full_comment.icon_tru:hover{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/btnadd2_hover.gif) no-repeat left 1px;
+}
+.xemtiep{
+  text-align:center;
+  width:100%;
+  margin:10px 0 20px 0;
+  float:left;
+  display:none;
+  background:#f5f5f5;
+}
+/*light box*/
+.ul-lb li{ cursor:pointer; font:12px arial; color:#000; margin:0px 0px 10px;}
+.login-form{
+   width:100%;
+   border:1px solid #dedede;
+   background:#fff;
+   position:relative;
+   padding:10px 0px;
+}
+#login-vne1{
+  padding:50px 0;
+}
+#login-vne1 .login-left{
+  border-right:1px solid #dedede;
+  padding:0px 2% 0px 0;
+  width:35%;
+    float:left;
+  height:176px;
+}
+#login-vne1 .login-right{width:61%; float:right;}
+
+#login-vne1 .login-left .login-type{
+  font:700 14px arial;
+  color:#000;
+  margin:0px 0px 5px;
+  overflow:hidden;
+  text-align:right;
+}
+#login-vne1 .login-right .login-type{font:700 14px arial; color:#000; margin:0px 0px 5px; display:block; overflow:hidden;}
+
+.p-social{ display:block; overflow:hidden; margin:0px 0px 10px;}
+.p-social .login-social{width:134px; height:30px; float:right; background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/social-login.gif) no-repeat;}
+.p-social .lg-facebook{ background-position:0px 0px;}
+.p-social .lg-google{background-position:0px -42px;}
+.login-txt{
+  margin:0px 0px 3px 0px;
+}
+.login-txt .txt-login{
+  border:1px solid #c0c0c0;
+  background:#fff;
+  font:400 14px arial;
+  color:#666;
+  width:85%;
+  padding:2px 7px;
+  height:20px;
+}
+.login-desc{font:400 11px arial; color:#9f224e; margin:0px 0px 10px; display:inline-block; overflow:hidden;}
+.login-btt{display:block; overflow:hidden; margin:0px; width:100%;}
+.btt-complete{width:96px; height:28px; text-align:center; padding:2px 0px 0px; font:500 14px arial; color:#fffefe; background:#9f224e; border:none; cursor: pointer;}
+
+.close-lb{ background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/close-lb.gif) no-repeat 0px 0px; width:9px; height:9px; position:absolute; top:10px; right:10px; cursor:pointer;}
+
+#login-vne2 .login-left{padding:0px 10px 0px 0px; width:49px; float:left;}
+#login-vne2 .login-right{padding:0px 0px 0px 10px; width:364px; float:left;}
+#login-vne2 .login-type{font:700 14px arial; color:#000; margin:0px 0px 5px; text-align:left; display:block; overflow:hidden; }
+#login-vne2 .complete-form{width:90%; padding:0px 50px; display:block; overflow:hidden;}
+
+
+#login-vne3,#login-vne5{height:266px; background:#f4f4f4; padding:0px;}
+#login-vne3 .complete-form,#login-vne5 .complete-form,#login-vne6 .complete-form { padding:20px 0 0 80px ;width:81%; display:block; overflow:hidden;}
+#login-vne3 .ttOline,#login-vne4 .ttOline,#login-vne5 .ttOline,#login-vne6 .ttOline,#login-vne7 .ttOline,.ttOline{ background:#fff; height:28px; padding:8px 20px 0px 20px; display:block; overflow:hidden;font:700 16px arial; color:#000;}
+#login-vne3 .login-txt,#login-vne5 .login-txt,#login-vne6 .login-txt{margin:0px 0px 3px 0px; display:block; overflow:hidden;}
+#login-vne3 .login-txt .txt-login{border:1px solid #c0c0c0; background:#fff; font:400 14px arial; color:#666;width:358px; padding:2px 7px; height:20px;}
+#login-vne3 .txt-capcha,#login-vne5 .txt-capcha,#login-vne6 .txt-capcha{ float:left;border:1px solid #c0c0c0; background:#fff; font:400 14px arial; color:#666;width:104px; padding:2px 7px; height:20px; margin-right:10px;}
+#login-vne3 img,#login-vne5 img,#login-vne6 img{ float:left;margin-right:8px;}
+#login-vne6 .sercurity .img_chapcha img{margin-right:110px\9;}
+#login-vne4{background:#f4f4f4; padding:0px}
+.complete-form{padding:20px; display:block; overflow:hidden; font:500 14px arial; color:#000; width:auto;}
+/*Add thêm 2 light box*/
+#login-vne6{height:167x; background:#f4f4f4; padding:0px;}
+.input_capcha{font:600 14px arial; color:#000; margin:0px 0px 3px;}
+.form_thamgia .block_input, .form_thamgia .txt_input {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C0C0C0;
+    color: #666666;
+    font: 400 14px arial;
+    height: 20px;
+    padding: 2px 2%;
+    width: 95%;
+}
+.txt_error{
+  color:#9F224E;
+  font-size:11px;
+}
+#login-vne7{background:#f4f4f4; padding:0px;}
+.rs_vote{ display:block; background:#ededed; padding:15px 20px; overflow:hidden; margin-bottom:12px;}
+#login-vne7 .ttOline{ margin-bottom:0px;}
+.question_vote{font:500 14px arial; color:#9f224e; margin:0px 0px 4px;}
+.p_infoVote{ margin:0px;}
+.time_vote{font:400 11px arial; color:#666; float:left;}
+.total_vote{ float:right;font:400 11px arial; color:#666;}
+.total_vote label{ font-weight:700; color:#9f224e;}
+
+.list_rs{ overflow:hidden; background:#f4f4f4;}
+.scroll_thongke{ float:left;width:92%;padding:0px; margin:10px 4%;}
+.scroll_thongke li{ padding:0px 0px 15px; margin:0px 0px 10px; border-bottom:1px dotted #ccc; display:block; overflow:hidden;}
+.info_result{ display:block; }
+.rsV_left{width:20%; margin:0px 8px 0px 0px; float:left; font:12px arial; color:#000;}
+.rsV_right{width:20%; margin-left:8px; float:right; font:12px arial; color:#999; text-align:right;}
+.rsV_right label{color:#000;}
+.scroll_color{width:55%; float:left; margin-top:3px; height:5px; background:#ccc;}
+.bg_center_scroll{ position:relative;background:#9f224e; float:left; height:5px;}
+.txt_number_ketqua{ display:inline-block; padding:5px 0px 0px; position:absolute; right:-10px; bottom:-15px; font:10px arial; color:#9f224e; }
+#BoxOverlay{
+  position:fixed!important;
+  height:100%!important;
+  width:100%!important;
+}
+.item_login{
+  width:100%;
+  float:left;
+  padding-bottom:10px;
+}
+.sercurity{
+  width:100%;
+  float:left;
+}
+/***********25.11*************/
+/*cÃ³ add thÃªm 1 sá»‘ class thá»«a hÆ°á»Ÿng css trÃªn login-vne5 */
+
+#login-vne5{
+padding: 0;
+height: 530px;
+background:#f5f5f5;
+}
+
+.share_email_des{
+background: #ededed;
+float: left;
+width: 100%;
+padding: 15px 0;
+}
+
+.share_email_left{
+float: left;
+width:15%;
+}
+
+.share_email_left a{
+color: #666;
+text-decoration: underline;
+font: 600 11px/16px Arial;
+padding:0 0 0 20px;
+}
+
+.share_email_right{
+float: right;
+width:84%;
+}
+
+.share_email_right div{
+font: 400 14px/16px Arial;
+color:#9f224e ;
+}
+
+.share_email_right ul{
+list-style: none;
+float: left;
+width: 100%;
+padding: 0;
+margin: 5px 0;
+}
+.share_email_right li{
+float: left;
+}
+.share_email_right li.txt_underline a{
+  text-decoration:underline;
+}
+.share_email_right a{
+font: 400 11px/16px Arial;
+color: #666;
+}
+
+.share_email_right .active a{
+color: #333;
+}
+
+#login-vne5 .complete-form{
+margin-top:10px;
+float: left;
+}
+
+#login-vne5 .complete-form textarea{
+height: 85px;
+margin-bottom:10px;
+}
+
+#login-vne5 .txt-login{
+}
+
+.share_email_label{
+margin-bottom: 5px;
+font: 400 14px/14px Arial;
+}
+
+.light_box{
+border:1px solid #dedede;
+font-size: 14px;
+}
+.light_box .body{
+  line-height: 24px;
+  background: #f4f4f4;
+  padding:20px;
+}
+.light_box .title{
+  font: 700 16px/20px Arial;
+  padding:10px 10px 10px 20px;
+  background: #fff;
+}
+.light_box .title span{
+  float: left;
+}
+.light_box .text_red{
+  color: #9f224e;
+}
+.light_box .text_green{
+  color: #328005;
+}
+.ico{
+  background: url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_sprite.png) no-repeat;
+  display: inline-block;
+}
+.light_box .ico.close{
+  background-position: -150px 0;
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+}
+
+.light_box.trandau .body{
+}
+
+/*End lightbox*/
+.control_pagination a{
+  float:left;
+  margin:0 0 0 10px;
+}
+.icon_responsive{
+  width:20px;
+  height:20px;
+  display:inline-block;
+  line-height:0;
+  font-size:0;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_resonesive.gif) no-repeat;
+}
+.ico_respone_04{
+  background-position:-252px 0;
+  width:25px;
+  height:25px;
+}
+.ico_respone_05{
+  background-position:-277px 0;
+  width:25px;
+  height:25px;
+}
+.block_dudoan .date{
+  padding: 10px 0;
+  width: 100%;
+  float: left;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 1px dotted #ccc;
+}
+.block_dudoan table{
+  width: 100%;
+  float: left;
+}
+.block_dudoan table td{
+  padding: 3px 0;
+}
+.block_dudoan table thead{
+  text-align: center;
+  color: #9f224e;
+}
+.block_dudoan table td.chuadau{
+  color:#000;
+}
+.block_dudoan table .main_team,.block_dudoan table .sub_team{
+  width: 39%;
+  font:400 18px arial;
+}
+.block_dudoan table .score{
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  width: 22%;
+  max-width: 66px;
+}
+.block_dudoan table .score button{
+  background: #328005;
+  color: #fff;
+  border:none;
+  width: 66px;
+  padding: 5px 0;
+  cursor:pointer;
+  font:400 11px arial;
+}
+.block_dudoan table .score button.btn_goiy{
+  background:#ccc;
+  color:#333;
+}
+.block_dudoan table .score span.box{
+border:1px solid #ccc;
+width: 20px;
+text-align: center;
+overflow: hidden;
+display:inline-block;
+}
+.block_dudoan table .score span.box input{
+  font-size: 14px;
+  width:100%;
+}
+.block_dudoan table .score span.no-border{
+  border:1px solid #fff;
+}
+.block_dudoan table .main_team{
+  text-align: right;
+  padding-right: 5px;
+}
+.block_dudoan table .main_team img{
+  margin-left: 5px;
+}
+.block_dudoan table .sub_team{
+  text-align: left;
+  padding-left: 5px;
+}
+.block_dudoan table .sub_team img{
+  margin-right: 5px;
+}
+.block_dudoan table .line td{
+  border-top: 1px dotted #ccc;
+}
+.box_dudoan{
+  border-bottom:1px solid #eee;
+  margin:0 0 20px 0;
+  padding:0 0 20px 0;
+}
+/*thong tin doi bong*/
+.block_image_quocgia{
+  width:10%;
+  float:left;
+}
+.block_image_quocgia img{
+  width:100%;
+}
+.box_tt_1doi .info_quocgia{
+  width:87%;
+  float:right;
+}
+.info_1{
+  width:100%;
+  float:right;
+}
+.info_1 p{
+  padding:0 0 5px;
+}
+.box_tt_1doi .info_1{
+  width:48%;
+  float:left;
+}
+.box_tt_1doi .info_2{
+  width:48%;
+  float:right;
+}
+.txt_tenquocgia{
+  font:400 24px arial;
+}
+.doiitem  td,
+.info_1 td,
+.info_2 td{
+  padding:3px 0;
+  vertical-align:top;
+}
+.doiitem .txt_defaul,
+.info_1 .txt_defaul{
+  font:700 12px arial;
+  width:40%;
+}
+.info_2 .txt_defaul{
+  font:700 12px arial;
+  width:60%;
+}
+.info_2 .txt_defaul .txt_trandau{
+  font:400 12px arial;
+}
+.box_tt_1doi .info_quocgia{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_1x1_gray.gif) repeat-y  50% top;
+}
+.box_tt_2doi .info_1 .txt_defaul{
+  width:60%;
+}
+.box_tt_2doi{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_1x1_gray.gif) repeat-y  50% top;
+  width:100%;
+  float:left;
+}
+.doiitem{
+  width:48%;
+  float:left;
+}
+.doiitem_2{
+  width:48%;
+  float:right;
+}
+.box_tt_2doi .block_image_quocgia{
+  width:21.5%;
+}
+.box_tt_2doi .info_1{
+  width:73%;
+}
+.box_tt_3doi .doiitem{
+  width:31%;
+  float:left;
+  border-right:1px solid #eee;
+  margin:0 2% 0 0;
+}
+.box_tt_3doi .doiitem:last-child{
+  margin:0;
+  border:none;
+}
+.box_tt_3doi .block_image_quocgia{
+  width:25%;
+}
+.box_tt_3doi .info_1{
+  width:70%;
+}
+.box_tt_3doi .doiitem table{
+  width:100%;
+}
+.box_tt_3doi .txt_tenquocgia{
+  font:400 20px arial;
+}
+
+.box_tt_4doi .doiitem{
+  width:22.8%;
+  float:left;
+  border-right:1px solid #eee;
+  margin:0 2% 0 0;
+}
+.box_tt_4doi .doiitem:last-child{
+  margin:0;
+  border:none;
+}
+*+html .box_tt_4doi .doiitem{
+  width:22.5%;
+}
+.box_tt_4doi .block_image_quocgia{
+  width:25%;
+}
+.box_tt_4doi .info_1{
+  width:70%;
+}
+.box_tt_4doi .doiitem table{
+  width:100%;
+}
+.box_tt_4doi .txt_tenquocgia{
+  font:400 20px arial;
+}
+/*thong tin cau thu*/
+.block_image_cauthu {
+  width:19.6%;
+  float:left;
+}
+.info_cauthu{
+  width:78%;
+  float:right;
+}
+.block_image_cauthu img{
+  width:100%;
+}
+.txt_cauthuname{
+  font:400 16px arial;
+}
+.box_tt_1cauthu .info_1{
+  width:38%;
+  float:left;
+}
+.box_tt_1cauthu .info_1 table{
+  width:100%;
+}
+.box_tt_1cauthu .info_2{
+  width:58%;
+  float:right;
+}
+#box_details_news .box_tt_1cauthu .info_2 .title_news{
+  width:100%;
+  float:left;
+  margin:0 0 5px;
+  padding:0;
+}
+.box_tt_1cauthu .info_2 .block_thumb_lead{
+  width:100%;
+  float:left;
+}
+.box_tt_1cauthu .info_2 .block_thumb_lead .news_lead{
+  padding:0;
+}
+.box_tt_1cauthu .info_2 .thumb{
+  width:46.67%;
+  margin:0 10px 10px 0;
+  float:left;
+}
+.box_tt_1cauthu .info_2 .list_dot{
+  width:100%;
+  float:left;
+}
+.box_tt_1cauthu .list_tin_300 li:last-child{
+  margin:0;
+  padding:0;
+  border:none;
+}
+.box_tt_2cauthu .cauthu_item{
+  width:48%;
+  float:left;
+}
+.box_tt_2cauthu .cauthu_item:last-child{
+  float:right;
+}
+.box_tt_2cauthu .block_image_cauthu{
+  width:33%;
+}
+.box_tt_2cauthu .info_cauthu{
+  width:63%;
+}
+.box_tt_2cauthu .info_2  table{
+  width:100%;
+}
+.box_tt_2cauthu .info_2 .txt_defaul{
+  width:40%;
+}
+.box_tt_3cauthu .cauthu_item{
+  width:33%;
+  float:left;
+}
+.box_tt_3cauthu .block_image_cauthu{
+  width:75%;
+}
+.box_tt_4cauthu .cauthu_item{
+  width:24%;
+  float:left;
+  margin:0 1% 0 0;
+}
+.box_tt_4cauthu .cauthu_item:last-child{
+  margin:0;
+}
+.box_tt_4cauthu .block_image_cauthu{
+  width:100%;
+}
+/*End detail page*/
+/*live*/
+.tb_servey .w20{
+  float:left;
+  width:5%;
+}
+.tb_servey .w130{
+  float:right;
+  width:87%;
+}
+.fck_detail .tb_servey {
+  text-align:left;
+}
+.fck_detail .tb_servey .w130{
+  width:95%;
+}
+.fck_detail .tb_servey.vote_3col td .w130{
+  width:85%;
+}
+.fck_detail .tb_servey.vote_2col td .w130{
+  width:90%;
+}
+#container_tab_live{
+    float:left;
+
+  margin:0 0 20px 0;
+}
+#container_tab_live ul li{
+    float:left;
+    width:100%;
+    margin-bottom:10px;
+    overflow:hidden;
+  position:relative;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_1x1_gray.gif) repeat-y 10% 0;
+}
+#container_tab_live ul li.no_space{
+  margin:0;
+}
+#container_tab_live ul li:hover{
+  /*background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_3x3_live_active.gif) repeat-y 10% 0;*/
+}
+#container_tab_live ul li li:hover{
+  background:none;
+}
+#container_tab_live div.minutes{
+    float:left;
+  width:10%;
+  position:relative;
+  color:#9f224e;
+}
+#container_tab_live div.text_live{
+    float:right;
+    width: 86%;
+    font-family:"arial";
+    font-size:12px;
+    min-height:50px;
+  position:relative;
+}
+#container_tab_live .social_share{
+ /*
+    position:absolute;
+ right:0;
+ bottom:0;
+ margin:0;
+ */
+    width:100%;
+    float:left;
+    margin: 0px 0 0;
+    height:20px;
+}
+#container_tab_live .social_share .content_inner{
+    display:none;
+  float:right;
+}
+#container_tab_live ul li:last-child div.text_live{
+  border:none;
+  padding:0;
+}
+#container_tab_live div.text_live .tb_servey .w130{
+  float:left;
+}
+#container_tab_live div.text_live p{
+  margin:0 0 10px 0;
+}
+#container_tab_live div.text_live img{
+    margin-bottom:5px;
+}
+#container_tab_live div.text_live table.tplCaption{
+  max-width:100%;
+}
+#container_tab_live div.text_live table.tplCaption img{
+  margin:0;
+}
+#container_tab_live div.text_live table.tplCaption .Image{
+  padding:10px;
+  background:#F5F5F5;
+}
+#container_tab_live div.bg_special_tuongthuat{
+    background:#f7f7f7;
+}
+#container_tab_live div.minutes span{
+    display:inline-block;
+    text-align:center;
+}
+#container_tab_live div.minutes span.icon_special{
+    width:19px;
+    height:19px;
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_live.png) no-repeat;
+}
+#container_tab_live li.icon_traibanh div.minutes span.icon_special{
+    background-position: -1px;
+}
+#container_tab_live li.icon_muiten div.minutes span.icon_special{
+    background-position: -24px center;
+}
+#container_tab_live li.icon_thevang div.minutes span.icon_special{
+    background-position: -44px center;
+}
+#container_tab_live div.text_live .live_quote{
+  width:100%;
+}
+#container_tab_live div.text_live .live_quote td.first_quote{
+  width:10%;
+}
+#container_tab_live div.text_live .live_quote .thumb_quote{
+  width:90%;
+  float:left;
+}
+#container_tab_live div.text_live .live_quote .thumb_quote img{
+  width:100%;
+  float:left;
+}
+#container_tab_live .text_live .block_audio .title_audio{
+  background:#303030 url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_audio_player.gif) no-repeat 10px 10px;
+  color:#fff;
+  font:400 14px arial;
+  padding:10px 0 10px 50px;
+}
+#box_coment_300 .scroll-pane{
+  margin:0 0 10px;
+}
+#box_coment_300 .content_scoller{
+  width:96%;
+}
+.icon_live{
+  position:absolute;
+  height:24px;
+  width:24px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_football_live.gif) no-repeat;
+  right:-12px;
+  top:0;
+}
+.icon_live_01{
+  background-position: -51px -40px;
+}
+.icon_live_02{
+  background-position: -129px -40px;
+}
+.icon_live_03{
+  background-position: -205px -40px;
+}
+.icon_live_04{
+  background-position: -284px -40px;
+}
+.icon_live_05{
+  background-position: -368px -40px;
+}
+.icon_live_06{
+  background-position: -447px -40px;
+}
+.icon_live_07{
+  background-position: -527px -40px;
+}
+.icon_live_08{
+  background-position: -50px -109px;
+}
+.icon_live_09{
+  background-position: -129px -109px;
+}
+.icon_live_10{
+  background-position: -209px -114px;
+}
+.icon_live_11{
+  background-position: -289px -109px;
+}
+.icon_live_12{
+  background-position: -367px -109px;
+}
+.icon_live_13{
+  background-position: -447px -109px;
+}
+.icon_live_14{
+  background-position: -527px -109px;
+}
+.icon_dot_live{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_dot_live.gif) no-repeat left top;
+  font-size:0;
+  line-height:0;
+  height:7px;
+  width:7px;
+  top:5px;
+  right:auto;
+  left:94%;
+
+}
+.high-light .icon_dot_live{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_dot_live_active.gif) no-repeat -9px -8px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .icon_dot_live{
+    left:96%;
+   }
+}
+#box_coment_300 .filter_coment a{
+  font:400 11px/30px arial;
+}
+.block_filter_live{
+  width:100%;
+  float:left;
+  height:30px;
+  background:#f4f4f4;
+  margin:10px 0 15px 0;
+}
+.filter_right{
+  float:right;
+}
+.filter_left{
+  float:left;
+  display:none;
+}
+.block_filter_live a{
+  display:inline-block;
+  float:left;
+  padding:0 10px;
+  font:400 12px/30px arial;
+  color:#333;
+}
+.filter_right a{
+  /*background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_drash_line_2x1.gif) repeat-y left top;*/
+}
+.filter_left a{
+  /*background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_drash_line_2x1.gif) repeat-y right top;*/
+}
+.block_filter_live a.active{
+  color:#9f224e;
+  font:400 12px/30px arial;
+  background:#E2E2E2;
+}
+#box_comment .view_more_coment a{
+  margin:0 0 0 35%;
+  width:20%;
+}
+.special_time {
+  display:inline-block;
+  padding:2px 5px;
+  background:#9F224E;
+  color:#fff;
+}
+#container_tab_live div.text_live .list_dot_3x3{
+  width:96%;
+  float:left;
+  padding:5px 2%;
+  background:#f4f4f4;
+  margin-bottom:10px;
+}
+#container_tab_live .list_dot_3x3 .dot_item{
+  padding:5px 0 5px 2%;
+  width:97%;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_dot_gray_3x3.gif) no-repeat left 10px;
+}
+.list_dot_3x3 .dot_item a{
+  font:700 12px arial;
+  color:#666;
+}
+#container_tab_live div.text_live .item_social{
+  margin:0 0 0 5px;
+  float:right;
+}
+#container_tab_live div.text_live .thumb{
+  width:25%;
+  float:left;
+  margin:0 10px 0 0;
+}
+#container_tab_live div.text_live .title_news{
+  width:auto;
+  float:none;
+  margin:0;
+}
+#container_tab_live div.text_live  .block_image_news{
+  padding:5px 2%;
+  float:left;
+  width:96%;
+  background:#f4f4f4;
+  margin:0 0 10px 0;
+}
+#container_tab_live div.text_live .item_slider{
+  padding:0 5px;
+}
+#container_tab_live div.text_live .btn_control_tv_slider{
+  top:30%;
+  display:none;
+}
+#container_tab_live .author_quote{
+  font-weight:700;
+}
+#box_coment_300.stick{
+  width:300px;
+  top:10px;
+}
+.live_post_status{
+  width:100%;
+  float:left;
+  text-align:center;
+  padding:10px 0;
+  background:#f4f4f4;
+  margin:0 0 15px 0;
+}
+.live_post_status a{
+  color:#9f224e;
+  font:700 12px/16px arial;
+  display:inline-block;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_live_post.gif) no-repeat left top;
+  padding:0 0 0 20px;
+}
+.live_post_status a.short_live{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_live_post.gif) no-repeat left bottom;
+}
+#container_tab_live div.text_live td{
+  vertical-align:top;
+}
+#container_tab_live .image_quote{
+  width:30px;
+  height:23px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_quote.gif) no-repeat right top;
+}
+/*scroll*/
+.scroll-pane{
+  height:280px;
+  overflow:hidden;
+}
+#box_coment_300 .content_box_category{
+  margin:0;
+}
+#box_coment_300 .title_box_category{
+  height:30px;
+  background:#eeeeee url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_1x28.gif) repeat-x left top;
+  overflow:hidden;
+  border:none;
+}
+#box_coment_300 .txt_main_category{
+  float:left;
+  margin:0 0 0 10px;
+  display:inline;
+  font:700 14px/30px arial;
+  color:#9f224e;
+}
+#box_coment_300 .txt_main_category span{
+  color:#9f224e;
+  font:700 14px/30px arial;
+  height:28px;
+  display:block;
+  float:left;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_dot_gray_3x3_vne.gif) repeat-x left -1px;
+}
+#box_coment_300 #box_comment{
+  margin:0;
+}
+.filter_coment{
+  float:right;
+  padding:0 10px 0 0;
+  color:#666;
+}
+.filter_coment a{
+  font:400 11px arial;
+  color:#666;
+}
+.filter_coment a.active{
+  color:#9D234C;
+}
+.filter_coment_mobile{
+  float:right;
+}
+.filter_coment_mobile select{
+  font:400 14px arial;
+  display:none;
+}
+/*slide show_detail*/
+.block_thumb_slide_show{
+  width:100%;
+  float:left;
+  position:relative;
+  text-align:center;
+  font-size:0;
+  line-height:0;
+}
+.block_thumb_slide_show img{
+  cursor:all-scroll;
+}
+.block_thumb_slide_show img.left{
+  text-align:center;
+  float:none;
+  cursor:all-scroll\!important;
+  cursor:all-scroll\9!important;
+  *cursor:all-scroll!important;
+  cursor:
+}
+.btn_icon_show_slide_show{
+  height:28px;
+  width:28px;
+  display:block;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_zoom.png) no-repeat left top;
+  position:absolute;
+  right:0;
+  top:0px;
+
+}
+.desc_cation{
+  width:100%;
+  padding:0 0 10px 0;
+  float:left;
+  background:#f5f5f5;
+  font-size:14px;
+}
+.item_slide_show .desc_cation{
+  font-size:12px;
+  padding:10px 2%;
+  width:96%;
+}
+.desc_cation a{
+  color:#004F8B;
+}
+.desc_cation a:hover{
+  color:#000;
+}
+.item_slide_show{
+  margin:0 auto 10px auto;
+  clear:both;
+}
+
+/*end slide show*/
+#box_slider .slider_container{
+  width:100%;
+  height:285px;
+  position:relative;
+  overflow:hidden;
+}
+.slider_container .title_news{
+  padding:10px 0;
+}
+/*countdown*/
+#countdown{
+  height:65px;
+  background:#eeeeee;
+  border-bottom:1px solid #cbcbcb;
+  margin:0 0 10px 0;
+}
+#countdown span{
+  display:block;
+  width:25%;
+  float:left;
+  text-align:center;
+  color:#00ACED;
+  font:400 30px/30px arial;
+  padding:10px 0 0 0;
+  height:55px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_1x1_gray.gif) repeat-y right top;
+}
+#countdown span.gio{
+  font-size:24px;
+  line-height:30px;
+}
+#countdown span.phut{
+  font-size:18px;
+  line-height:30px;
+}
+#countdown span.giay{
+  font-size:12px;
+  line-height:30px;
+  background:#00ACED;
+  color:#fff;
+}
+#countdown span:last-child{
+
+}
+#countdown span label{
+  display:block;
+  width:100%;
+  color:#000;
+  font:400 11px arial;
+}
+#countdown span.giay label{
+  color:#fff;
+}
+.block_search{
+  background:#333333;
+  border-bottom:1px solid #171717;
+  padding:7px 10px;
+}
+.block_search .ui-corner-all{
+  border-radius:0;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0);
+  background:#555555;
+  border:none;
+}
+.block_search .input_search{
+  background:#555!important;
+  padding:0.2em 0;
+  color:#aeaeae;
+  width:190px!important;
+  padding:0.5em 0px 0.5em 0.5em!important;
+  font-size:12px;
+  height:18px;
+  float:left;
+  border-radius:0!important;
+  border:none;
+}
+.block_search a.btn_search{
+  display:block;
+  float:left;
+  width:22px;
+  height:21px;
+  padding:4px 0 5px 0;
+  background:#555;
+}
+.block_search .btn_search{
+  width:23px;
+  height:30px;
+  border:none;
+  background-position:-602px -5px;
+  background-color:#555555;
+  margin:0;
+  border-radius:0!important;
+}
+.list_item_panel{
+  width:100%;
+  float:left;
+}
+.list_item_panel li{
+  float:left;
+  width:100%;
+}
+.list_item_panel li img{
+  float:left;
+}
+ .list_item_panel li a{
+  display:block;
+  width:100%;
+  float:left;
+  color:#fff!important;
+  font:700 16px/40px arial;
+  background:#555555;
+  border-bottom:1px solid #484848;
+}
+.list_item_panel li.active a{
+  background:#333333 url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_arrow_active_20x41.gif) no-repeat right top;
+  border-left:5px solid #9f224e;
+  width:235px;
+
+}
+.list_item_panel li.end a{
+  border:none;
+}
+.ui-body-a .list_item_panel li a.ui-link{
+  color:#fff;
+}
+.list_item_panel li a.bg_666{
+  background:#666666;
+}
+.coppy_right_left{
+  background:#333333 url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/icon_arrow.gif) no-repeat 15px 0;
+  padding:20px 5px 50px 15px;
+  float:left;
+  width:220px;
+  font:400 14px arial;
+  color:#666666;
+}
+.coppy_right_left p{
+  padding-bottom:0.5em;
+}
+.coppy_right_left .txt_lienhe,
+.coppy_right_left .txt_lienhe a{
+  color:#fff!important;
+}
+.block_close_menu{
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index:99;
+  left:0;
+  top:0;
+  display:none;
+}
+#box_col_left.block_more_info {
+position:absolute;
+top:0px;
+left:-240px;
+width:240px;
+height:100%;
+z-index:999;
+
+}
+.btn_control_col_left{
+  border-right:1px solid #e6e6e6;
+  height:44px;
+  cursor: pointer;
+    display: block;
+    position: absolute;
+    right: -45px;
+    top: 0;
+}
+.block_scoll_menu{
+  width:100%;
+  float:left;
+}
+#page.hidden{
+  overflow:hidden;
+}
+.icon_menu_phone{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_menu.png) no-repeat;
+  display:inline-block;
+  float:left;
+  width:24px;
+  height:24px;
+  margin:9px 10px 0 10px;
+}
+.list_item_panel li.active .icon_menu_phone{
+    margin:9px 10px 0 5px;
+}
+.ico_menu_01{
+  background-position:5px -8px;
+}
+.ico_menu_02{
+  background-position:-20px -8px;
+}
+.ico_menu_03{
+  background-position:-44px -8px;
+}
+.ico_menu_04{
+  background-position:-70px -8px;
+}
+.ico_menu_05{
+  background-position:-103px -8px;
+}
+.ico_menu_06{
+  background-position:-132px -8px;
+}
+.ico_menu_07{
+  background-position:-157px -8px;
+}
+.ico_menu_08{
+  background-position:-181px -8px;
+}
+.ico_menu_09{
+  background-position:-208px -8px;
+}
+.ico_menu_10{
+  background-position:-233px -8px;
+}
+.ico_menu_11{
+  background-position:-260px -8px;
+}
+.ico_menu_12{
+  background-position:-285px -8px;
+}
+.ico_menu_13{
+  background-position:-310px -8px;
+}
+.ico_menu_14{
+  background-position:-337px -8px;
+}
+.ico_menu_15{
+  background-position:-366px -8px;
+}
+.ico_menu_16{
+  background-position:-394px -8px;
+}
+.ico_menu_17{
+  background-position:-423px -8px;
+}
+.ico_menu_18{
+  background-position:-452px -8px;
+}
+.ico_menu_19{
+  background-position:-485px -8px;
+}
+.ico_menu_20{
+  background-position:-510px -8px;
+}
+.ico_menu_21{
+  background-position:-536px -8px;
+}
+.ico_menu_22{
+  background-position:-561px -8px;
+}
+.ico_menu_23{
+  background-position:-629px -8px;
+}
+.ico_menu_24{
+  background-position:-673px -8px;
+}
+.ico_menu_25{
+  background-position:-719px -8px;
+}
+
+.ico_menu_26{
+  background-position:-766px -8px;
+}
+.ico_menu_27{
+  background-position:-810px -8px;
+}
+.ico_menu_28{
+  background-position:-853px -8px;
+}
+.ico_menu_29{
+  background-position:-895px -8px;
+}
+.ico_menu_30{
+  background-position:-939px -8px;
+}
+.ico_menu_31{
+  background-position:-980px -8px;
+}
+.ico_menu_32{
+  background-position:-1024px -8px;
+}
+.ico_menu_33{
+  background-position:-1064px -8px;
+}
+.ico_menu_34{
+  background-position:-1087px -8px;
+}
+.ico_menu_35{
+  background-position:-1105px -8px;
+}
+.ico_menu_36{
+  background-position:-1151px -8px;
+}
+.ico_menu_37{
+  background-position:-1205px -8px;
+}
+.ico_menu_38{
+  background-position:-1269px -8px;
+}
+.ico_menu_39{
+  background-position:-1335px -8px;
+}
+.ico_menu_40{
+  background-position:-1394px -8px;
+}
+.ico_menu_41{
+  background-position:-1437px -8px;
+}
+
+
+#wraper_header_device{
+    width:100%;
+    float:left;
+    background:#F4F4F4;
+    border-bottom:1px solid #ccc;
+    margin:0 0 10px;
+  }
+  .breakumb_timer {
+    margin:0 0 10px 0;
+  }
+  .breakumb_timer .timer_header ul li{
+    height:34px;
+    float:left;
+  }
+  .breakumb_timer .timer_header ul li a{
+    height:34px;
+    float:left;
+    display:block;
+    font:700 14px/34px arial;
+    padding:0 0 0 5px;
+    background:#eceeed;
+  }
+  .breakumb_timer .timer_header ul li.start a {
+    border-left: 2px solid #00aced;
+    color:#00aced;
+  }
+  .breakumb_timer .timer_header ul li .arrow_breakumb{
+    display:block;
+    float:left;
+    height:34px;
+    width:20px;
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_arow_breakumb_mobile.gif) 0 -68px no-repeat;
+  }
+  .breakumb_timer .timer_header ul li.have_cap2 a{
+    background:#eceeed;
+  }
+  .breakumb_timer .timer_header ul li.have_cap2 .arrow_breakumb{
+    background-position:0 0;
+  }
+  .breakumb_timer .timer_header ul li.cap2 a{
+    background:#c2c4c5;
+  }
+  .breakumb_timer .timer_header ul li.cap2 .arrow_breakumb{
+    background-position:0 -34px;
+
+  }
+/* Cái này nếu thấy cần thiết anh Nguyển bỏ vào gerneral nhé (vì em thấy hay sử dụng)*/
+.text_999{
+  color:#999 !important;
+}
+.text_right{
+  text-align: right !important;
+}
+.text_left{
+  text-align: left !important;
+}
+.text_center{
+  text-align: center !important;
+}
+/*Load file icon_sprite (em thấy đỡ phải gõ lại dòng này nhiều lần)*/
+.ico{
+  background: url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_sprite.png) no-repeat;
+}
+/* List-32Doi */
+.list_32_team .title,.list_score .title{
+  font: 400 20px Arial;
+}
+
+.list_32_team .list_team{
+  border-bottom: 1px dotted #ccc;
+  width: 100%;
+  float: left;
+  margin-top: 5px;
+  padding: 10px 0;
+}
+
+.list_32_team .list_team.last{
+border-bottom: none;
+}
+
+.list_32_team .list_team li{
+  float:left;
+  margin-right: 3.636%;
+  width:20.303%;
+}
+
+.list_32_team .list_team li img{
+  float: left;
+  width: 100%;
+}
+
+.list_32_team .list_team li .label{
+  font:400 14px Arial;
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+}
+
+.list_32_team .list_team li.first{
+  text-align: center;
+  width:7.5757%;
+  color:#999;
+  font:400 24px Arial;
+  margin-right: 0;
+}
+
+.list_32_team .list_team li.first span{
+  margin: 30px 0 0 0;
+  float: left;
+  width: 100%;
+}
+
+.list_32_team .list_team li.last{
+  margin-right: 0;
+}
+
+/* Box dự đoán kết quả đá banh */
+.category_guess_score .content_box_category{
+  margin-top:1px;
+}
+
+.category_guess_score .tab_items{
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  float: left;
+}
+.category_guess_score .tab_items li{
+  float: left;
+}
+.category_guess_score .tab_items a{
+  color:#999;
+  padding: 5px 15px;
+  float: left;
+}
+
+.category_guess_score .tab_items a.active{
+  background: #ccc;
+  color: #333;
+  font-weight: bold;
+}
+.category_guess_score .date{
+  padding: 10px 0;
+  width: 100%;
+  float: left;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 1px dotted #ccc;
+}
+.category_guess_score table{
+  width: 100%;
+  float: left;
+}
+.category_guess_score table td{
+  padding: 3px 0;
+  vertical-align:top;
+}
+.category_guess_score table .txt_view_more{
+  margin:9px 0 0 0;
+}
+.category_guess_score table .minutes,
+.category_guess_score table thead{
+  text-align: center;
+  color: #9f224e;
+}
+.category_guess_score table .main_team,.category_guess_score table .sub_team{
+  width: 39%;
+  text-align:center;
+}
+.category_guess_score table .score{
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  width: 22%;
+  max-width: 66px;
+}
+.category_guess_score table .score button{
+  background: #328005;
+  color: #fff;
+  border:none;
+  width: 66px;
+  padding: 5px 0;
+  cursor:pointer;
+}
+.category_guess_score table .score span.box{
+border:1px solid #ccc;
+width: 20px;
+float: left;
+text-align: center;
+overflow: hidden;
+}
+.category_guess_score table .score span.box input{
+  font-size: 14px;
+  width:20px;
+  text-align:center;
+}
+.category_guess_score table .score span.no-border{
+  border:1px solid #fff;
+}
+
+.category_guess_score table .main_team img{
+  margin-left: 5px;
+}
+.category_guess_score table .sub_team img{
+  margin-right: 5px;
+}
+.category_guess_score table .sub_team a,
+.category_guess_score table .main_team a{
+  font-size:14px;
+}
+.category_guess_score .sub_team .txt_view_more a{
+  font-size:11px;
+}
+.category_guess_score table .line td{
+  border-top: 1px dotted #ccc;
+}
+/*Tab vua phá lưới*/
+.category_guess_score .king_goal{
+  padding: 30px 0 55px 0;
+  background: #f4f4f4;
+  text-align: center;
+}
+.category_guess_score .king_goal .text_center{
+  font-size: 14px;
+}
+.category_guess_score .king_goal select{
+  display: block;
+  width: 93.3333%;
+  margin: 5px 3.3333%;
+  padding: 3px 5px 2px 5px;
+  border:1px solid #ddd;
+  color: #999;
+  font-size: 14px;
+  float: left;
+}
+.category_guess_score .king_goal .btn_submit_k_g{
+  margin-top: 5px;
+  width: 95px;
+  height: 25px;
+  color: #fff;
+  background: #328005;
+  font-size: 14px;
+  cursor: pointer;
+}
+/* Box danh sách trúng thưởng */
+.category_list_prize .content_box_category{
+  margin-top: 0;
+}
+.category_list_prize .date{
+  padding: 10px 10px 5px 0px;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 5px;
+  background-position: 10px 8px;
+  font-weight: bold;
+}
+.category_list_prize .date i.ico{
+  width: 16px;
+  height: 16px;
+  float: left;
+  background-position: 0 0;
+  margin: -2px 5px 0px 10px;
+}
+.category_list_prize table{
+  width: 100%;
+  float: left;
+}
+.category_list_prize table td.stt{
+  padding-left:10px;
+}
+.category_list_prize table td .center_block{
+  display: block;
+  color: #999;
+  padding:3px 0 0 0;
+  font:700 11px arial;
+}
+.category_list_prize table td{
+  vertical-align: text-top;
+}
+.category_list_prize table .score{
+  color: #999;
+  font-size:11px;
+}
+.category_list_prize table .score span{
+  color:#333;
+  font-size:12px;
+}
+
+
+/* Box vua phá lưới */
+.category_goal_king table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.category_goal_king table .team img{
+  float: left;
+}
+.category_goal_king table th{
+  padding-bottom: 5px;
+}
+.category_goal_king table td{
+  border-top:1px dotted #e2e2e3;
+  padding: 5px 0;
+}
+
+/*==========================================Bang Diem===============================*/
+.list_score .title{
+  margin-bottom: 15px;
+}
+.list_score table{
+  text-align: center;
+  font: 400 14px Arial;
+  margin-bottom: 20px;
+}
+.list_score table{
+  text-align: center;
+  border-spacing:0;
+}
+.list_score table td{
+  vertical-align: middle;
+}
+.list_score table td{
+  border-top: 1px dotted #ccc;
+}
+.list_score table .first td{
+  border:none;
+}
+.list_score table th{
+  background: #f4f4f4;
+  font-weight: 400;
+}
+.list_score table .score{
+  font-weight:700;
+}
+.list_score table th span{
+  display: block;
+  margin: 10px 0;
+}
+.list_score table span{
+  display: block;
+}
+.list_score table .result span,.list_score table .count span{
+width: 33.333%;
+float: left;
+}
+.list_score table th.math span,.list_score table th.result .last{
+  background: url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/bg_table_split.png) center right repeat-y;
+}
+.list_score table th.score span{
+  background: url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/bg_table_split.png) center left repeat-y;
+}
+*+html .list_score table .result span,.list_score table .count span{
+width: 33%;
+margin: 0;
+padding: 10px 0
+}
+.list_score table th.team{
+  background-color: #00aced;
+  border-right: 1px solid #f4f4f4;
+  font-weight: bold;
+  padding-left: 10px;
+  color:#fff;
+}
+.list_score table .team{
+  text-align: left;
+}
+.list_score table td span{
+  padding: 10px 0;
+}
+.list_score table td.team{
+  padding-left: 10px;
+}
+.list_score table .team img{
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* ===========================================Trang Dự đoán============================ */
+/* Page_dudoan */
+.page_guess{
+  font-size: 14px;
+}
+.page_guess .title{
+  font:400 18px Arial;
+  margin-bottom: 10px;
+}
+.page_guess p.br{
+  margin-bottom: 20px;
+}
+.page_guess p.green{
+  color: #328005;
+}
+.page_guess .box_guess{
+  margin-bottom: 30px;
+}
+.page_guess .box_guess .title_box{
+  text-transform: capitalize;
+  float: left;
+  padding: 10px 20px 5px 20px;
+  background: #00ACED;
+  font-weight: bold;
+  text-align: center;
+  color:#fff;
+}
+.page_guess .box_guess .content{
+  padding: 15px 0 10px;
+  border-top: 1px solid #eee;
+}
+.page_guess .box_guess .content p{
+  padding:0 0 10px 0;
+}
+.page_guess .box_guess .action{
+  background: #f5f5f5;
+  padding: 10px 0;
+}
+.page_guess .box_guess select{
+  padding: 3px 3px 3px 10px;
+  border:1px solid #eee;
+  float: left;
+  margin:0 0 5px 10px;
+  width: 350px;
+}
+.page_guess .box_guess.player select{
+  width: 170px;
+}
+.page_guess .box_guess .btn{
+  width: 95px;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  text-align: center;
+  background: #328005;
+  float: left;
+  margin-left: 10px;
+}
+/* Category bảng điểm */
+.category_list_score .tab{
+  float:left;
+  width: 100%;
+}
+.category_list_score .tab_bangdien li{
+  float:left;
+  margin: 0 8px 0 0;
+}
+.category_list_score .tab_bangdien li.last{
+  margin-right: 0;
+}
+.category_list_score .tab_bangdien a{
+  height: 25px;
+  width: 30px;
+  line-height: 25px;
+  text-align: center;
+  float: left;
+  background: #f3f3f3;
+  font-weight:700;
+  color:#999;
+}
+.category_list_score .tab_bangdien a.active{
+  background: #dedede;
+  color:#333;
+}
+
+.category_list_score table{
+  text-align: right;
+  margin-top: 5px;
+  border-collapse: collapse;
+}
+.category_list_score table th{
+  padding: 8px 0;
+  border-bottom: 1px dotted #ccc;
+}
+.category_list_score table td{
+  padding: 8px 0 0 5px;
+}
+.category_list_score table .team{
+  text-align: left;
+}
+.category_list_score table .team img{
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.category_list_score .view_more{
+  border-top: 1px dotted #ccc;
+  padding: 5px 0;
+  margin-top: 5px;
+}
+/*======================================Page-schedule====================================*/
+/* Class chung sử dụng sau này */
+.txt_icon_arrow_up{
+  color: #328005;
+  font-size: 12px;
+}
+.txt_icon_arrow_up i{
+  width: 5px;
+  height: 5px;
+  background-position: -25px 0;
+  display: inline-block;
+  margin-left: 5px;
+}
+/* end */
+.page_schedule table{
+  font-size: 14px;
+  border-collapse: collapse;
+}
+.page_schedule table td{
+  padding: 5px 0;
+}
+.page_schedule table .small td{
+  padding: 5px 0 !important;
+  border-bottom: none !important;
+}
+.page_schedule table .small .border-top{
+  border-top: 1px dotted #ccc;
+  margin-top: 10px;
+}
+.page_schedule table .large .border-top{
+  border-top: 1px dotted #ccc;
+  margin-top: 10px;
+}
+.page_schedule table .now td{
+  padding: 10px 0;
+}
+.page_schedule table caption{
+  background: #f4f4f4;
+  font:700 12px Arial;
+  text-align: left;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+.page_schedule .sub_guess > .ico{
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-position: -175px 0;
+  margin-left: 10px;
+}
+.page_schedule table caption span{
+  font: 400 12px Arial;
+  color: #328005;
+}
+.page_schedule table .time{
+  width: 5%;
+  padding-left: 30px;
+  color: #9f224e;
+}
+.page_schedule table .group{
+  width: 10%;
+  font-weight: bold;
+}
+.page_schedule table .main_team{
+  width: 25%;
+  text-align: right;
+  font-weight: bold;
+}
+.page_schedule table .sub_team{
+  font-weight: bold;
+  width: 45%;
+}
+.page_schedule table .main_team img{
+  margin:0 25px 0 10px;
+  vertical-align: middle;
+}
+.page_schedule table .sub_team img{
+  margin:0 10px 0 25px;
+  vertical-align: middle;
+}
+.page_schedule table .score{
+  text-align: center;
+  font-weight: bold;
+}
+.page_schedule table .goal td{
+  border-top: 1px dotted #ccc;
+}
+.page_schedule table .goal,.page_schedule table .ticket{
+  background: #f4f4f4;
+  font-size: 12px;
+}
+.page_schedule table .goal img,.page_schedule table .ticket img{
+  vertical-align: bottom;
+}
+.page_schedule table td.guess {
+  font-weight: bold;
+}
+.page_schedule table td.guess input{
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  text-align:center;
+}
+.page_schedule table td .btn{
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.page_schedule table td .btn.green{
+  color: #fff;
+  background-color: #328005;
+  display: inline-block;
+}
+.page_schedule table td .btn.gray{
+  background-color: #ccc;
+  font-size: 11px;
+  display: inline-block;
+  color: #333;
+  vertical-align: top;
+}
+.page_schedule table td .btn.gray i{
+  background-position: -50px 13px;
+  margin-left: 5px;
+  display: inline-block;
+  width:7px;
+}
+.page_schedule .sub_guess table .score input{
+width: 20px;
+height: 20px;
+border:1px solid #ccc;
+font-size: 14px;
+text-align:center;
+}
+.page_schedule .sub_guess table td{
+  color: #333 !important;
+  font:400 14px Arial !important;
+  border-bottom: 1px dotted #ccc;
+}
+.page_schedule .sub_guess table tr:last-child td{
+  border:none;
+}
+.page_schedule .sub_guess table .no_border td{
+  border-bottom: none;
+}
+.page_schedule .sub_guess table .collapse{
+  display: none;
+}
+.page_schedule #board.board .title{
+  font: 700 16px Arial;
+  margin:10px 0;
+}
+.page_schedule #board.board .body{
+  background: #dedede;
+}
+.page_schedule #board.board .vongloai_vongbang{
+  width: 660px;
+  margin: 0 auto;
+}
+/* ======================================Calendar cùi bắp ===================================*/
+.corn_calendar table{
+  border-collapse: collapse;
+}
+.corn_calendar table td{
+  cursor: pointer;
+  padding: 0;
+  width:30px;
+}
+.corn_calendar table td.active,
+.corn_calendar table td:hover{
+  background: #328005;
+}
+.corn_calendar table td.active span{
+  border-right:1px solid #328005;
+  border-left:none;
+  color: #fff;
+background: #328005;
+}
+.corn_calendar table td:hover span{
+  border-right:1px solid #328005;
+  border-left:none;
+  color: #fff;
+}
+.corn_calendar table td:hover span.match{
+  background: none;
+}
+.corn_calendar table span{
+  display: block;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+.corn_calendar table{
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+}
+.corn_calendar table .last span{
+  border-right: none;
+}
+.corn_calendar table .date{
+  font-size: 10px;
+  color: #328005;
+}
+.corn_calendar table .number{
+  color: #999;
+  font-size: 12px;
+}
+.corn_calendar table .match{
+  background: #dedede;
+  vertical-align: top;
+  padding-bottom: 5px;
+  margin-top: 4px;
+  height: 20px;
+  border:none;
+}
+.corn_calendar table .match.none{
+  background: #fff;
+}
+.corn_calendar table .match.one .ico{
+  width: 4px;
+  height: 4px;
+  background-position: 0px -35px;
+  display: inline-block;
+}
+.corn_calendar table .match.two .ico{
+  width: 12px;
+  height: 4px;
+  background-position: -25px -35px;
+  display: inline-block;
+}
+.corn_calendar table .match.three .ico{
+  width: 19px;
+  height: 4px;
+  background-position: -50px -35px;
+  display: inline-block;
+}
+.corn_calendar table .match.four .ico{
+  width: 12px;
+  height: 11px;
+  background-position: -75px -35px;
+  display: inline-block;
+  margin-top: 7px;
+}
+.corn_calendar table td.active .one .ico,
+.corn_calendar table td:hover .one .ico{
+  background-position: -100px -35px;
+}
+.corn_calendar table td.active .two .ico,
+.corn_calendar table td:hover .two .ico{
+  background-position: -125px -35px;
+}
+.corn_calendar table td.active .three .ico,
+.corn_calendar table td:hover .three .ico{
+  background-position: -150px -35px;
+}
+.corn_calendar table td.active .four .ico,
+.corn_calendar table td:hover .four .ico{
+  background-position: -175px -35px;
+}
+.corn_calendar table td.nomatch:hover{
+  background:none;
+}
+.corn_calendar table td.nomatch a:hover span{
+  color:#999!important;
+  border-right:1px solid #DEDEDE;
+
+}
+.corn_calendar table td.nomatch a span{
+  color:#999!important;
+}
+/* ======================================================Lịch thi đấu sơ đồ================================ */
+.vongloai_vongbang{
+  margin-bottom: 20px;
+}
+.vongloai_vongbang ul.tabs{
+  float: left;
+  width: 100%;
+  background: #f4f4f4;
+}
+.vongloai_vongbang ul.tabs li{
+  float:left;
+}
+.vongloai_vongbang ul.tabs li.last{
+  float: right;
+}
+.vongloai_vongbang ul.tabs li a{
+  padding: 8px 15px;
+  display: block;
+  font-size: 14px;
+  color: #999;
+}
+.vongloai_vongbang ul.tabs li a.active{
+  background:#95bb26;
+  color: #333;
+}
+.vongloai_vongbang #tab_vongloai{
+  background: #dedede;
+  padding: 20px 10px;
+}
+.vongloai_vongbang #tab_vongloai .width{
+  width: 85px;
+  float: left;
+  margin-right: 7px;
+  text-align: center;
+}
+.vongloai_vongbang #tab_vongloai .round_1_16{
+  width: 86px;
+}
+.vongloai_vongbang #tab_vongloai .round_1_16.right{
+  margin-right: 0;
+}
+.vongloai_vongbang #tab_vongloai .box{
+  margin-bottom: 5px;
+}
+.vongloai_vongbang #tab_vongloai .round{
+  font: 400 14px Arial;
+  position: relative;
+}
+.vongloai_vongbang #tab_vongloai .date{
+  font-size: 12px;
+  color: #999;
+}
+.vongloai_vongbang #tab_vongloai .box *{
+  background: #fff;
+  padding: 5px 0;
+}
+.vongloai_vongbang #tab_vongloai .title{
+  font:700 14px Arial;
+  margin-bottom: 5px;
+}
+.vongloai_vongbang #tab_vongloai .round_4{
+  margin-top: 25px;
+}
+.vongloai_vongbang #tab_vongloai .round_4 .date{
+  background: #dedede;
+  padding: 16px 0;
+  border-right: 5px solid #fff;
+}
+.vongloai_vongbang #tab_vongloai .round_4.right .date{
+  border-left: 5px solid #fff;
+  border-right: none;
+}
+.vongloai_vongbang #tab_vongloai .round_1_16 .group_top{
+  margin-bottom: 40px;
+}
+.vongloai_vongbang #tab_vongloai .round_4 .group_top{
+  margin-bottom: 110px;
+}
+.vongloai_vongbang #tab_vongloai .round_2{
+  margin-top: 60px;
+}
+.vongloai_vongbang #tab_vongloai .round_2 .date{
+  background: #dedede;
+}
+.vongloai_vongbang #tab_vongloai .round_2 .date.a{
+  padding-bottom: 135px;
+}
+.vongloai_vongbang #tab_vongloai .round_2 .date{
+  border-right: 5px solid #fff;
+}
+.vongloai_vongbang #tab_vongloai .round_2.right .date{
+  border-left: 5px solid #fff;
+  border-right: none;
+}
+.vongloai_vongbang #tab_vongloai .round_1{
+  margin-top: 90px;
+}
+.vongloai_vongbang #tab_vongloai .round_1 .date{
+  background: #dedede;
+  padding: 35px 0;
+  border-left:5px solid #fff;
+  border-right:5px solid #fff;
+}
+.vongloai_vongbang #tab_vongloai .round_1 .date.giai_3{
+  padding: 8px 0;
+}
+.vongloai_vongbang #tab_vongloai .round_1 .title.giai_3{
+  margin-top: 40px;
+}
+.vongloai_vongbang #tab_vongloai span.line{
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: #fff;
+  left: -10px;
+  padding: 0;
+  top: 10px;
+}
+.vongloai_vongbang #tab_vongloai span.line.right{
+  right: -10px;
+  left: auto;
+}
+/* javascript tab (Về sau cứ tab thì dùng chung cái này) */
+.tab_content .content{
+  display: none;
+}
+.tab_content .content.active{
+  display: block;
+}
+/* btn_collapse */
+.btn_collpase{
+  font-size: 12px !important;
+  color: #666;
+}
+.btn_collapse i{
+width: 12px;
+height: 8px;
+display: inline-block;
+margin-left: 5px;
+background-position: -75px 0;
+}
+
+/* =============================================================Page_trandau======================================= */
+/* Progress_bar (Co the su dung sau nay) */
+.progress_bar_style_1{
+  width: 100%;
+  height: 10px;
+  background: #dedede;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  position: relative;
+}
+.progress_bar_style_1 span{
+  position: absolute;
+  height: 10px;
+  left: 0;
+  top: 0;
+  border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  background: #58a12b;
+}
+/* end */
+
+.page_trandau table{
+  border-collapse: collapse;
+  width:100%;
+}
+.page_trandau table img{
+  vertical-align: middle;
+}
+.page_trandau .tbl_main .time{
+  text-align: center;
+}
+.page_trandau .tbl_main thead .time{
+  color: #9f224e;
+  font: 400 14px Arial;
+}
+.page_trandau .tbl_main thead .team{
+  font:400 24px Arial;
+}
+.page_trandau .tbl_main thead .score{
+  font: 700 30px Arial;
+}
+.page_trandau .tbl_main .team.a{
+  text-align: right;
+  width: 40.151%;
+}
+.page_trandau .tbl_main .team.b{
+  width: 40.151%;
+}
+.page_trandau .tbl_main thead .team.a img{
+  margin: 0 55px 0 10px;
+}
+.page_trandau .tbl_main thead .team.b img{
+  margin: 0 10px 0 55px;
+}
+.page_trandau .tbl_main thead .last td{
+  padding:10px 0;
+}
+.page_trandau .tbl_main .score{
+  text-align: center;
+}
+.page_trandau .tbl_main tbody td{
+  background: #f5f5f5;
+  padding: 5px 0;
+}
+.page_trandau .tbl_main tbody .first td{
+  padding-top: 10px;
+  border-top: 1px dotted #ccc;
+}
+.page_trandau .tbl_main tbody .last td{
+  padding-bottom: 10px;
+}
+.page_trandau .tbl_main tbody .time span{
+  border-left: 1px dotted #ccc;
+  border-right: 1px dotted #ccc;
+  padding: 0px 10px;
+}
+.page_trandau .tbl_main tfoot td{
+  text-align: center;
+}
+.page_trandau .tbl_main tfoot .btn_guess{
+  width: 95px;
+  text-align: center;
+  height: 25px;
+  background: #328005;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 14px;
+}
+/* =====================Tab============================== */
+.page_trandau .col{
+  width: 50%;
+  float: left;
+}
+.page_trandau .col .team{
+  width: 35%;
+}
+.page_trandau .col .team_name{
+  font: 400 18px Arial;
+  margin: 30px 0 0 0;
+}
+.page_trandau .col.b .team_name{
+  text-align: right;
+}
+.page_trandau .col .result img{
+  margin: 20px 10px 20px 0;
+  float: left;
+}
+.page_trandau .col.b .result img{
+  float: right;
+  margin: 20px 0 20px 10px ;
+}
+.page_trandau .col table{
+  border-collapse: collapse;
+}
+.page_trandau .col table td{
+  padding: 5px 0;
+}
+.page_trandau .col table .date{
+  color: #999;
+  text-align: right;
+  font-size:11px;
+}
+.page_trandau .col table .team.a{
+  text-align: right;
+}
+.page_trandau .col table .team img{
+  float: right;
+  margin: 0 10px;
+}
+.page_trandau .col table .team.b img{
+  float: left;
+}
+.page_trandau .col table .score{
+  font-weight: bold;
+  text-align: center;
+}
+.page_trandau .info{
+  float: right;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-top: 1px dotted #ccc;
+}
+.page_trandau .info img{
+  vertical-align: middle;
+  margin: 0 5px 0 10px;
+}
+.page_trandau .box .title{
+  font:700 14px Arial;
+  background: #00aced;
+  padding: 10px 20px 5px;
+  float: left;
+  color:#fff;
+}
+.page_trandau .box .body{
+  width: 100%;
+  float: left;
+  border-top: 1px solid #eee;
+}
+.page_trandau .box table td{
+  padding: 10px 0;
+  font-size: 14px;
+}
+.page_trandau .box table .result{
+  font-size: 12px;
+  width: 75px;
+}
+.page_trandau .box table .number{
+  font-weight: bold;
+}
+.page_trandau .box table .number.a .progress_bar_style_2{
+  float: right;
+}
+.page_trandau .box table .progress_bar_style_2{
+  max-width: 150px;
+  margin: 0 10px;
+  float: left;
+  margin-top: 5px;
+}
+/* Progress_bar (Co the su dung sau nay) */
+.progress_bar_style_2{
+  width: 100%;
+  height: 7px;
+  background: #f5f5f5;
+  position: relative;
+}
+.progress_bar_style_2 span{
+  position: absolute;
+  height: 7px;
+  left: 0;
+  top: 0;
+  background: #95bb26;
+}
+.progress_bar_style_2 span.reverse{
+  left: auto;
+  right: 0;
+}
+/* end */
+
+.page_trandau .doihinh .team{
+  width: 34.545%;
+  float: left;
+  margin: 30px 0 0 40px;
+}
+.page_trandau .doihinh .team.b{
+  float: right;
+  margin-right: 40px;
+}
+.page_trandau .doihinh .team .name{
+  font:400 18px Arial;
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+.page_trandau .doihinh .team .sub_title{
+  font:700 14px Arial;
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+.page_trandau .doihinh .team .info_player{
+  margin-top: 5px;
+}
+.page_trandau .doihinh .team .info_player ul{
+  padding: 15px;
+  width: auto;
+  border-top: 1px dotted #ccc;
+}
+.page_trandau .doihinh .team .info_player ul li{
+  width: 50%;
+  float: left;
+  padding: 5px 0;
+}
+
+.page_trandau .dudoan{
+  margin-top: 30px;
+}
+.page_trandau .dudoan .team{
+  font-size: 18px;
+  width: 40.151%;
+}
+.page_trandau .dudoan .team.a{
+  text-align: right;
+}
+.page_trandau .dudoan .team.a img{
+  margin: 0 20px 0 5px;
+}
+.page_trandau .dudoan .team.b img{
+  margin: 0 5px 0 20px;
+}
+.page_trandau .dudoan td.guess input{
+  width: 30px;
+  border: 1px solid #ccc;
+  height: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+.page_trandau .dudoan td.guess span{
+  padding: 0 5px;
+}
+.page_trandau .dudoan .btn_send{
+  width: 90px;
+  text-align: center;
+  color: #fff;
+  background: #328005;
+  font-size: 14px;
+  padding:5px 0;
+}
+
+.page_trandau .total_source_guess{
+  border-top: 1px dotted #ccc;
+  padding-top: 20px;
+  font-size: 14px;
+}
+.page_trandau .total_source_guess .team_score,.page_trandau .total_source_guess .score{
+  width:28.030%;
+}
+.page_trandau .total_source_guess td{
+  padding: 5px 10px;
+}
+.page_trandau .total_source_guess td.score{
+  font-weight:700;
+}
+
+/* Progress_bar (Co the su dung sau nay) */
+.progress_bar_style_3{
+  width: 100%;
+  height: 20px;
+  background: #f5f5f5;
+  position: relative;
+}
+.progress_bar_style_3 span{
+  position: absolute;
+  height: 20px;
+  left: 0;
+  top: 0;
+  background: #95bb26;
+  color:#666;
+  text-align: center;
+  line-height: 20px;
+}
+/* end */
+/* ===========================================Chi tiet doi bong _ ket qua ===================================== */
+.page_result_detail_team > .title{
+  color: #328005;
+  font-size: 30px;
+}
+.page_result_detail_team .title img{
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+}
+.page_result_detail_team .style_2 .time{
+  color: #333;
+  padding-left: 20px;
+}
+.page_result_detail_team .style_2 table td{
+  font-weight: 100;
+}
+.page_result_detail_team .style_2 table .live a{
+  color: #328005;
+}
+.page_result_detail_team .style_2 table .score{
+  font-weight: bold;
+}
+.page_result_detail_team .style_2 table .during td{
+  padding: 5px 0;
+  font-size: 12px;
+  background:#f4f4f4;
+}
+.page_result_detail_team .style_2 table .during.line td{
+  border-top: 1px dotted #ccc;
+}
+.page_result_detail_team .style_2 table .during .main_team img{
+  margin-left: 5px;
+}
+.page_result_detail_team .style_2 table .during .sub_team img{
+  margin-right: 5px;
+}
+
+.page_result_detail_team .box.phongdo{
+  margin-top: 25px;
+}
+.page_result_detail_team .box.phongdo ul li{
+  width: 50%;
+  float: left;
+}
+.page_result_detail_team .box.phongdo .circle{
+  margin: 20px 0 ;
+}
+.page_result_detail_team .box.phongdo .circle img{
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.page_result_detail_team .box.phongdo .circle.right img{
+  margin-left: 10px;
+}
+.page_result_detail_team .box.phongdo ul{
+  background:none;
+}
+.page_result_detail_team .box.phongdo ul li{
+  padding: 5px 0;
+}
+.page_result_detail_team .box.phongdo ul span{
+  float: left;
+}
+.page_result_detail_team .box.phongdo ul img{
+  margin: 0 10px;
+  display: inline-block;
+}
+.page_result_detail_team .box.phongdo ul li .date{
+  color: #999;
+  min-width: 65px;
+}
+.page_result_detail_team .box.phongdo ul li .score{
+  font-weight: bold;
+}
+
+.page_result_detail_team .into_worldcup table{
+  margin-top: 10px;
+}
+.page_result_detail_team .into_worldcup table .result{
+  width: auto !important;
+}
+.page_result_detail_team .into_worldcup table span{
+  padding: 0;
+}
+
+
+/* Detail_player */
+.page_detail_player .detail_player,.page_detail_player .assessment_player{
+  margin-bottom: 20px;
+}
+.detail_player .wrap_player{
+  margin-top: 10px;
+}
+.detail_player .wrap_player img{
+  float: left;
+  margin-right: 10px;
+}
+.detail_player .info_player > .name{
+  font: 700 24px/17px Arial;
+  color: #58a12b;
+  margin-bottom: 15px;
+}
+.detail_player .info_player table td{
+  padding:2px 0;
+  font-size: 12px;
+}
+.detail_player .info_player table td.label{
+  font-weight: bold;
+  width:30%;
+}
+
+/* assessment_player */
+.assessment_player ul{
+  margin-top: 10px;
+}
+.assessment_player ul li{
+  padding: 5px 0;
+  width: 33.333%;
+  float: left;
+  font: 700 14px Arial;
+}
+.assessment_player ul li .label{
+  font-size: 12px;
+  color: #666;
+  font-weight: 100;
+}
+.assessment_player ul li .progress_bar_style_2{
+  max-width: 150px;
+  float: left;
+  margin: 5px 10px 0 0;
+}
+
+/* related_news_t */
+.related_news_t .wrap{
+  margin-top: 10px;
+}
+.related_news_t .wrap .thumb{
+  width: 45.454%;
+  float: left;
+  margin-right: 1.515%;
+}
+.related_news_t .wrap .thumb img.big_thumb{
+  float: left;
+  width: 100%;
+}
+.related_news_t .wrap .thumb .title_thumb{
+  font: 700 16px/20px Arial;
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+  padding:0 0 5px 0;
+}
+.related_news_t .wrap .thumb .title_thumb a{
+  font: 700 16px/20px Arial;
+}
+.related_news_t .wrap .thumb img{
+
+}
+.related_news_t .wrap .related{
+  width: 53.030%;
+  float: right;
+}
+.related_news_t .wrap .related li{
+  padding: 10px 0;
+  border-bottom: 1px dotted #ccc;
+}
+.related_news_t .wrap .related li.first{
+  padding-top: 0;
+}
+.related_news_t .wrap .related .title_sub{
+  font: 700 14px/14px Arial;
+  margin-bottom: 5px;
+}
+
+
+/* Chi tiet doi bong */
+.slider_top_team{
+  padding: 0 15px;
+  margin: 0 0 20px;
+  position: relative;
+}
+.slider_top_team .content_slider_top_team{
+  overflow: hidden;
+  width: 100%;
+}
+.slider_top_team .btn_control_top_team .ico{
+  width: 7px;
+  height: 12px;
+  position: absolute;
+  top:50%;
+  margin-top: -6px;
+}
+.slider_top_team .btn_control_top_team.next_slider .ico{
+  background-position: -125px 0;
+  display: inline-block;
+  right: 0;
+}
+.slider_top_team .btn_control_top_team.prev_slider .ico{
+  background-position: -100px 0;
+  display: inline-block;
+  left: 0;
+}
+.slider_top_team .board{
+  width: 97%;
+  float: left;
+  padding:0 1.5%;
+}
+.slider_top_team .board .date,.slider_top_team .board .some_more{
+  height: 29px;
+  width:100%;
+  float: left;
+  background: #f5f5f5;
+  border-bottom: 1px solid #dedede;
+  font:400 11px/1.4 Arial;
+}
+.slider_top_team .board .date .week{
+  float: left;
+  margin: 10px 0 0 10px;
+  font-weight: bold;
+}
+.slider_top_team .board .date .time{
+  float: right;
+  margin: 10px 10px 0 0 ;
+  color: #666;
+}
+.slider_top_team .board table{
+  border-collapse: collapse;
+  width: 100%;
+  float: left;
+}
+.slider_top_team .board table td{
+  background: #f5f5f5;
+  border-top:1px solid #fff;
+  border-bottom:1px solid #dedede;
+  padding: 7px 0;
+  text-align: center;
+  font-weight: bold;
+}
+.slider_top_team .board table td span{
+  display: block;
+}
+.slider_top_team .board table td small{
+  display: block;
+  color: #666;
+  font-weight: 100;
+}
+.slider_top_team .board table td strong{
+  font: 700 24px Arial;
+}
+.slider_top_team .board .some_more{
+  text-align: center;
+  line-height: 29px;
+  border-bottom: none;
+  border-top: 1px solid #fff;
+}
+.slider_top_team .board .some_more a{
+  color: #666;
+}
+
+#tab_info .related_news_t .txt_view_more{
+  margin: 10px 0 0 0;
+}
+#tab_info .related_news_t ul{
+  background: none;
+}
+#tab_info .related_news_t ul a{
+  padding:0;
+  color:#333;
+}
+/* Lich su doi bong */
+.detail_player.team_history{
+  margin-top: 20px;
+}
+.detail_player.team_history img{
+  float: right;
+  margin: 0 0 0 10px;
+}
+.detail_player.team_history table .label{
+  padding:0 20px 0 10px;
+}
+.detail_player.team_history .txt_view_more{
+  margin-top: 10px;
+}
+
+/* Tab_history */
+#tab_history{
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+}
+#tab_history p{
+font-size: 14px;
+}
+#tab_history dd{
+  padding-left: 70px;
+}
+.xemtiep a{
+   display: block;
+    font: 400 14px arial;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+.detail_player .img_player{
+  float:right;
+  width:37%;
+}
+.detail_player .info_player{
+  width:60%;
+  float:left;
+}
+.detail_player .info_player p{
+  padding:0 0 5px 0;
+}
+.list_news_dot_3x3_300 li a {
+    color: #666666;
+    font: 700 12px/16px arial;
+}
+.txt_11{
+  font-size:11px;
+}
+.reply_name { color: #999999; font-style: italic; }
+.page_trandau .btn_vote{
+  width:35%;
+  margin:0;
+}
+.page_trandau .view_percent_vote{
+  width:26%;
+  float:left;
+  margin:0 2%;
+}
+.process_vote{
+  width:100%;
+  height:10px;
+  background:#dedede;
+  border-radius:5px;
+  float:left;
+  font-size:0;
+  line-height:0;
+  margin:5px 0 0 0;
+}
+.percen_vote{
+  height:10px;
+  background:#58a12b;
+  border-radius:5px;
+  float:left;
+  font-size:0;
+  line-height:0;
+}
+.block_thongtintrandau .vote_right{
+    float:right;
+}
+.block_vote_capdau{
+  padding:10px 0 0 0;
+}
+.tk_trandau .name_team_trandau {
+    float: left;
+    font: 400 18px arial;
+    width: 100%;
+  padding:0 0 10px;
+}
+.tk_trandau_right .name_team_trandau{
+  text-align:right;
+}
+.tk_trandau{
+    float:left;
+  width:48%;
+  margin:20px 0 10px 0;
+}
+.tk_trandau_rasan{
+    float:left;
+  padding:0 0 10px 0;
+  width:100%;
+}
+.tk_trandau .name_team_trandau p{
+  padding:0 0 0 10px;
+}
+.tk_trandau .name_team_trandau img{
+  width:16px;
+  margin:0 10px 0 0;
+}
+.tk_trandau .cauthu_dubi .name_team_trandau{
+  color:#666;
+}
+.tk_trandau_right{
+    float:right;
+}
+.tk_trandau .bg_top_table{
+    height:40px;
+    background:#EEEEEE;
+    font: 11px/40px arial;
+    margin-bottom:10px;
+}
+.tk_trandau .bg_top_table .w190,
+.tk_trandau .bg_top_table .w50{
+    line-height:40px;
+}
+.tk_trandau .bg_top_table .w70 b{
+    padding-left:10px;
+}
+.tk_trandau .w70{
+  float:left;
+  width:20%
+}
+.tk_trandau .w50{
+  float:left;
+  width:20%
+}
+.tk_trandau .w190{
+    float:left;
+  width:60%;
+}
+.tk_trandau .w50,
+.tk_trandau .w190{
+    line-height:21px;
+    color:#333333;
+}
+.item_cauthu{
+    margin-bottom:5px;
+}
+.item_cauthu .so_ao{
+    display:block;
+    width:21px;
+    height:21px;
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_thongke.gif) no-repeat -51px;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    font-family:"arial";
+    font-size:11px;
+    margin-left:10px;
+    line-height:21px;
+}
+
+.tk_trandau_right .so_ao{
+    background-position: -27px;
+}
+.item_cauthu .tree_vao_ra_san{
+    float:left;
+    width:13px;
+    height:13px;
+    background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_thongke.gif) no-repeat -180px top;
+    margin-left:18px;
+    margin-right:3px;
+}
+.cauthu_vaosan .so_ao{
+    float:left;
+    margin-left:3px;
+}
+.tk_trandau .w50{
+    text-align:center;
+}
+.doihinh_dubi .tk_cauthu_dubi{
+    padding-top:10px;
+}
+.doihinh_dubi .tk_cauthu_dubi .so_ao{
+    background-position: -2px;
+}
+.cauthu_rasan .so_ao{
+    background-position:-2px;
+}
+.doihinh_dubi{
+  background:#eee;
+  padding:10px 0;
+}
+.tk_trandau  .doihinh_dubi .name_team_trandau{
+  font:700 12px arial;
+  border-bottom:1px solid #DEDEDE;
+  text-align:left;
+}
+#print_page #detail_page_live.line_col, #print_page #detail_page.line_col{
+  background:none;
+}
+.embed-container, .embed-container.audio {
+  position: relative;
+  padding-bottom: 56.25%; /* 16/9 ratio */
+  height: 0;
+  overflow: hidden;
+ }
+ #box_details_news .embed-container,#box_details_news .embed-container.audio{
+  margin-bottom:10px;
+  }
+ .fck_detail .embed-container{
+   margin:0 0 1em 0;
+  }
+  .block_flash_video .embed-container
+ {
+     background:#000;
+ }
+ .embed-container.audio{
+    padding-bottom: 12.2%;
+ }
+ .embed-container iframe,
+ .embed-container object,
+ .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ }
+ /*****Danh gia*****/
+.block_survey_2_detail_right{
+    width:100%;
+    float:left;
+    border-top:1px solid #CCC;
+    margin:10px 0 20px 0;
+    display:inline;
+  background:#f5f5f5;
+  padding-bottom:10px;
+}
+.block_survey_2_detail_right h2{
+background:#eee;
+padding:5px 10px;
+color:#000;
+ font-weight:bold;
+ font-size: 14px;
+ text-align:left;
+ color:#9f224e;
+}
+.main_survey,.block_submit{
+  width:100%;
+  float:left
+}
+.block_survey_2_detail_right .item_survey{
+  width:100%;
+  float:left;
+    padding-bottom:5px;
+}
+#box_details_news .block_survey_2_detail_right .main_survey ul{list-style-type:none; margin:0;}
+#box_details_news .block_survey_2_detail_right .main_survey ul li{
+  width:100%;
+  float:left;
+  list-style-type:none;
+  margin:0;
+  border-bottom:1px solid #dadada;
+  padding:5px 0;
+  color:#666
+}
+#box_details_news .block_survey_2_detail_right .main_survey ul li:last-child{
+  border:none;
+  background:none;
+}
+#box_details_news .block_survey_2_detail_right .item_survey ul li .txt_survey_left{
+  float:left;
+  font:400 12px arial;
+  margin:0 0 0 10px;
+}
+
+#box_details_news .block_survey_2_detail_right .item_survey ul li .txt_survey_right{
+  float:right;
+  font:700 12px arial;
+  margin:0 10px 0 0;
+}
+#box_details_news .block_survey_2_detail_right .item_survey ul li label{ color:#9f224e;}
+
+#box_details_news .block_survey_2_detail_right .btn_danhgia{
+background: #858585;
+padding: 4px 6px;
+margin: 0 0 0 5px;
+font:700 11px/8px Arial;
+color: #fff;
+float:left;
+cursor:pointer;
+}
+/*rating light box*/
+.rating {
+  float:left;
+}
+.star {
+  float: left;
+  width: 34px;
+  height: 24px;
+  overflow: hidden;
+  text-indent: -999em;
+  cursor: pointer;
+}
+.star-left,
+.star-right {
+  width: 12px;
+}
+.star,
+.star a {background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/star.png) no-repeat 0 0px;}
+.star-left,
+.star-left a {background: url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/star-left.png) no-repeat 0 0px;}
+.star-right,
+.star-right a {background: url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/star-right.png) no-repeat 0 0px;}
+.star a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: 0 -23px;
+}
+div.rating div.on a {
+  background-position: 0 -23px;
+}
+div.rating div.hover a,
+div.rating div a:hover {
+  background-position: 0 0px;
+}
+#ratinglt{
+  width:100%;
+  position:relative;
+  background:#f4f4f4;
+  padding-bottom:20px;
+}
+.rating_bar{
+  padding:10px 10%;
+  background:#ededed;
+  font:400 14px/24px arial;
+}
+.input_comment .rating_bar{
+  padding:0 0 10px 0;
+  width:100%;
+  float:left;
+  background:none;
+}
+.block_one_start{
+  float:left;
+  margin:0 0 0 10px;
+}
+.txt_numbdanhgia{
+  margin:0 0 0 20px;
+}
+.rating_sercut{
+  padding:10px 10% 0;
+}
+#ratinglt .form_thamgia .btt-complete{
+  margin:20px 0 0 10px;
+}
+.txt_danhgiacuaban{
+  margin:0 10px 0 0;
+}
+/*rating*/
+/*rating*/
+#ratinglt_result{
+  width:100%;
+  background:#f4f4f4;
+  position:relative;
+}
+.title_result{
+  font:400 11px arial;
+  padding:10px 0;
+  color:#666;
+}
+.content_result_rating .title_result{
+  position:absolute;
+  bottom:-60px;
+}
+.block_result_rating{
+  padding:0 20px 50px 20px;
+}
+.content_result_rating{
+  position:relative;
+}
+.width_colrating{
+  position:relative;
+  height:100px;
+}
+.col_rating{
+  width:9%;
+  background:#ccc;
+  bottom:0;
+  position:absolute;
+}
+.block_result_rating .col1{
+  left:0;
+}
+.block_result_rating .col2{
+  left:10%;
+}
+.block_result_rating .col3{
+  left:20%;
+}
+.block_result_rating .col4{
+  left:30%;
+}
+.block_result_rating .col5{
+  left:40%;
+}
+.block_result_rating .col6{
+  left:50%;
+}
+.block_result_rating .col7{
+  left:60%;
+}
+.block_result_rating .col8{
+  left:70%;
+}
+.block_result_rating .col9{
+  left:80%;
+}
+.block_result_rating .col10{
+  left:90%;
+}
+.num_rating{
+  width:100%;
+  float:left;
+  padding:5px 0 0 0;
+  border-top:1px solid #e1e1e1;
+  margin:5px 0 0 0;
+}
+.num_rating li{
+  width:10%;
+  float:left;
+  text-align:center;
+}
+.title_thoitiet{
+  width:100%;
+  float:left;
+  height:37px;
+  background:#fff;
+}
+.txt_title_thoitiet{
+  font:700 16px/37px arial;
+  margin:0 0 0 20px;
+}
+.form_thamgia .input_capcha{
+  width:100px;
+}
+.form_thamgia .btn_refrest{
+    float:left;
+  margin:20px 10px 0 0;
+}
+.form_thamgia .capcha{
+  float:left;
+  margin:20px 10px 0 0;
+}
+.form_thamgia .capcha img{
+  max-width:none;
+}
+.form_thamgia .block_input_capcha{
+  float:left;
+  width:130px;
+}
+.form_thamgia  .txt_clear_all{
+  font:400 11px arial;
+  color:#666;
+  text-decoration:underline;
+  margin:0 0 0 20px;
+}
+#box_tinkhac .title_box_category{
+  margin:0;
+}
+#box_tinkhac .content_box_category .list_news_dot_3x3{
+  margin:0;
+  border:none;
+  padding:0;
+}
+#box_tinkhac .content_box_category .list_news_dot_3x3 a{
+  font:400 16px arial;
+  background-position: 0 6px;
+  color:#000;
+}
+#box_tinkhac .content_box_category .list_news_dot_3x3 span.txt_666{
+  font:400 14px arial;
+}
+#box_tinkhac_detail .title_box_category{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_2x2_xam.gif) repeat-x left 0px;
+}
+.block_tincheo{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px solid #e2e2e3;
+  padding-bottom:10px;
+}
+.block_tincheo .icon_responsive{
+  float:left;
+  margin:2px 5px 0 0;
+}
+.block_tincheo li{
+  width:100%;
+  float:left;
+  padding:0 0 5px 0;
+}
+.block_tincheo li a{
+  font-size:14px;
+}
+#box_tinlienquan .txt_main_category{
+  margin:0;
+}
+#box_tinlienquan .title_box_category{
+  margin-bottom:0px;
+}
+#box_tinlienquan .content_box_category .list_news_dot_3x3{
+  margin:0;
+  border:0;
+  padding:0 0 10px 0;
+}
+#box_tinlienquan .content_box_category .list_news_dot_3x3 li{
+  padding:0 0 0 10px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/dot_gray_3x3.gif) no-repeat left 6px;
+  margin:5px 0 0 0;
+}
+#box_details_news #box_tinlienquan .content_box_category .list_news_dot_3x3 a{
+  font:400 14px arial;
+  color:#000;
+  background-position:0 7px;
+  display:inline;
+}
+#box_details_news #box_tinlienquan .content_box_category .list_news_dot_3x3 span{
+  font:400 14px arial;
+}
+#box_details_news #box_tinlienquan .content_box_category .list_news_dot_3x3 span.txt_num_comment{
+  font:400 12px arial;
+}
+.style_02{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bgline_title_d6.gif) repeat-x  left 0px;
+  border:none;
+}
+.style_02 .txt_main_category a{
+  color:#000000;
+  padding:5px 0 0 0;
+  border-top:2px solid #328005
+}
+.ico_respone_06{
+  background-position:-154px 0;
+  width:16px;
+  height:16px;
+}
+
+.ico_respone_07{
+  background-position:-170px 0;
+  width:16px;
+  height:16px;
+}
+
+.ico_respone_08{
+  background-position:-186px 0;
+  width:16px;
+  height:16px;
+}
+.icon_wc{
+  display:inline-block;
+  width:15px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_wc.png) no-repeat 0 6px;
+  height:30px;
+}
+.list_menu_small{
+  width:100%;
+  float:left;
+  background:#f4f4f4;
+  margin:10px 0 0;
+  display:none;
+}
+.list_menu_small li{
+  width:44%;
+  margin:0 3%;
+  border-bottom:1px solid #d7d7d7;
+  float:left;
+}
+.list_menu_small li.end{
+  border:none;
+}
+.list_menu_small li a{
+  display:block;
+  width:100%;
+  float:left;
+  height:44px;
+  font:400 16px/44px arial;
+}
+.coppy_right_small{
+  font:400 12px arial;
+  color:#333333;
+  display:none;
+  padding:10px 0 0 0;
+}
+.tttoasoan{
+  width:100%;
+  float:left;
+}
+.width_50{
+  width:45%;
+  float:left;
+  margin:0 0 10px 10px;
+}
+.width_50 img{
+  margin:0 10px 0px 0;
+}
+.coppy_right{
+  width:100%;
+  float:left;
+  margin:10px 0 0 0;
+  padding:20px 0 0 0;
+  border-top:1px solid #d7d7d7;
+}
+.coppy_right p{
+  padding:0 0 0 10px;
+}
+.txt_num_comment{
+  color:#9f224e;
+  font:400 12px arial;
+  white-space:nowrap;
+}
+.txt_num_comment .total{
+  cursor:pointer;
+}
+.stick {
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+  width:980px;
+  background:#fff;
+  padding:10px 0 0 0;
+
+}
+*+html .stick{
+  position:static;
+}
+.txt_vne{
+  color:#9F224E;
+}
+.text_live .list_slide{
+  width:100%;
+  position:relative;
+}
+.block_inputconfirmcapcha{
+  width:100%;
+  padding:5px 0 0 0;
+  float:left;
+}
+.block_inputconfirmcapcha .txt-capcha {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C0C0C0;
+    color: #666666;
+    float: left;
+    font: 400 14px arial;
+    height: 20px;
+    margin:0 10px;
+    padding: 2px 7px;
+    width: 104px;
+}
+.block_inputconfirmcapcha .icon_refest{
+  margin:0 0 0 10px;
+}
+.txt_maxacnhan{
+  text-align:left;
+  padding:5px 0 0px 10px;
+  width:90%;
+  font:400 12px arial;
+}
+.action .login-desc,
+.king_goal .login-desc{
+  padding:0 0 0 10px;
+  width:95%;
+  text-align:left;
+}
+.icon_wc_mobile{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_wc.png) no-repeat 0 8px;
+  width:15px;
+  height:34px;
+  display:inline-block;
+}
+.block_maxacnhan{
+  width:300px;
+  margin:0 auto;
+}
+.page_schedule table td.guess .block_maxacnhan input{
+  width:104px;
+}
+.page_schedule table td.guess .block_maxacnhan{
+  text-align:left;
+}
+.page_schedule table td.guess .block_maxacnhan a{
+  margin:0 0 0 10px
+}
+.block_dudoan table .score .login-desc,
+.page_schedule table td.guess .block_maxacnhan .login-desc{
+  margin:0 0 3px 10px;
+  text-align:left;
+}
+/*
+  Do Vui World Cup by HueNTM
+*/
+.banner_dovui{
+  display:block;
+  overflow:hidden;
+  margin-bottom:20px;
+}
+.banner_dovui img{
+  width:100%;
+}
+#box_dovui{
+  display:block;
+  overflow:hidden;
+  margin-bottom:20px;
+}
+.naviagtion_dovui{
+  display:block;
+  margin-bottom:10px;
+  text-align:center;
+  height:24px;
+}
+.naviagtion_dovui a{
+  height:24px;
+  display:inline-block;
+  *display:inline;
+  overflow:hidden;
+  vertical-align:top;
+
+}
+.naviagtion_dovui a.center{
+  font-weight:bold;
+  color:#333;
+  margin:0px 10px;
+  line-height:24px;
+  *display:inline;
+}
+.naviagtion_dovui a.center span{
+  padding-left:5px;
+  float:right;
+  *float:none;
+
+}
+.cauhoi_dovui{
+  display:block;
+  overflow:hidden;
+  background:#fff;
+  font-size:14px;
+  color:#333;
+}
+.cauhoi_dovui li{
+  padding:12px 20px;
+  display:block;
+  overflow:hidden;
+}
+.cauhoi_dovui li.odd{
+  background:#f3f3f3;
+}
+.title_question{
+  color:#7b9b1e;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+.detail_question{
+  font-weight:bold;
+  margin-bottom:10px;
+}
+.list_answer{
+  display:block;
+  overflow:hidden;
+}
+.each_answer{
+  width:25%;
+  float:left;
+  overflow:hidden;
+}
+.mid_dovui_banner{
+  display:block;
+  overflow:hidden;
+  text-align:center;
+  padding:15px 0px 5px;
+}
+.p_thele_dovui{
+  font-size:12px;
+  display:block;
+  overflow:hidden;
+  width:100%;
+  background:#fff;
+}
+.filter_danhsach{
+  display:block;
+  overflow:hidden;
+  border-bottom:1px dotted #ccc;
+  padding:7px 10px 6px;
+  margin-bottom:10px;
+}
+.left_filterds{
+  float:left;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/calendar_trungthuong.gif) no-repeat 0px 0px;
+  padding-left:22px;
+  font-weight:bold;
+  color:#333;
+  height:16px;
+  line-height:16px;
+}
+.xemdapan{
+  font:bold 12px arial;
+  color:#328005;
+  float:right;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/dapan.gif) no-repeat 0px 0px;
+  height:16px;
+  line-height:16px;
+  padding-left:19px;
+}
+#danhsach_dovui .content_box_category{
+  margin-top:0;
+}
+.ul_trungthuong{
+  display:block;
+  overflow:hidden;
+  padding:0px 10px;
+}
+.ul_trungthuong li{
+  display:block;
+  overflow:hidden;
+  padding-bottom:10px;
+}
+.ul_trungthuong .left_trungthuong{
+  float:left;
+  font-size:12px;
+  font-weight:bold;
+  color:#333;
+}
+.ul_trungthuong .right_trungthuong{
+  float:right;
+  font-size:12px;
+  color:#999999;
+}
+.bottom_dovui{
+  margin-top:10px;
+  display:block;
+  overflow:hidden;
+  text-align:center;
+}
+.bottom_dovui p{
+  text-align:center;
+  color:#9f224e;
+  margin-bottom:5px;
+}
+.bottom_dovui .btt_dovui{
+  width:69px;
+  height:25px;
+  background:#328005;
+  text-align:center;
+  line-height:25px;
+  font-size:12px;
+  color:#fff;
+  cursor:pointer;
+}
+.hetthoigian{
+  display:block;
+  overflow:hidden;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  color:#9f224e;
+  margin-bottom:10px;
+}
+.light_box.trandau.dovui_lightbox .body{
+  padding:8px 20px;
+  font-size:13px;
+  color:#000;
+}
+.label_dn_dv{
+  margin:0px 0px 5px;
+  text-align:left;
+}
+.input_dn_dv{
+  margin:0px 0px 15px;
+  border:1px solid #c0c0c0;
+  background:#fff;
+  height:20px; padding:2px 5px 0px;
+  height:26px;
+  width:98%;
+}
+.txt_dovui{
+  width:100%;
+  border:none;
+  background:none;
+  font-size:13px;  outline: 0;
+}
+.dovui_lightbox .title{
+  color:#328005
+}
+.btt_dn_dv input{
+  width:100px;
+  height:30px;
+  background:#9f224e;
+  text-align:center;
+  border:none;
+  color:#fffefe;
+  font-size:14px;
+  margin-top:5px;
+  cursor:pointer;
+}
+.dovui_lightbox .warning{
+  padding:10px 0px;
+  line-height:15px;
+}
+#thele_dovui .scroll-pane{height:380px;}
+#thele_dovui .content_scoller { padding-right:10px; display:block; overflow:hidden; text-align:left;}
+#thele_dovui .body{
+  padding:8px 10px 8px 20px;
+  font-size:13px;
+  color:#000;
+}
+#thele_dovui .body p{
+  padding-bottom:15px;
+
+}
+.page_trandau .m_score{
+  padding:10px 0 0 0;
+}
+.page_trandau .m_score input{
+  background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    font-size: 18px;
+    font-weight: bold;
+    height: 25px;
+    text-align: center;
+    width: 25px
+}
+.text_right .number_sosanh{
+  float:right;
+}
+.number_sosanh{
+  width:38px;
+  text-align:center;
+}
+.rd_dovui{ float:left;width:20px; display:inline;}
+.each_answer div{ float:left; display:inline; max-width:80%; }
+.each_answer label{ display:block;width:100%; float:left;}
+.naviagtion_dovui .mobile_version{ display:none}
+.right_caledar_dv{ vertical-align:top; line-height:25px;}
+
+/*slider detail page*/
+/*sssass*/
+.swipebox .box{display:block; padding:10px;}
+.swipebox img{max-width:100%;}
+.swipebox {
+  overflow: hidden!important;
+}
+.warning_dovui{font-size:11px; color:#9F224E; display:block; text-align:left; margin-left:-5px;}
+
+#swipebox-overlay img {
+  border: none!important;
+}
+
+#swipebox-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999!important;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#swipebox-slider {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  white-space: nowrap;
+  position: absolute;
+  display: none;
+}
+
+#swipebox-slider .slide {
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/loading.gif) no-repeat center center;
+  height: 100%;
+  width: 100%;
+  line-height: 1px;
+  text-align: center;
+  display: inline-block;
+}
+
+#swipebox-slider .slide:before {
+  content: "";
+  display: inline-block;
+  height: 50%;
+  width: 1px;
+  margin-right: -1px;
+}
+
+#swipebox-slider .slide img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+
+#swipebox-description{
+  position: absolute;
+  left: 0;
+  z-index: 999; width: 100%; padding:0px 0px;
+}
+
+#swipebox-description.expan_now{
+  height:100%;
+}
+
+#swipebox-action {
+  bottom: -50px;
+}
+#swipebox-action.visible-bars {
+  bottom: 0;
+}
+
+#swipebox-action.force-visible-bars {
+  bottom: 0!important;
+}
+
+#swipebox-caption {
+  top: -50%; text-align:center;
+}
+#swipebox-description{bottom:-50%; text-align:center;}
+#swipebox-caption.visible-bars {
+  top: 0;
+}
+#swipebox-close,#swipebox-next,#swipebox-prev {
+  display:none;
+}
+#swipebox-close.visible-bars,#swipebox-next.visible-bars,#swipebox-prev.visible-bars {
+  display:block;
+}
+#swipebox-description.visible-bars{bottom:0px; text-align:center;}
+
+#swipebox-caption.force-visible-bars {
+  top: 0!important;
+}
+#swipebox-description.force-visible-bars { bottom: 0!important;}
+#swipebox-prev, #swipebox-next/*#swipebox-action */{
+  /*background-image: url("/Scripts/touchTouch/CloseSlide.png");*/ background-image:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/arrows00.png);
+  background-repeat: no-repeat;
+  border: none!important;
+  text-decoration: none!important;
+  cursor: pointer;
+  position: absolute;
+  width: 43px;
+  height: 58px;
+  top:40%; z-index:2;
+}
+#swipebox-close {/*#swipebox-action */
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/icon_close_sildebox.png) no-repeat 10px 5px;
+  border: none!important;
+  text-decoration: none!important;
+  cursor: pointer;
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top:3px; z-index:3;
+}
+#swipebox-close {/*#swipebox-action */
+  /*background-position: 15px 12px;*/background-position: 10px 12px;
+  right: 10px;
+}
+#swipebox-prev {/*#swipebox-action background-position: -32px 13px;*/
+  background-position: 0px 0px;
+  left: 10px;
+}
+#swipebox-next {/*#swipebox-action  background-position: -78px 13px;*/
+  background-position: -43px 0px;
+  right: 10px;
+}
+#swipebox-prev.disabled,/*#swipebox-action*/
+#swipebox-next.disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+#swipebox-slider.rightSpring {
+  -moz-animation: rightSpring 0.3s;
+  -webkit-animation: rightSpring 0.3s;
+}
+#swipebox-slider.leftSpring {
+  -moz-animation: leftSpring 0.3s;
+  -webkit-animation: leftSpring 0.3s;
+}
+/* Skin
+--------------------------*/
+#swipebox-overlay {
+  background: #0d0d0d;
+}
+
+#swipebox-action, #swipebox-caption ,#swipebox-description{
+  /*background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_stranparent_title_slide.png) repeat 0px 0px;  */
+  text-shadow: 1px 1px 1px black;
+}
+
+#swipebox-action {
+  -webkit-box-shadow: 0 -1px -1px 1px #212121, inset 0 -1px -1px 1px black;
+  -moz-box-shadow: 0 -1px -1px 1px #212121, inset 0 -1px -1px 1px black;
+  box-shadow: 0 -1px -1px 1px #212121, inset 0 -1px -1px 1px black;
+}
+#swipebox-caption {
+  color: #fff!important;
+  white-space:normal !important;
+  font-size: 13px;
+  font-family:arial; font-weight:bold;line-height: 13px;
+  display:none!important;
+}
+#swipebox-description{
+  color: #fff!important;font-family:arial;font-size: 13px;white-space:normal;
+}
+#icon_expan{
+  width:36px;
+  height:36px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_expan_slide_show.png) no-repeat 5px 5px;
+  position:absolute;
+  right:20px;
+  top:5px;
+  z-index:9999;
+}
+.expan_now {
+  background:#000;
+}
+.expan_now .icon_backdetail,
+.expan_now .icon_totalcomment{
+  display:none;
+}
+.decs_cript{
+  overflow:hidden;
+  margin:20px 0 10px 0;
+  text-align:left;
+  padding:25px 10px 0 10px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_stranparent_title_slide.png);
+}
+.decs_cript *{
+    color:#fff!important;
+}
+.decs_cript a{
+    text-decoration:underline;
+}
+.decs_cript p{
+  display:inline;
+}
+.expan_now .decs_cript{
+  height:85%;
+  overflow:scroll;
+}
+.expan_now #icon_expan{
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_expan_slide_show_2.png) no-repeat;
+}
+.icon_backdetail{
+  height:26px;
+  background:#1a1a1a url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/fb_detail.png) no-repeat;
+  position:absolute;
+  left:10px;
+  top:5px;
+  padding:0px 5px 0px 20px;
+  color:#58595b!important;
+  border-radius:10px;
+}
+.icon_totalcomment{
+  height:26px;
+  background:#1a1a1a url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/bg_icon_comment_sliderphoto.png) no-repeat 5px 10px;
+  position:absolute;
+  left:50px;
+  top:5px;
+  border-radius:10px;
+  padding:0px 5px 0px 20px;
+  color:#58595b!important;
+  font:400 11px/26px arial;
+
+}
+#to_top{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:9999;
+  display:none;
+}
+.page_result_detail_team .style_2 .tb_lichthidau_clb .time{
+  padding:10px 0;
+  width:10%;
+}
+.page_result_detail_team .style_2 .tb_lichthidau_clb .group{
+  width:10%;
+}
+.page_result_detail_team .style_2 .tb_lichthidau_clb .main_team{
+  width:25%;
+}
+.page_result_detail_team .style_2 .tb_lichthidau_clb .score{
+  width:10%;
+}
+.page_result_detail_team .style_2 .tb_lichthidau_clb .sub_team{
+  width:25%;
+}
+.page_result_detail_team .style_2 .tb_lichthidau_clb .live{
+  width:20%;
+}
+.page_result_detail_team .style_2 .tb_lichthidau_clb .time .ct_time{
+  padding:0 0 0 20px;
+}
+.light_box.trandau .body .block_maxacnhan {
+  text-align:left;
+  width:auto;
+}
+.txt_huongdanmsm{
+  font-size:16px;
+  padding:0 0 0 50px
+}
+.txt_huongdanmsm a{
+  text-decoration:underline;
+}
+.light_box .block_maxacnhan .btn_goi {
+    background:#328005;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: 700 13px arial;
+    padding: 5px 0;
+    width: 76px;
+}
+.light_box .block_maxacnhan .btn_goi.inactive{
+    background:#dedede;
+  color:#666;
+}
+.light_box .block_maxacnhan .login-desc{
+  text-align:left;
+}
+.light_box .block_inputconfirmcapcha .txt-capcha{
+  margin:0 10px 0 0;
+}
+.light_box .block_maxacnhan .txt_maxacnhan{
+  padding:5px 0 0 0;
+  font-size:14px;
+}
+.block_fck_thele p{
+  padding:0 0 10px 0;
+  line-height:20px;
+}
+.block_fck_thele p img{
+  width:80%;
+  margin:0 auto;
+}
+.block_fck_thele p a{
+  color:#004f8b;
+  text-decoration:underline;
+}
+.block_fck_thele{
+  overflow:hidden;
+  height:1020px;
+}
+.block_fck_thele.expan{
+  height:auto;
+}
+.block_xemthem_thele{
+  width:100%;
+  float:left;
+  text-align:center;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/bg_1x1_gray.gif) repeat-x left 8px;
+  margin:0 0 15px 0;
+}
+.block_xemthem_thele a{
+  display:inline-block;
+  padding:0 20px;
+  background:#fff url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_expan.gif) no-repeat 75px 5px;
+  font:400 11px arial;
+  color:#328005;
+}
+.block_xemthem_thele a.active{
+  background:#fff url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_colaps.gif) no-repeat 65px 5px;
+}
+.item_danhsach{
+  width:100%;
+  float:left;
+  padding:0 0 20px;
+}
+#box_details_news .block_timer,
+.block_share {
+  padding:12px 10px 0 0;
+}
+.block_clear_men{
+  float:right;
+  font-size:0;
+  line-height:0;
+}
+.page_schedule .block_clear_men,
+.page_detail_player .block_clear_men{
+  padding:6px 0 0 0;
+}
+.page_result_detail_team .title .block_clear_men  img{
+  margin:10px 0 0 0;
+}
+.breakumb_timer .block_clear_men{
+  margin:8px 0 0 0;
+}
+#showCaptcha br{
+  display:none;
+}
+/* the le do vui */
+.p_thele_dv{
+  font:18px arial;
+  color:#323232;
+  margin:0px 0px 10px;
+}
+.bref_thele_dv,.full_thele_dv{
+  font-size:14px;
+  color:#323232;
+}
+.bref_thele_dv p,.full_thele_dv p{
+  margin:0px 0px 10px;
+}
+.full_thele_dv{
+  display:none;
+}
+.xemthem_dv,.rutgon_dv{
+  display:block;
+  overflow:hidden;
+  height:20px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/1_1.gif) repeat-x 0px center;
+  text-align:center;
+  margin-bottom:10px;
+}
+.rutgon_dv{ display:none;}
+.xemthem_dv a,.rutgon_dv a{
+  font-size:11px;
+  color:#328005;
+  padding:0px 20px;
+  background:#ffffff url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/drop_xemthem.gif) no-repeat  72px 5px;
+  height:20px;
+  line-height:20px;
+}
+.rutgon_dv a{
+  background:#ffffff url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/drop_rutgon.gif) no-repeat   62px 5px;
+}
+.begin_start{
+  display:block;
+  overflow:hidden;
+  margin:0px 0px 10px;
+}
+.begin_start a{
+  height:25px;
+  background:#328005;
+  font-size:14px;
+  color:#fff;
+  line-height:25px;
+  text-align:center;
+  width:102px;
+  float:left;
+
+}
+
+@media screen and (min-width: 120px) and (max-width: 480px){
+  .hiden_device_all,.bottom_pagination,.list_score table .result, .list_score table .count span,
+  #detail_page #col_right, .box_tt_1cauthu .info_2 ,.block_hidden_320, .control_pagination, .block_mid_col_right, .pagination_news, .block_top_right_video,.ft-botl,.ft-botm,.ft-botr,#social_like,.rss,.block_fck_thele .block_clear_men, #box_details_news .block_clear_men, .block_timer_share,#col_left .block_clear_men {
+    display:none;
+  }
+  .list_score table .count span.last,
+  .hiddenweb,.list_menu_small,.coppy_right_small,.box_sub_hot_news li .thumb,.div-fbook {
+    display:block;
+  }
+
+  .img_logo {
+    display: block;
+    margin: 10px 0 7px 54px;
+    width: 150px;
+    float:left;
+  }
+  .logo_wc{
+    margin:5px 10px 0 0;
+  }
+  #container{
+    padding:0 2%;
+    width:96%;
+    margin:0 auto;
+  }
+  #footer,
+  #col_right,
+  #wrapper_page,
+  #col_left{
+    width:100%;
+  }
+  .block_top_left_video,
+  #col_left{
+    margin:0 0 10px;
+  }
+  .line_page{
+    background:none;
+  }
+  .line_mid_col{
+    background-position:75% 0;
+  }
+  .block_top_left_video,
+  .block_mid_col_left{
+    width:100%;
+  }
+  .block_top_right_video,
+  .block_mid_col_right{
+    width:100%;
+  }
+  .box_sub_hot_news .scroll-pane{
+    width:100%;
+    height:350px;
+  }
+  .box_sub_hot_news ul{
+    width:93%;
+  }
+  .content_slider{
+    width:92%;
+    margin:0 0 0 4%;
+  }
+  .list_32_team .list_team li.first{
+    width:100%;
+    text-align:left;
+  }
+  .list_32_team .list_team li.first span{
+    margin:0;
+  }
+  .list_32_team .list_team li{
+    width:46%;
+    margin-bottom:10px;
+  }
+  .list_32_team .list_team li.first label{
+    color:#9c9c9c;
+  }
+  .list_32_team .list_team li .label{
+    font:400 18px arial;
+  }
+  .list_32_team .title, .list_score .title{
+    padding:0;
+  }
+  .list_32_team .list_team{
+    padding:10px 2%;
+    width:96%;
+    background:#f4f4f4;
+    margin:10px 0 0;
+    border:none;
+  }
+  .block_title{
+    position:relative;
+    float:left;
+    background:none;
+    color:#333;
+  }
+  .block_title .txt_title a{
+    color:#333;
+  }
+  .block_lead{
+    font:400 16px arial;
+  }
+  .list_photo_dulich li{
+    width:47%;
+    margin:0 1% 10px 1%;
+  }
+  .list_score table .result span, .list_score table .count span{
+    width:100%;
+  }
+  .category_list_prize table{
+    font-size:14px;
+  }
+  .list_photo_dulich li .title_news a,
+  .category_goal_king table,
+  .list_score table{
+    font-size:16px;
+  }
+  .list_score table .score{
+    font-weight:700;
+  }
+  .title_box_category{
+    height:44px;
+  }
+  .txt_main_category span, .txt_main_category a{
+    font:400 20px/44px arial;
+  }
+  .category_list_prize table td .center_block{
+    font:700 12px arial;
+  }
+  /*detail page*/
+  #box_details_news .title_news h1 {
+    color: #000000;
+    font: 400 28px/30px arial;
+  }
+  #box_details_news .short_intro, #box_details_news .fck_detail .Normal, #box_details_news .fck_detail p {
+      font-size: 18px;
+      line-height: 24px;
+  }
+  #box_details_news .relative_new .list_news_dot_3x3_300 a {
+      color: #666666;
+      font: 700 16px arial;
+  }
+  #box_details_news .relative_new .list_news_dot_3x3_300 li{
+    background-position:left 8px;
+  }
+  .title_box_detailpage .txt_main_category a{
+    height:auto;
+  }
+  .category_list_score table,
+  .box_tt_1doi .info_quocgia{
+    font-size:14px;
+  }
+  .doiitem .txt_defaul, .info_1 .txt_defaul{
+    font:700 14px arial;
+  }
+  .info_2 .txt_defaul{
+    font-size:14px;
+  }
+  .box_tt_1doi .info_quocgia,
+  .box_tt_2doi{
+    background:none;
+  }
+  .box_tt_2cauthu .cauthu_item,
+  .box_tt_4doi .doiitem,
+  .box_tt_3doi .doiitem,
+  .box_tt_2doi .doiitem{
+    margin:0 0 20px;
+  }
+  .box_tt_2cauthu .cauthu_item,
+  .box_tt_1cauthu .info_1,
+  .box_tt_1doi .info_2,
+  .box_tt_1doi .info_1,
+  .box_tt_4doi .doiitem,
+  .box_tt_3doi .doiitem,
+  .info_quocgia table,
+  .box_tt_2doi .doiitem_2,
+  .box_tt_2doi .doiitem{
+    width:100%;
+  }
+  .box_tt_4doi .doiitem table,
+  .box_tt_3doi .doiitem table{
+    width:70%;
+    float:right;
+  }
+  .block_image_cauthu{
+    width:33%;
+  }
+  .info_cauthu{
+    width:63%;
+  }
+  .box_tt_4cauthu .cauthu_item{
+    width:47%;
+    margin:0 1% 20px 1%;
+    float:none;
+    display:inline-block;
+    vertical-align:top;
+  }
+  #box_tinkhac_detail .list_news{
+    width:100%;
+  }
+  #box_tinkhac_detail .list_news li {
+    border-bottom: 1px dotted #E2E2E3;
+    float: left;
+    margin:0 0 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  #box_tinkhac_detail .list_news .thumb_160 {
+    margin: 0 10px 0 0;
+    width: 20%;
+  }
+  #box_tinkhac_detail .list_news li a, #box_tinkhac_detail .content_box_category .list_news_dot_3x3_300 li a {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  #box_comment .comment_item p {
+    line-height: 22px;
+    padding-bottom: 2px;
+    font-size:16px;
+  }
+  #box_comment .comment_item .block_like_web a{
+    font-size:14px;
+  }
+  /*end detail page*/
+  .info_player{
+    width:100%;
+    float:left;
+    padding:10px 0 0 0;
+  }
+  .detail_player .info_player table td{
+    font-size:14px
+  }
+  .wrap_player img{
+    width:100%;
+  }
+  .assessment_player ul li{
+    width:50%;
+  }
+  .related_news_t .wrap .thumb{
+    width:100%;
+    margin:0 0 10px;
+  }
+  .related_news_t .wrap .related{
+    width:100%;
+  }
+  .related_news_t .wrap .thumb .title_thumb,
+  .related_news_t .wrap .thumb .title_thumb a{
+    font:400 20px arial;
+  }
+  .related_news_t .wrap .related .title_sub a,
+  .related_news_t .wrap .related .title_sub{
+    font:700 18px arial;
+  }
+  .related_news_t .wrap .related p{
+    font:400 16px arial;
+  }
+  .page_trandau .box .title{
+    font:400 20px arial;
+  }
+  /*tin tuc*/
+  .block_2mid_col,
+  #box_news_top .line_col_midnews_top{
+    background:none;
+  }
+
+  .box_hot_news{
+    width:100%;
+  }
+  .box_sub_hot_news{
+    width:100%;
+    height:auto;
+    border-top:1px dotted #e2e2e3;
+    margin:10px 0 0;
+    padding:10px 0 0;
+  }
+  .box_sub_hot_news .scroll-pane{
+    height:auto;
+  }
+  #box_news_top .box_hot_news .title_news a{
+    font:400 20px arial;
+  }
+  .videoname .news_lead,
+  .news_lead,
+  #box_news_top .news_lead{
+    font:400 16px arial;
+  }
+  .list_dot a,
+  .list_news_dot_3x3 li a,
+  .box_hot_news .list_news_dot_3x3_300 li a{
+    font:700 14px arial;
+  }
+  #box_news_top .title_news a,
+  .block_image_news .title_news a{
+    font:700 18px arial;
+  }
+  .box_sub_hot_news ul{
+    width:100%;
+  }
+  .list_dot{
+    padding:10px 0 0 0;
+  }
+  .list_photo_dulich{
+    border:none;
+    margin:0;
+  }
+  /*lich thi dau*/
+  .page_schedule table .group{
+    display:none;
+  }
+  .page_result_detail_team .style_2 .time{
+    padding:0
+  }
+  .page_schedule table .live,
+  .page_schedule table .group{
+    display:none;
+  }
+  .page_schedule table .sub_team,
+  .page_schedule table .main_team{
+    width:35%;
+  }
+  .tk_trandau{
+    width:100%;
+  }
+  .page_trandau .tbl_main .team.a,
+  .page_trandau .tbl_main .team.b{
+    width:30%;
+  }
+  #box_news_top .news_lead, #box_news_top .title_news{
+    width:auto;
+    float:none;
+  }
+  .page_guess .box_guess select{
+    width:94%;
+  }
+  .page_guess .box_guess.player select{
+    width:93%;
+  }
+  .assessment_player ul li .progress_bar_style_2{
+    width:80%;
+  }
+  .detail_player .info_player{
+    width:100%;
+  }
+
+
+  /*light box*/
+.ul-lb li{ cursor:pointer; font:12px arial; color:#000; margin:0px 0px 10px;}
+.login-form{width:100%;}
+#login-vne1 .login-left{border-bottom:1px solid #dedede; padding:10px 0; width:100%; float:left; height:auto;}
+#login-vne1 .login-right{width:100%; float:left;}
+.content_form{
+  padding:20px 0 0 20px;
+}
+.login-type{font:700 14px arial; color:#000; margin:0px 0px 20px 20px; text-align:left; display:block; overflow:hidden;}
+.content_form .login-type{
+  margin:0 0 10px 0px;
+}
+.p-social{float:left;margin:0 0 0 20px;}
+.p-social .login-social{width:134px; height:30px; float:right; background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/social-login.gif) no-repeat}
+.p-social .lg-facebook{ background-position:0px 0px;}
+.p-social .lg-google{background-position:0px -42px;}
+.login-txt{margin:0px 0 3px 0px; display:block; overflow:hidden;}
+.login-txt .txt-login{border:1px solid #c0c0c0; background:none; font:400 14px arial; color:#666;width:270px; padding:2px 7px; height:20px;}
+.login-desc{font:400 11px arial; color:#9f224e; margin:0px 0px 10px; display:block; overflow:hidden;}
+.login-btt{display:block; overflow:hidden; margin:0px;}
+.btt-complete{
+  padding:5px 10px;
+  border:none;
+  background:#9a1f44;
+  color:#fff;
+  font:700 16px arial;
+  cursor:pointer;
+}
+
+.close-lb{ background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/close-lb.gif) no-repeat 10px 10px; width:30px; height:30px; position:absolute; top:10px; right:10px; cursor:pointer;}
+#form_thamgia .close-lb{
+  top:3px;
+}
+#login-vne2 .login-left{padding:0px 10px 0px 0px; width:49px; float:left; display:none;}
+#login-vne2 .login-right{width:100%; float:left;}
+#login-vne2 .complete-form{width:100%; float:left; padding:0;}
+
+
+#login-vne3,#login-vne5{height:266px; background:#f4f4f4; padding:0px;}
+#login-vne3 .complete-form,#login-vne4 .complete-form,#login-vne5 .complete-form {width:100%; float:left;}
+.ttOline{ background:#fff; height:28px; padding:8px 20px 0px 20px; display:block; overflow:hidden;font:700 16px arial; color:#000; margin-bottom:22px;}
+#login-vne3 .login-txt,#login-vne5 .login-txt{margin:0px 0px 3px 0px; display:block; overflow:hidden;}
+#login-vne3 .login-txt .txt-login{border:1px solid #c0c0c0; background:#fff; font:400 14px arial; color:#666; padding:2px 7px; height:20px;}
+#login-vne3 .txt-capcha,#login-vne5 .txt-capcha,#login-vne6 .txt-capcha{ float:left;border:1px solid #c0c0c0; background:#fff; font:400 14px arial; color:#666;width:104px; padding:2px 7px; height:20px; margin-right:10px;}
+#login-vne3 img,#login-vne5 img{ float:left;margin-right:8px;}
+
+#login-vne4{background:#f4f4f4;padding:0;}
+#login-vne4 .content_form{padding:0 0 20px 20px;}
+#login-vne4 .complete-form{overflow:hidden; font:500 14px arial; color:#000;}
+/*Add thêm 2 light box*/
+#login-vne6{height:167x; background:#f4f4f4; padding:0px;}
+.input_capcha{font:600 14px arial; color:#000; margin:0px 0px 3px;}
+
+#login-vne7{height:375px; background:#f4f4f4; padding:0px;}
+.rs_vote{ display:block; background:#ededed; padding:15px 20px; overflow:hidden; margin-bottom:12px;}
+#login-vne7 .ttOline{ margin-bottom:0px;}
+.question_vote{font:700 18px arial; color:#9f224e; margin:0px 0px 4px;}
+.p_infoVote{ margin:0px;}
+.time_vote{font:400 11px arial; color:#666; float:left;}
+.total_vote{ float:right;font:400 12px arial; color:#666;}
+.total_vote label{ font-weight:700; color:#9f224e;}
+
+.list_rs{ overflow:hidden; background:#f4f4f4;}
+.scroll_thongke{ float:left; max-height:245px; overflow-y:scroll; float:left; width:504px;padding:0px; margin:10px 10px 10px 20px;}
+.scroll_thongke li{ padding:0px 0px 15px; margin:0px 0px 10px; border-bottom:1px dotted #ccc; display:block; overflow:hidden;}
+.info_result{ display:block; }
+.rsV_left{width:100%; float:left; font:16px arial; color:#000;}
+.rsV_right{width:100%;  float:right; font:12px arial; color:#999; text-align:right;}
+.rsV_right label{color:#000;}
+.scroll_color{width:100%; float:left; margin:5px 0; height:5px; background:#ccc;}
+.bg_center_scroll{ position:relative;background:#9f224e; float:left; height:5px;}
+.txt_number_ketqua{ display:inline-block; padding:5px 0px 0px; position:absolute; left:0px; bottom:-20px; font:10px arial; color:#9f224e; }
+.list_vote li{
+  width:100%;
+  float:left;
+  margin:0 0 10px 0;
+  padding:0 0 10px 0;
+  border-bottom:1px dotted #cccccc;
+}
+.list_rs .content_form{
+  padding:20px;
+}
+.block_input_capcha{
+  float:left;
+  width:100%;
+}
+#login-vne6 .block_input_capcha .login-txt{
+  float:left;
+  width:134px;
+}
+#login-vne6 .block_input_capcha .txt-capcha{
+  margin:0;
+}
+.btn_refrest{
+  margin:0 0 0 10px;
+}
+#login-vne6 .login-desc{
+  width:100%;
+  float:left;
+}
+#login-vne6  .content_form{
+  padding:20px;
+}
+#login-vne3 .complete-form, #login-vne5 .complete-form,#login-vne6 .complete-form{
+  padding:20px 0;
+  width:100%;
+}
+/***********25.11*************/
+/*cÃ³ add thÃªm 1 sá»‘ class thá»«a hÆ°á»Ÿng css trÃªn login-vne5 */
+
+#login-vne5{
+padding: 0;
+height: 530px;
+}
+
+.share_email_des{
+background: #d3d3d3;
+float: left;
+width: 100%;
+padding: 15px 0;
+}
+
+.share_email_left{
+float: left;
+}
+
+.share_email_left a{
+color: #666;
+text-decoration: underline;
+font: 600 11px/16px Arial;
+padding: 0 20px;
+}
+
+.share_email_right{
+float: right;
+width:455px;
+}
+
+.share_email_right div{
+font: 400 14px/16px Arial;
+color:#9f224e ;
+}
+
+.share_email_right ul{
+list-style: none;
+float: left;
+width: 100%;
+padding: 0;
+margin: 5px 0;
+}
+.share_email_right li{
+float: left;
+}
+
+.share_email_right a{
+font: 400 11px/16px Arial;
+color: #666;
+}
+
+.share_email_right .active a{
+color: #333;
+}
+
+#login-vne5 .complete-form{
+margin-top:35px;
+float: left;
+width: 450px;
+}
+
+#login-vne5 .complete-form textarea{
+height: 85px;
+}
+
+#login-vne5 .txt-login{
+width: 380px;
+}
+
+.share_email_label{
+margin-bottom: 5px;
+font: 400 14px/14px Arial;
+}
+#login-vne1{
+  padding:10px 0;
+}
+#login-vne1 .login-left .login-type{
+  margin:0 0 10px 20px;
+  text-align:left;
+}
+.rating_sercut{
+  padding:10px 2%;
+}
+/*End lightbox*/
+#SexyAlertBox-Box{
+  width:100%;
+}
+.sercurity .right{
+  float:left;
+}
+.page_schedule .m_sub_guess table tr:last-child td{
+  border-bottom:none;
+}
+.vongloai_vongbang ul.tabs{
+  margin:0 0 10px 0;
+}
+#box_tinkhac_detail{
+  margin:0;
+}
+#box_tinkhac_detail .xemtiep{
+  margin:10px 0 0 0;
+}
+#spotlight{
+  margin:0;
+}
+.category_list_prize table td,
+.item_danhsach{
+  font-size:16px;
+}
+.category_list_prize table .score span,
+.category_list_prize table .score{
+  font-size:14px;
+}
+.list_news .block_image_news .thumb,
+.box_sub_hot_news li .thumb{
+  width:20%;
+}
+/* do vui */
+/* do vui */
+.detail_question,.ul_trungthuong .left_trungthuong{
+  font-size:16px;
+  font-weight:normal;
+}
+.naviagtion_dovui a{float:left;*display:inline;}
+.naviagtion_dovui a.mobile_version{ display:inline-block;*display:inline; }
+.naviagtion_dovui a.desktop_version,.img_calendar{ display:none;}
+.naviagtion_dovui a.center span{
+  padding-left:0px;
+  font-size:14px;
+  color:#333;
+}
+.naviagtion_dovui .prev_dv_m{
+  padding-left:5px;
+  padding-right:25px;
+}
+.naviagtion_dovui .next_dv_m{
+  padding-left:15px;
+  float:right;
+  padding-right:5px;
+}
+.line50p{
+  display:block;
+  overflow:hidden;
+  margin-bottom:10px;
+}
+.each_answer{width:49%;}
+#dovui_page #col_right{display:block; overflow:hidden;}
+#dovui_page #col_right .banner_300x250{ display:none;}
+.p_thele_dovui{font-size:16px;}
+.txt_view_more a {font-size:12px;}
+.ul_trungthuong .right_trungthuong{font-size:14px;}
+.left_filterds{ background:none; padding-left:0; font-size:14px;}
+.only_mobile{display:block; }
+.left_filterds a{float:left; height:20px; line-height:24px; padding:0px 3px 0px 0px; margin-right:3px;}
+.xemdapan{ margin-top:4px;}
+.logo_wc{ display:block; float:right; padding-top:2px;}
+#col_300,
+#col_660,
+#container_tab_live div.text_live{
+  width:100%;
+}
+#container_tab_live div.minutes{
+  width:100%;
+    padding:0 0 10px 0;
+}
+#container_tab_live div.minutes .text_minutes{
+  float:left;
+}
+#container_tab_live div.minutes .icon_live{
+  position:static;
+  float:left;
+}
+#detail_page_live.line_col, #detail_page.line_col{
+    background:none;
+}
+#container_tab_live div.text_live{
+  font-size:16px;
+}
+#container_tab_live ul li{
+  background-position:2% 0;
+  width:93%;
+  padding:0 0 0 5%;
+}
+#container_tab_live .list_dot_3x3 .dot_item a{
+  font-size:14px;
+}
+.icon_dot_live{
+  display:none;
+}
+ .embed-container.audio{
+    padding-bottom: 23.7%;
+ }
+}
+@media screen and (min-width: 481px) and (max-width: 767px){
+  .hiden_device_all,#col_right,.corn_calendar,.ft-botl,.ft-botm,.ft-botr,.rss,#col_left .block_clear_men  {
+    display:none;
+  }
+  .hiddenweb,.list_menu_small,.coppy_right_small{
+    display:block;
+  }
+
+  .img_logo {
+    display: block;
+    margin: 10px 0 7px 54px;
+    width: 150px;
+    float:left;
+  }
+  #container{
+    padding:0 1%;
+    width:98%;
+    margin:0 auto;
+  }
+  #footer,
+  #wrapper_page,
+  #col_left{
+    width:100%;
+  }
+  .line_page{
+    background:none;
+  }
+  .line_col_midnews_top,
+  .line_mid_col{
+    background-position:75% 0;
+  }
+  .box_hot_news,
+  .block_top_left_video,
+  .block_mid_col_left{
+    width:73.5%;
+  }
+  .box_sub_hot_news,
+  .block_top_right_video,
+  .block_mid_col_right{
+    width:23.5%;
+  }
+  .box_sub_hot_news .scroll-pane{
+    width:100%;
+    height:350px;
+  }
+  .box_sub_hot_news ul{
+    width:93%;
+  }
+  .list_menu_small li{
+    width:27%;
+  }
+  .page_guess .box_guess select{
+    width:94%;
+  }
+
+
+}
+@media screen and (min-width: 640px) and (max-width: 767px){
+  /* do vui */
+  #dovui_page #col_left{width:49%;}
+  #dovui_page #col_right{width:49%; display:block;}
+  .line50p {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .each_answer {
+    width: 49%;
+  }
+  #dovui_page  #col_right .banner_300x250 img{width:100%;}
+  .naviagtion_dovui a{float:left;*display:inline;}
+  .naviagtion_dovui a.mobile_version{ display:inline-block;*display:inline; }
+  .naviagtion_dovui a.desktop_version,.img_calendar{ display:none;}
+  .naviagtion_dovui a.center span{
+    padding-left:0px;
+    font-size:14px;
+    color:#333;
+  }
+  .naviagtion_dovui .prev_dv_m{
+    padding-left:5px;
+    padding-right:25px;
+  }
+  .naviagtion_dovui .next_dv_m{
+    padding-left:15px;
+    float:right;
+    padding-right:5px;
+  }
+  /* do vui */
+  .right_caledar_dv{line-height:20px;}
+}
+@media screen and (min-width: 320px) and (max-width: 639px){
+  /* do vui */
+  #dovui_page #col_left{width:100%;}
+  #dovui_page #col_right{width:100%; display:block;}
+  .line50p {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .each_answer {
+    width:49%;
+  }
+  #dovui_page #col_right .banner_300x250 {
+    display: none;
+  }
+  .right_caledar_dv{line-height:17px;}
+  .p_thele_dv{font-size:20px;}
+  .bref_thele_dv p, .full_thele_dv p{font-size:16px;}
+  .xemthem_dv a{font-size:14px; padding:0px 25px 0px 10px; background: url('http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/drop_xemthem.gif') no-repeat scroll 80px 7px #FFF;}
+  .rutgon_dv a{font-size:14px; padding:0px 25px 0px 10px; background: url('http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/graphics/drop_xemthem.gif') no-repeat scroll 70px 7px #FFF;}
+  .begin_start{ text-align:center;}
+  .begin_start a {font-size:14px; height:30px; line-height:30px; float:none; height:30px;width:100px; text-align:center; display:inline-block;}
+}
+@media screen and (min-width: 768px) and (max-width: 979px){
+  .hiden_device_all,.xemtiep.hiddenweb,.corn_calendar,.ft-botl,.ft-botm,.ft-botr,.rss,#col_left .block_clear_men  {
+    display:none;
+  }
+  .hiddenweb,.list_menu_small,.coppy_right_small{
+    display:block;
+  }
+  #footer,
+  #wrapper_page{
+    width:100%;
+  }
+
+  .img_logo {
+    display: block;
+    margin: 10px 0 7px 54px;
+    width: 150px;
+    float:left;
+  }
+  #container{
+    padding:0 1%;
+    width:98%;
+    margin:0 auto;
+  }
+  #col_left{
+    width:64%;
+  }
+  #col_right{
+    width:34%;
+  }
+  .line_col_midnews_top,
+  .line_mid_col,
+  .line_page{
+    background-position:65% 0;
+  }
+  .box_hot_news,
+  .block_top_left_video,
+  .block_mid_col_left{
+    width:64%;
+  }
+
+  .box_sub_hot_news,
+  .block_top_right_video,
+  .block_mid_col_right{
+    width:34%;
+  }
+
+  .box_sub_hot_news .scroll-pane{
+    width:100%;
+    height:350px;
+  }
+  .box_sub_hot_news ul{
+    width:93%;
+  }
+  .content_slider{
+    margin:0 0 0 3%;
+    width:94%;
+  }
+
+  .w320{
+    width:49%;
+  }
+  .list_menu_small li{
+    width:19%;
+  }
+  /* do vui */
+  .right_caledar_dv{line-height:20px;}
+}
+/*slider*/
+.w670{
+  width:100%;
+}
+.item_slider{
+  padding:0 5px;
+}
+.item_slider .title_video{
+  padding:10px 0 0 0;
+  width:100%;
+  float:left;
+}
+.btn_control_tv_slider{
+  height:28px;
+  width:28px;
+  background:url(http://st.f1.thethao.vnecdn.net/worldcup/c/v4/images/icons/icon_next_prev_common_slider.png) no-repeat;
+  position:absolute;
+  z-index:9;
+  top:25%;
+}
+.prev_slider{
+  left:0;
+  background-position:0 -28px;
+}
+.next_slider{
+  right:0;
+  background-position:-28px -28px;
+}
+.list_video .next_slider{
+}
+.owl-carousel .owl-wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+/* display none until init */
+.owl-carousel{
+  display: none;
+  position: relative;
+  width: 100%;
+  -ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item{
+  float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+  cursor: pointer;
+}
+.owl-controls {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing {
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+/* CSS3 Transitions */
+
+.owl-origin {
+  -webkit-perspective: 1200px;
+  -webkit-perspective-origin-x : 50%;
+  -webkit-perspective-origin-y : 50%;
+  -moz-perspective : 1200px;
+  -moz-perspective-origin-x : 50%;
+  -moz-perspective-origin-y : 50%;
+  perspective : 1200px;
+}
+/* fade */
+.owl-fade-out {
+  z-index: 10;
+  -webkit-animation: fadeOut .7s both ease;
+  -moz-animation: fadeOut .7s both ease;
+  animation: fadeOut .7s both ease;
+}
+.owl-fade-in {
+  -webkit-animation: fadeIn .7s both ease;
+  -moz-animation: fadeIn .7s both ease;
+  animation: fadeIn .7s both ease;
+}
+/* backSlide */
+.owl-backSlide-out {
+  -webkit-animation: backSlideOut 1s both ease;
+  -moz-animation: backSlideOut 1s both ease;
+  animation: backSlideOut 1s both ease;
+}
+.owl-backSlide-in {
+  -webkit-animation: backSlideIn 1s both ease;
+  -moz-animation: backSlideIn 1s both ease;
+  animation: backSlideIn 1s both ease;
+}
+/* goDown */
+.owl-goDown-out {
+  -webkit-animation: scaleToFade .7s ease both;
+  -moz-animation: scaleToFade .7s ease both;
+  animation: scaleToFade .7s ease both;
+}
+.owl-goDown-in {
+  -webkit-animation: goDown .6s ease both;
+  -moz-animation: goDown .6s ease both;
+  animation: goDown .6s ease both;
+}
+/* scaleUp */
+.owl-fadeUp-in {
+  -webkit-animation: scaleUpFrom .5s ease both;
+  -moz-animation: scaleUpFrom .5s ease both;
+  animation: scaleUpFrom .5s ease both;
+}
+
+.owl-fadeUp-out {
+  -webkit-animation: scaleUpTo .5s ease both;
+  -moz-animation: scaleUpTo .5s ease both;
+  animation: scaleUpTo .5s ease both;
+}
+/* Keyframes */
+/*empty*/
+@-webkit-keyframes empty {
+  0% {opacity: 1}
+}
+@-moz-keyframes empty {
+  0% {opacity: 1}
+}
+@keyframes empty {
+  0% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes fadeOut {
+  0% { opacity:1; }
+  100% { opacity:0; }
+}
+@-moz-keyframes fadeOut {
+  0% { opacity:1; }
+  100% { opacity:0; }
+}
+@keyframes fadeOut {
+  0% { opacity:1; }
+  100% { opacity:0; }
+}
+@-webkit-keyframes backSlideOut {
+  25% { opacity: .5; -webkit-transform: translateZ(-500px); }
+  75% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(-200%); }
+  100% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(-200%); }
+}
+@-moz-keyframes backSlideOut {
+  25% { opacity: .5; -moz-transform: translateZ(-500px); }
+  75% { opacity: .5; -moz-transform: translateZ(-500px) translateX(-200%); }
+  100% { opacity: .5; -moz-transform: translateZ(-500px) translateX(-200%); }
+}
+@keyframes backSlideOut {
+  25% { opacity: .5; transform: translateZ(-500px); }
+  75% { opacity: .5; transform: translateZ(-500px) translateX(-200%); }
+  100% { opacity: .5; transform: translateZ(-500px) translateX(-200%); }
+}
+@-webkit-keyframes backSlideIn {
+  0%, 25% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(200%); }
+  75% { opacity: .5; -webkit-transform: translateZ(-500px); }
+  100% { opacity: 1; -webkit-transform: translateZ(0) translateX(0); }
+}
+@-moz-keyframes backSlideIn {
+  0%, 25% { opacity: .5; -moz-transform: translateZ(-500px) translateX(200%); }
+  75% { opacity: .5; -moz-transform: translateZ(-500px); }
+  100% { opacity: 1; -moz-transform: translateZ(0) translateX(0); }
+}
+@keyframes backSlideIn {
+  0%, 25% { opacity: .5; transform: translateZ(-500px) translateX(200%); }
+  75% { opacity: .5; transform: translateZ(-500px); }
+  100% { opacity: 1; transform: translateZ(0) translateX(0); }
+}
+@-webkit-keyframes scaleToFade {
+  to { opacity: 0; -webkit-transform: scale(.8); }
+}
+@-moz-keyframes scaleToFade {
+  to { opacity: 0; -moz-transform: scale(.8); }
+}
+@keyframes scaleToFade {
+  to { opacity: 0; transform: scale(.8); }
+}
+@-webkit-keyframes goDown {
+  from { -webkit-transform: translateY(-100%); }
+}
+@-moz-keyframes goDown {
+  from { -moz-transform: translateY(-100%); }
+}
+@keyframes goDown {
+  from { transform: translateY(-100%); }
+}
+
+@-webkit-keyframes scaleUpFrom {
+  from { opacity: 0; -webkit-transform: scale(1.5); }
+}
+@-moz-keyframes scaleUpFrom {
+  from { opacity: 0; -moz-transform: scale(1.5); }
+}
+@keyframes scaleUpFrom {
+  from { opacity: 0; transform: scale(1.5); }
+}
+
+@-webkit-keyframes scaleUpTo {
+  to { opacity: 0; -webkit-transform: scale(1.5); }
+}
+@-moz-keyframes scaleUpTo {
+  to { opacity: 0; -moz-transform: scale(1.5); }
+}
+@keyframes scaleUpTo {
+  to { opacity: 0; transform: scale(1.5); }
+}

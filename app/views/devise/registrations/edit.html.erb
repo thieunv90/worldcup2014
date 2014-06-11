@@ -6,26 +6,30 @@
   <div><%= f.label :username %><br />
     <span><%= resource.username %></span>
   </div>
+  <br />
   <div><%= f.label :email %><br />
     <span><%= resource.email %></span>
   </div>
+  <br />
   <div><%= f.label :full_name %><br />
-  <%= f.text_field :full_name, autofocus: true %></div>
+  <%= f.text_field :full_name, autofocus: true, :class => "form-control" %></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
   <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+    <%= f.password_field :password, autocomplete: "off", :class => "form-control" %></div>
 
   <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+    <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %></div>
 
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
+    <%= f.password_field :current_password, autocomplete: "off", :class => "form-control" %></div>
+  <br />
+  <div>
+    <%= f.submit "Update", :class => "btn btn-primary" %>
+    <%= link_to "Back", :back, :class => "btn btn-default" %>
+  </div>
 
-  <div><%= f.submit "Update" %></div>
 <% end %>
-
-<%= link_to "Back", :back %>

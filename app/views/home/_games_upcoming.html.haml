@@ -1,24 +1,24 @@
-%h3= t(:upcoming_games)
-%table
+.width_common.box.sub_guess.space_box
+  .title Vòng bảng
   - last_play_at = Time.local( 1999, 1, 1 )
   - games.each do |game|
     - unless last_play_at.year   == game.play_at_local.year  &&
     - last_play_at.month  == game.play_at_local.month &&
     - last_play_at.day    == game.play_at_local.day
-      %tr{style: "background-color: silver;"}
-        %td{colspan: "10"}= game.play_at_local.strftime('%A, %d. %B %Y')
-    %tr{style: "vertical-align: middle;"}
-      %td
-        = game.play_at_local.strftime('%H:%M')
-      %td{style: "text-align: right;"}
-        = link_to game.team1.title, match_game_path( game.id )
-        = "(#{game.team1.title2})" if game.team1.title2.present?
-      %td
-        = logo_for_team( game.team1 )
-        = display_score(game)
-        = logo_for_team( game.team2 )
-      %td
-        = link_to game.team2.title, match_game_path( game.id )
-        = "(#{game.team2.title2})" if game.team2.title2.present?
-      %td
-        (#{game.round.title})
+      %table.width_common
+        %caption= game.play_at_local.strftime('%A, %d. %B %Y')
+        %tbody
+          %tr.now
+            %td.time= game.play_at_local.strftime('%H:%M')
+            %td.group= game.group.title
+            %td.main_team
+              %span= game.team1.title
+              = logo_for_team(game.team1)
+            %td.score
+              = display_score(game)
+            %td.sub_team
+              = logo_for_team(game.team2)
+              %span= game.team2.title
+
+              .txt_view_more
+                %a.txt_666{href: match_game_path( game.id ), title: "Thống kê trận đấu #{game.team1.title} - #{game.team2.title}"} Chi tiết

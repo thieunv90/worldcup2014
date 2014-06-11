@@ -25,7 +25,7 @@ end
 staffs.each_with_index do |staff, index|
   user = User.find_by_email("#{staff}@nustechnology.com")
   if !user
-    user = User.new(username: "#{staff}", email: "#{staff}@nustechnology.com", password: "123", password_confirmation: "123", full_name: "#{staffs_fullname[index]}")
+    user = User.new(username: "#{staff}", email: "#{staff}@nustechnology.com", password: "1", password_confirmation: "1", full_name: "#{staffs_fullname[index]}")
     user.save
   end
 end

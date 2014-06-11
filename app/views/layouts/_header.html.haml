@@ -1,0 +1,19 @@
+#wrapper_header
+  .header_logo.width_common
+    %a{href: root_path}
+      %img.left.logo_web{alt: "", src: "http://nustechnology.com/assets/logo.png", width: "120px"}/
+    #user-area
+      - if user_signed_in?
+        %span= "Welcome, #{current_user.display_name}!"
+        %span{style: 'margin-left: 10px;'}= link_to "Profile", authentication_path
+        %span{style: 'margin-left: 10px;'}= link_to "Logout", destroy_user_session_path, :method => :delete
+      - else
+        %span= link_to "Login", new_user_session_path
+  %h4 Đồng hành cùng World cup 2014 - Rinh quà khủng
+  #main_menu
+    %a.active{href: root_path}
+      %span.icon_wc>  
+      World Cup 2014
+    %a{href: "#"} Cá cược tỉ số
+    %a{href: "#"} Top triệu phú
+    %a{href: "#"} Top trọc phú

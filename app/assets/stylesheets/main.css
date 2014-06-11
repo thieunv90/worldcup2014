@@ -1,0 +1,18 @@
+.header_logo{
+  margin-top: -30px !important;
+  position: relative;
+}
+.ft-botl{
+  padding: 10px 0 0 0 !important;
+}
+.ft-botr{
+  padding: 10px 0 0 0 !important;
+}
+.p-t-20{
+  padding-top: 10px;
+}
+#user-area{
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
