@@ -28,4 +28,12 @@ namespace :db do
     Round.where(pos: 19).update_all(amount: 50000)
     Round.where(pos: 20).update_all(amount: 50000)
   end
+
+  desc "Update name of scores"
+  task :update_scores_name, [:role] => :environment do
+    Score.all.each do |s|
+      s.name = s.name.gsub(/[\s+)(]/,"")
+      s.save
+    end
+  end
 end

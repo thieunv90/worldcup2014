@@ -16,3 +16,67 @@
   right: 0;
   top: 40px;
 }
+.i-4-flag{
+  width: 48px;
+  height: 32px;
+}
+.flag{
+  border: 1px solid #c7c6c6;
+}
+.m-t-10{
+  margin-top: 10px;
+}
+.txt_main_category a, #main_menu a, .tabs a{
+  text-decoration: none !important;
+}
+.tabs a{
+  color: #fff !important;
+  font-weight: bold;
+}
+.betting-score{
+  text-decoration: none !important;
+  padding: 5px;
+}
+.a-color{
+  color: #428bca;
+}
+.total-people-betting{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: grey;
+}
+.total-money-betting{
+  text-align: right;
+  font-family: 'Play', sans-serif;
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+}
+.page_trandau .col.a{
+  width: 70% !important;
+}
+.page_trandau .col.b{
+  width: 30% !important;
+}
+.score-bet{
+  font-size: 20px;
+  color: #00868B;
+}
+.users-bet{
+  font-family: 'Play', sans-serif;
+  font-size: 16px;
+  color: #1D7CF2;
+}
+.play-font{
+  font-family: 'Play', sans-serif;
+  font-size: 16px;
+}
+.amount_of_money{
+  font-family: 'Play', sans-serif;
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+}
+.margin-20 {
+  margin: 20px 0;
+}

@@ -3055,8 +3055,9 @@ border-bottom: none;
   color: #fff;
   border:none;
   width: 66px;
-  padding: 5px 0;
-  cursor:pointer;
+  padding: 7px 0;
+  cursor: pointer;
+  font-size: 14px;
 }
 .category_guess_score table .score span.box{
 border:1px solid #ccc;
@@ -3872,7 +3873,7 @@ background-position: -75px 0;
 }
 .page_trandau .col .team_name{
   font: 400 18px Arial;
-  margin: 30px 0 0 0;
+  margin: 10px 0 0 0;
 }
 .page_trandau .col.b .team_name{
   text-align: right;

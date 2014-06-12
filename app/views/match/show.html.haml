@@ -1,44 +1,110 @@
-%h2= @game.play_at_local.strftime('%A, %d. %B %Y')
-= render partial: 'game', locals: { game: @game }
-%br
-%div
-  %h4 Statistics:
-  - @statistics.each do |user_id, scores|
-    - score_ids = scores.map(&:score_id)
-    - user = User.find(user_id)
-    %li
-      - if user_signed_in? && user == current_user
-        %strong= "#{User.find(user_id).display_name}: #{Score.where(id: score_ids).collect{|s| s.name}.join(', ')} (You)"
-      - else
-        = "#{User.find(user_id).display_name}: #{Score.where(id: score_ids).collect{|s| s.name}.join(', ')}"
-%br
-%div
-  %h4 Total Money:
-  %li= "Total money from previous match: #{number_with_delimiter(@money_from_previous_match, delimiter: '.')} VNĐ"
-  %li= "Total money users betting: #{number_with_delimiter(@money_users_bet, delimiter: '.')} VNĐ"
-  %li= "Total money NUS Technology Company contributing: #{number_with_delimiter(@money_company_contribute, delimiter: '.')} VNĐ"
-  %div{style: "font-size: 160%; color: blue;"}= "==> Total money bet on this match: #{number_with_delimiter(@total_money, delimiter: '.')} VNĐ"
-- if @game.locked?
-  %div
-    %h4 Result:
-    - if @no_winner
-      = "No winner!"
-    - else
-      %p{style: "color: green; font-size: 150%;"}= "The winners of this match: #{@winners}"
-      %p{style: "color: teal; font-size: 120%;"}= "Each people got: #{number_with_delimiter(@amount_of_money, delimiter: '.')} VNĐ"
-%div
-  %h4 Betting:
-  - if !user_signed_in?
-    = "You must login to bet this match"
-  - else
-    - if @game.locked?
-      = "This match was occured."
-    - elsif !current_user.admin?
-      = form_tag match_betting_path(@game), :method => :post, :class => 'form-horizontal match_betting_form'
-      .form-group
-        %label.col.col-md-1.control-label Bet:
-        .col.col-md-5
-          = select_tag "user_scores", options_for_select(@scores, @selected_scores), :multiple => true, :disabled => @disabled, :class => 'form-control'
-      %div{style: "margin-left: 110px;"}
-        %button.btn.btn-primary{type: "submit"} Submit
-        = link_to "Back to Main page", root_path, :class => 'btn btn-default'
+.width_common
+  .page_trandau.width_common
+    %h4.text-center{style: "font-family: 'Play';"}
+      Deadline:
+      %strong= "#{@game.deadline.strftime('%H:%M %p, %A, %d/%m')}"
+    %table.tbl_main.width_common.space_box.m-t-10
+      %thead
+        %tr
+          %td#time-socre.time{:colspan => "3", :style => "color:#666666;"}= @game.group.title
+        %tr
+          %td#time-socre.time{:colspan => "3", :style => "color:#666666;"}= @game.play_at_local.strftime('%d/%m - %H:%S %p')
+        %tr
+          %td.team.a
+            %span= @game.team1.title
+            = logo_for_team( @game.team1 )
+          %td#score-data.score V
+          %td.team.b
+            = logo_for_team( @game.team2 )
+            %span= @game.team2.title
+      %tbody#main-score-card
+      %tfoot
+        %tr
+          %td.summit{:colspan => "3", style: "padding: 10px 0;"}
+            - if user_signed_in? && current_user.admin?
+              %p= link_to "Cập nhật tỉ số", match_update_score_path(@game), class: "btn_guess go-predict-match betting-score"
+            - else
+              %a.btn_guess.go-predict-match.betting-score{href: "#du-doan-ti-so", :style => "cursor:pointer;"}
+                Dự đoán
+    .vongloai_vongbang.tab_content
+      %ul.tabs
+        %li
+          %a.tab.active{:href => "javascript:;", :title => "Thống kê cá cược"} Thống kê
+      #tab_thongke.content.active.adasda
+        .col.a
+          .team_name
+            %span.a-color Thông tin cá cược
+          .result.total-people-betting
+            = "Có <strong>#{@statistics.size}</strong> người đã tham gia dự đoán tỉ số trận đấu này.".html_safe
+          %table.width_common.m-t-10
+            %tbody
+              - @statistics.each do |user_id, scores|
+                - score_ids = scores.map(&:score_id)
+                - user = User.find(user_id)
+                %tr
+                  - if user_signed_in? && user == current_user
+                    %td= "<strong><span class='users-bet'>#{User.find(user_id).display_name}</span> đã dự đoán các tỉ số: <span class='score-bet'>#{Score.where(id: score_ids).collect{|s| s.name}.join(', ')}</span></strong>".html_safe
+                  - else
+                    %td= "<span><span class='users-bet'>#{User.find(user_id).display_name}</span> đã dự đoán các tỉ số: <span class='score-bet'>#{Score.where(id: score_ids).collect{|s| s.name}.join(', ')}</span></span>".html_safe
+        .col.b
+          .team_name
+            %span.a-color Tổng tiền đầu tư
+          .result.total-money-betting
+            = "#{number_with_delimiter(@total_money, delimiter: '.')} VNĐ"
+          %table.width_common
+            %tbody
+              %tr
+                %td
+                  Trận trước:
+                %td.play-font
+                  = "#{number_with_delimiter(@money_from_previous_match, delimiter: '.')} VNĐ"
+              %tr
+                %td
+                  Trận này:
+                %td.play-font
+                  = "#{number_with_delimiter(@money_users_bet, delimiter: '.')} VNĐ"
+              %tr
+                %td
+                  Công ty NUS:
+                %td.play-font
+                  = "#{number_with_delimiter(@money_company_contribute, delimiter: '.')} VNĐ"
+        - if @game.locked?
+          .box_category.width_common.space_box.box_dudoan{:style => "border-bottom:none;"}
+            .title_box_detailpage.width_common
+              .txt_main_category
+                #du-doan-ti-so= link_to "Kết quả", "javascript:;"
+            .content_box_category.width_common
+              .block_dudoan.category_guess_score
+                - if @no_winner
+                  Không có nhà đầu tư nào dự đoán đúng tỉ số trận đấu này.
+                - else
+                  = "Xin chúc mừng <strong><span class='users-bet'>#{@winners}</span></strong> đã dự đoán đúng tỉ số của trận đấu.".html_safe
+                  %br
+                  = "Số tiền nhận được: <span class='amount_of_money'>#{number_with_delimiter(@amount_of_money, delimiter: '.')}</span> VNĐ".html_safe
+        - else
+          .box_category.width_common.space_box.box_dudoan{:style => "border-bottom:none;"}
+            .title_box_detailpage.width_common
+              .txt_main_category
+                #du-doan-ti-so= link_to "Dự đoán tỉ số", "javascript:;"
+            .content_box_category.width_common
+              .block_dudoan.category_guess_score
+                - if !user_signed_in?
+                  = "Bạn cần #{link_to 'đăng nhập', new_user_session_path} để dự đoán tỉ số trận đấu này.".html_safe
+                - else
+                  - if @game.locked?
+                    Trận đấu này đã diễn ra.
+                  - elsif !current_user.admin?
+                    = form_tag match_betting_path(@game), :method => :post, :class => 'form-horizontal match_betting_form'
+                    %table
+                      %thead
+                        %tr
+                          %td.minutes{:colspan => "3"}
+                      %tbody
+                        %tr.current
+                          = select_tag "user_scores", options_for_select(@scores, @selected_scores), :multiple => true, :disabled => @disabled, :class => 'form-control', "data-placeholder"=>"Click vào đây để chọn tỉ số..."
+                        %tr.submit
+                          %td.main_team
+                          %td.score
+                            %button.predict-match{type: "submit"} Gửi
+                          %td.sub_team
+  / end page_trangdau
