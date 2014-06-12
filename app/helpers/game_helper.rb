@@ -3,7 +3,7 @@ module GameHelper
   def display_score(game)
     if game.winner.blank?
       if game.score1.blank? && game.score2.blank?
-        "-"
+        ''
       else
         "#{game.score1} - #{game.score2}"
       end

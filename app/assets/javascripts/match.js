@@ -19,4 +19,11 @@ $(function(){
       }
     });
   });
+  $("table.list-people-betting tbody").readmore({
+    speed: 90,
+    maxHeight: 200,
+    moreLink: '<a href="#" class="green-btn">Xem tất cả</a>',
+    lessLink: '<a href="#" class="green-btn">Thu gọn</a>',
+    embedCSS: true
+  });
 });

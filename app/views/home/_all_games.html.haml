@@ -11,7 +11,7 @@
             %span= game.team1.title
             = logo_for_team(game.team1)
           %td.score
-            = display_score(game)
+            %span{style: "font: 700 30px Arial !important;"}= display_score(game).blank? ? "-" : display_score(game)
           %td.sub_team
             = logo_for_team(game.team2)
             %span= game.team2.title

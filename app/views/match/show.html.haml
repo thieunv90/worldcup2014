@@ -13,7 +13,7 @@
           %td.team.a
             %span= @game.team1.title
             = logo_for_team( @game.team1 )
-          %td#score-data.score V
+          %td#score-data.score= display_score(@game).blank? ? "V" : display_score(@game)
           %td.team.b
             = logo_for_team( @game.team2 )
             %span= @game.team2.title
@@ -24,8 +24,9 @@
             - if user_signed_in? && current_user.admin?
               %p= link_to "Cập nhật tỉ số", match_update_score_path(@game), class: "btn_guess go-predict-match betting-score"
             - else
-              %a.btn_guess.go-predict-match.betting-score{href: "#du-doan-ti-so", :style => "cursor:pointer;"}
-                Dự đoán
+              - if !@game.locked?
+                %a.btn_guess.go-predict-match.betting-score{href: "#du-doan-ti-so", :style => "cursor:pointer;"}
+                  Dự đoán
     .vongloai_vongbang.tab_content
       %ul.tabs
         %li
@@ -36,7 +37,7 @@
             %span.a-color Thông tin cá cược
           .result.total-people-betting
             = "Có <strong>#{@statistics.size}</strong> người đã tham gia dự đoán tỉ số trận đấu này.".html_safe
-          %table.width_common.m-t-10
+          %table.width_common.m-t-10.list-people-betting
             %tbody
               - @statistics.each do |user_id, scores|
                 - score_ids = scores.map(&:score_id)
@@ -69,7 +70,7 @@
                 %td.play-font
                   = "#{number_with_delimiter(@money_company_contribute, delimiter: '.')} VNĐ"
         - if @game.locked?
-          .box_category.width_common.space_box.box_dudoan{:style => "border-bottom:none;"}
+          .box_category.width_common.space_box.box_dudoan.m-t-10{:style => "border-bottom:none;"}
             .title_box_detailpage.width_common
               .txt_main_category
                 #du-doan-ti-so= link_to "Kết quả", "javascript:;"
@@ -82,7 +83,7 @@
                   %br
                   = "Số tiền nhận được: <span class='amount_of_money'>#{number_with_delimiter(@amount_of_money, delimiter: '.')}</span> VNĐ".html_safe
         - else
-          .box_category.width_common.space_box.box_dudoan{:style => "border-bottom:none;"}
+          .box_category.width_common.space_box.box_dudoan.m-t-20{:style => "border-bottom:none;"}
             .title_box_detailpage.width_common
               .txt_main_category
                 #du-doan-ti-so= link_to "Dự đoán tỉ số", "javascript:;"

@@ -26,6 +26,9 @@
 .m-t-10{
   margin-top: 10px;
 }
+.m-t-20{
+  margin-top: 20px;
+}
 .txt_main_category a, #main_menu a, .tabs a{
   text-decoration: none !important;
 }
@@ -79,4 +82,20 @@
 }
 .margin-20 {
   margin: 20px 0;
+}
+.green-btn{
+  width: 95px !important;
+  text-align: center;
+  height: 25px;
+  background: #328005;
+  color: #fff !important;
+  font-size: 14px;
+  text-decoration: none !important;
+  padding: 2px 0 0 0;
+}
+.txt_view_more a{
+  font: 400 13px arial !important;
+}
+.txt_view_more{
+  margin-top: 10px !important;
 }
