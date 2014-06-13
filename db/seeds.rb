@@ -10,7 +10,8 @@
 # Create scores
 (0..15).each do |i|
   for j in 0..i do
-    Score.find_or_create_by_name("#{i} - #{j}")
+    Score.find_or_create_by_name("#{i}-#{j}")
+    Score.find_or_create_by_name("#{j}-#{i}")
   end
 end
 
