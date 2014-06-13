@@ -6,8 +6,8 @@ class MatchController < ApplicationController
     @game = Game.find(params[:game_id])
     @scores = Score.all.collect{|s|[s.name, s.id]}
     @selected_scores = current_user.user_scores.where(game_id: @game.id).collect{|a|a.score_id} if user_signed_in?
-    @disabled = (@game.deadline.to_date == Date.today && Time.now.hour < @game.deadline.hour) ? false : true
-    # @disabled = false
+    # @disabled = (@game.deadline.to_date == Date.today && Time.now.hour < @game.deadline.hour) ? false : true
+    @disabled = false
 
     # Statistics
     @statistics = @game.user_scores.group_by(&:user_id)
@@ -39,8 +39,8 @@ class MatchController < ApplicationController
       if params[:user_scores].size > 3
         flash[:error] = "Cannot bet greater than 3 scores!"
       elsif params[:user_scores].size > 0
-        if game.deadline.to_date == Date.today && Time.now.hour < game.deadline.hour
-        # if true
+        # if game.deadline.to_date == Date.today && Time.now.hour < game.deadline.hour
+        if true
           existing_scores = current_user.user_scores.where(game_id: game.id)
           unless existing_scores.blank?
             existing_scores.delete_all
