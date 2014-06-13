@@ -34,8 +34,7 @@ class MatchController < ApplicationController
   def betting
     game = Game.find(params[:game_id])
     unit_price = game.round.amount
-    p "@@@"
-    p game.deadline
+
     unless params[:user_scores].blank?
       if params[:user_scores].size > 3
         flash[:error] = "Cannot bet greater than 3 scores!"
@@ -82,7 +81,7 @@ class MatchController < ApplicationController
     @scores = Score.all.collect{|s|[s.name, s.id]}
     if current_user.admin? && request.post?
       score = Score.find(params[:score_id])
-      score_result = score.name.split(' - ')
+      score_result = score.name.split('-')
       if @game.update_attributes(score1: score_result[0].to_i, score2: score_result[1].to_i, score_id: score.id, locked: true, winner: params[:result].to_i > 0 ? params[:result].to_i : nil)
         # List winner of this match
         list_winners_arr = @game.user_scores.where(score_id: @game.score_id).group_by(&:user_id).keys
