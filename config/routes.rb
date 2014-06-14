@@ -18,6 +18,6 @@ Worldcup2014::Application.routes.draw do
   match 'match/:game_id/update_score', :to => 'match#update_score', :as => :match_update_score
 
   post 'scores/:score_id/get_score', :to => 'scores#get_score', :as => :get_score
-
+  get 'statistics', :to => 'statistics#index'
   root :to => 'home#index'
 end

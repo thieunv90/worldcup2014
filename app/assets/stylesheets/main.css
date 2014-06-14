@@ -99,3 +99,14 @@
 .txt_view_more{
   margin-top: 10px !important;
 }
+.statistics-table .table > thead > tr > th {
+  font-weight: bold;
+}
+tr.bold-win td{
+  font-weight: bold;
+  color: blue;
+}
+tr.bold-lose td{
+  font-weight: bold;
+  color: red;
+}
