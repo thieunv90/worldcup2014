@@ -91,12 +91,12 @@ class MatchController < ApplicationController
           # Reset total money win
           Budget.where(game_id: @game.id).update_all(total_money_win: 0)
           # Update total money win
-          money_for_each_people = (investment.total + money_from_previous_match) / list_winners_arr.size
+          money_for_each_people = ((investment.total + money_from_previous_match).to_f / list_winners_arr.size).round
           Budget.where(user_id: list_winners_arr, game_id: @game.id).update_all(total_money_win: money_for_each_people)
           investment.update_attributes(remaining: 0) if !investment.remaining.blank?
         else
           Budget.where(game_id: @game.id).update_all(total_money_win: 0)
-          investment.update_attributes(remaining: (investment.total + money_from_previous_match) / 2)
+          investment.update_attributes(remaining: ((investment.total + money_from_previous_match).to_f / 2).round)
         end
         flash[:notice] = "Update score successfully!"
       else
