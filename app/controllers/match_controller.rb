@@ -64,8 +64,8 @@ class MatchController < ApplicationController
       end
     else
       existing_scores = current_user.user_scores.where(game_id: game.id)
-      if !existing_scores.blank? && game.deadline.to_date == Date.today && Time.now.hour < game.deadline.hour
-      # if !existing_scores.blank? && true
+      # if !existing_scores.blank? && game.deadline.to_date == Date.today && Time.now.hour < game.deadline.hour
+      if !existing_scores.blank? && true
         existing_scores.delete_all
         # Update budget
         user_budget = Budget.where(user_id: current_user.id, game_id: game.id).first
