@@ -11,9 +11,9 @@
         %span= link_to "Đăng nhập", new_user_session_path
   %h4 Đồng hành cùng World cup 2014 - Rinh quà khủng
   #main_menu
-    %a.active{href: root_path}
+    %a{href: root_path, class: params[:controller] == 'home' ? 'active' : ''}
       %span.icon_wc>  
       World Cup 2014
-    %a{href: statistics_path} Thống kê
+    %a{href: statistics_path, class: params[:controller] == 'statistics' && params[:action] == 'index' ? 'active' : ''} Thống kê
     %a{href: "#"} Top triệu phú
     %a{href: "#"} Top trọc phú
