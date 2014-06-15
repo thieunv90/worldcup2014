@@ -4,8 +4,8 @@
       %img.left.logo_web{alt: "", src: "http://nustechnology.com/assets/logo.png", width: "120px"}/
     #user-area
       - if user_signed_in?
-        %span= "Chào, #{current_user.display_name}&nbsp&nbsp&nbsp&nbsp|".html_safe
-        %span{style: 'margin-left: 10px;'}= link_to "Hồ sơ", authentication_path
+        %span= "Chào, #{link_to current_user.display_name, authentication_path}&nbsp&nbsp&nbsp&nbsp|".html_safe
+        %span{style: 'margin-left: 10px;'}= link_to "Lịch sử cá cược", user_statistics_path(current_user)
         %span{style: 'margin-left: 10px;'}= link_to "Đăng xuất", destroy_user_session_path, :method => :delete
       - else
         %span= link_to "Đăng nhập", new_user_session_path
@@ -14,6 +14,4 @@
     %a{href: root_path, class: params[:controller] == 'home' ? 'active' : ''}
       %span.icon_wc>  
       World Cup 2014
-    %a{href: statistics_path, class: params[:controller] == 'statistics' && params[:action] == 'index' ? 'active' : ''} Thống kê
-    %a{href: "#"} Top triệu phú
-    %a{href: "#"} Top trọc phú
+    %a{href: statistics_path, class: params[:controller] == 'statistics' && params[:action] == 'index' ? 'active' : ''} Top triệu phú - trọc phú
