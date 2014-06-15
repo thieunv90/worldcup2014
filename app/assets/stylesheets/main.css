@@ -29,6 +29,9 @@
 .m-t-20{
   margin-top: 20px;
 }
+.m-b-20{
+  margin-bottom: 20px;
+}
 .txt_main_category a, #main_menu a, .tabs a{
   text-decoration: none !important;
 }
@@ -99,8 +102,11 @@
 .txt_view_more{
   margin-top: 10px !important;
 }
-.statistics-table .table > thead > tr > th {
+.statistics-table .table > thead > tr > th, .statistics-user-detail-table .table > thead > tr > th {
   font-weight: bold;
+}
+.statistics-table .table > tbody > tr , .statistics-user-detail-table .table > tbody > tr{
+  cursor: pointer;
 }
 tr.bold-win td{
   font-weight: bold;
@@ -109,4 +115,30 @@ tr.bold-win td{
 tr.bold-lose td{
   font-weight: bold;
   color: red;
+}
+.width-100{
+  width: 100%;
+}
+table.statistics-user-table{
+  margin-bottom: 10px;
+}
+.width-17{
+  width: 17%;
+}
+.bold-text{
+  font-weight: bold;
+}
+.statistics-user-table tr.total_money_profits td{
+  font-weight: bold;
+  color: blue;
+  font-size: 18px;
+}
+.statistics-user-table tr.total_money_lose td{
+  font-weight: bold;
+  color: red;
+  font-size: 18px;
+}
+.highlight_row .highlight_column{
+  color: blue;
+  font-weight: bold;
 }

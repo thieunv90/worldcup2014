@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :user_scores
   has_and_belongs_to_many :scores, join_table: :user_scores
+  has_many :budgets
 
   def display_name
     return self.full_name unless self.full_name.blank?

@@ -1,0 +1,39 @@
+%h3.text-center{style: "margin: 20px 0 5px 0;"}
+  %strong THỐNG KÊ CHI TIẾT
+%p.text-center{style: "margin-bottom: 5px;"} (Đơn vị tiền tệ: VNĐ)
+%p.text-center.bold-text{style: "margin-bottom: 20px; color: green;"}= "Nhà đầu tư: #{@user.full_name}"
+%table.statistics-user-table.width-100
+  %thead
+    %tr
+      %th.width-17
+      %th
+    %tbody
+      %tr
+        %td Tổng tiền đầu tư:
+        %td.bold_text= number_with_delimiter(@total_money_user_bet, delimiter: '.') + " VNĐ"
+      %tr
+        %td Tổng tiền thắng cuộc:
+        %td.bold_text= number_with_delimiter(@total_money_user_win, delimiter: '.') + " VNĐ"
+      %tr{class: @total_money_user_get > 0 ? 'total_money_profits' : 'total_money_lose'}
+        %td Tổng lợi nhuận:
+        %td= number_with_delimiter(@total_money_user_get, delimiter: '.') + " VNĐ"
+.table-responsive.statistics-user-detail-table
+  %table.table.table-bordered.table-hover
+    %thead
+      %tr
+        %th Trận
+        %th Ngày diễn ra
+        %th.text-center Tổng tỉ số đã cược
+        %th.text-center Tiền đầu tư
+        %th.text-center Tiền thắng cược
+        %th.text-center Lợi nhuận
+    %tbody
+      - @user_statistics.each do |record|
+        %tr{class: @maximum_money_win == record[:money_win] ? 'highlight_row success' : '', "data-url" => match_game_url(record[:game])}
+          %td= record[:match]
+          %td= record[:date_occur]
+          %td.text-center= record[:total_scores]
+          %td.text-center= number_with_delimiter(record[:money_bet], delimiter: '.')
+          %td.text-center.highlight_column= number_with_delimiter(record[:money_win], delimiter: '.')
+          %td.text-center{class: record[:money_get] > 0 ? 'success' : (record[:money_get] < 0 ? 'danger' : '')}= number_with_delimiter(record[:money_get], delimiter: '.')
+%p.text-right.m-b-20 * Click vào từng hàng để xem thông tin chi tiết từng trận đấu
