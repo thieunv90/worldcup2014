@@ -13,7 +13,9 @@ class MatchController < ApplicationController
     @statistics = @game.user_scores.group_by(&:user_id)
 
     # Money Betting
-    @money_from_previous_match = @game.pos > 1 ? Investment.where(game_id: Game.find_by_pos(@game.pos - 1).id).first.remaining : 0
+    games_ordered = Game.order(:play_at)
+    index_current_game = games_ordered.index(@game)
+    @money_from_previous_match = @game.pos > 1 ? Investment.where(game_id: games_ordered[index_current_game-1].id).first.remaining : 0
     total_budgets_bet = Budget.where(game_id: @game.id).map(&:total_money_bet).sum
     @money_users_bet = total_budgets_bet
     @money_company_contribute = total_budgets_bet.zero? ? 0 : 3*@game.round.amount
@@ -86,7 +88,10 @@ class MatchController < ApplicationController
         # List winner of this match
         list_winners_arr = @game.user_scores.where(score_id: @game.score_id).group_by(&:user_id).keys
         investment = Investment.find_by_game_id(@game.id)
-        money_from_previous_match = @game.pos > 1 ? Investment.where(game_id: Game.find_by_pos(@game.pos - 1).id).first.remaining : 0
+        # Find previous game
+        games_ordered = Game.order(:play_at)
+        index_current_game = games_ordered.index(@game)
+        money_from_previous_match = @game.pos > 1 ? Investment.where(game_id: games_ordered[index_current_game-1].id).first.remaining : 0
         if list_winners_arr.size > 0
           # Reset total money win
           Budget.where(game_id: @game.id).update_all(total_money_win: 0)
