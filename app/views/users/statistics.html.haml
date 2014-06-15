@@ -29,7 +29,7 @@
         %th.text-center Lợi nhuận
     %tbody
       - @user_statistics.each do |record|
-        %tr{class: @maximum_money_win == record[:money_win] ? 'highlight_row success' : '', "data-url" => match_game_url(record[:game])}
+        %tr{class: (@maximum_money_win == record[:money_win] && @maximum_money_win > 0) ? 'highlight_row success' : '', "data-url" => match_game_url(record[:game])}
           %td= record[:match]
           %td= record[:date_occur]
           %td.text-center= record[:total_scores]
