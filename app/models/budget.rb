@@ -7,7 +7,10 @@ class Budget < ActiveRecord::Base
 
   def update_investment
     game = Game.find(self.game_id)
-    money_from_previous_match = game.pos > 1 ? Investment.where(game_id: Game.find_by_pos(game.pos - 1).id).first.remaining : 0
+    games_ordered = Game.order(:play_at)
+    index_current_game = games_ordered.index(game)
+    money_from_previous_match = game.pos > 1 ? Investment.where(game_id: games_ordered[index_current_game-1].id).first.remaining : 0
+
     unit_price = game.round.amount
     money_users_bet = 0
     money_company_contribute = 0
@@ -18,7 +21,7 @@ class Budget < ActiveRecord::Base
       end
       money_company_contribute = 3 * unit_price
     end
-    total_money = money_users_bet + money_company_contribute + money_from_previous_match
+    total_money = money_users_bet + money_company_contribute
     Investment.find_by_game_id(self.game_id).update_attributes(total: total_money)
   end
 end
