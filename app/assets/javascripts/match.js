@@ -1,5 +1,5 @@
 $(function(){
-  $("select#user_scores").chosen({
+  $("select#user_scores, select.betting-multi-score").chosen({
     max_selected_options: 3,
     no_results_text: "Oops, nothing found!"
   });

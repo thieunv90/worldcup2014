@@ -23,6 +23,7 @@
           %td.summit{:colspan => "3", style: "padding: 10px 0;"}
             - if user_signed_in? && current_user.admin?
               %p= link_to "Cập nhật tỉ số", match_update_score_path(@game), class: "btn_guess go-predict-match betting-score"
+              %p= link_to "Betting score", match_betting_score_path(@game), class: "btn_guess go-predict-match betting-score"
             - else
               - if !@game.locked?
                 %a.btn_guess.go-predict-match.betting-score{href: "#du-doan-ti-so", :style => "cursor:pointer;"}

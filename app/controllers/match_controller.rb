@@ -110,4 +110,28 @@ class MatchController < ApplicationController
       redirect_to match_game_path(@game)
     end
   end
+
+  def betting_score
+    @game = Game.find(params[:game_id])
+    unit_price = @game.round.amount
+    @users = User.where(admin: false).order(:username)
+    @scores = Score.all.collect{|s|[s.name, s.id]}
+    @disabled = false
+    if current_user.admin? && request.post?
+      unless params[:user].blank?
+        params[:user].each do |user_id, score|
+          score[:score_ids].each do |score_id|
+            UserScore.create(user_id: user_id, score_id: score_id, game_id: params[:game_id], bid_date: Date.today)
+          end
+          # Update budget
+          user_budget = Budget.where(user_id: user_id, game_id: @game.id).first
+          if user_budget.blank?
+            Budget.create(game_id: @game.id, user_id: user_id, total_money_bet: score[:score_ids].size * unit_price)
+          else
+            user_budget.update_attributes(total_money_bet: score[:score_ids].size * unit_price)
+          end
+        end
+      end
+    end
+  end
 end
