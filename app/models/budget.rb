@@ -7,7 +7,7 @@ class Budget < ActiveRecord::Base
 
   def update_investment
     game = Game.find(self.game_id)
-    games_ordered = Game.order(:play_at)
+    games_ordered = Game.order(:play_at, :pos)
     index_current_game = games_ordered.index(game)
     money_from_previous_match = game.pos > 1 ? Investment.where(game_id: games_ordered[index_current_game-1].id).first.remaining : 0
 

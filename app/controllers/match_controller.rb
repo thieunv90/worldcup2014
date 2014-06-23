@@ -13,7 +13,7 @@ class MatchController < ApplicationController
     @statistics = @game.user_scores.group_by(&:user_id)
 
     # Money Betting
-    games_ordered = Game.order(:play_at)
+    games_ordered = Game.order(:play_at, :pos)
     index_current_game = games_ordered.index(@game)
     @money_from_previous_match = @game.pos > 1 ? Investment.where(game_id: games_ordered[index_current_game-1].id).first.remaining : 0
     total_budgets_bet = Budget.where(game_id: @game.id).map(&:total_money_bet).sum
@@ -89,7 +89,7 @@ class MatchController < ApplicationController
         list_winners_arr = @game.user_scores.where(score_id: @game.score_id).group_by(&:user_id).keys
         investment = Investment.find_by_game_id(@game.id)
         # Find previous game
-        games_ordered = Game.order(:play_at)
+        games_ordered = Game.order(:play_at, :pos)
         index_current_game = games_ordered.index(@game)
         money_from_previous_match = @game.pos > 1 ? Investment.where(game_id: games_ordered[index_current_game-1].id).first.remaining : 0
         if list_winners_arr.size > 0
