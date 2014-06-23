@@ -1,0 +1,20 @@
+.width_common.box.sub_guess.space_box
+  .title Vòng bảng - Các trận đang diễn ra
+  - games.each do |game|
+    %table.width_common
+      %caption= game.play_at_local.strftime('%A, %d. %B %Y')
+      %tbody
+        %tr.now
+          %td.time= game.play_at_local.strftime('%H:%M')
+          %td.group= game.group.title
+          %td.main_team
+            %span= game.team1.title
+            = logo_for_team(game.team1)
+          %td.score
+            %span{style: "font: 700 30px Arial !important;"}= display_score(game).blank? ? "-" : display_score(game)
+          %td.sub_team
+            = logo_for_team(game.team2)
+            %span= game.team2.title
+
+            .txt_view_more
+              %a.txt_666{href: match_game_path( game.id ), title: "Thống kê trận đấu #{game.team1.title} - #{game.team2.title}"} Chi tiết

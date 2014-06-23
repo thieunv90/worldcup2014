@@ -1,6 +1,6 @@
 .width_common.box.sub_guess.space_box
-  .title Vòng bảng
-  - games.each do |game|
+  .title Vòng bảng - Các trận sắp diễn ra
+  - current_games.each do |game|
     %table.width_common
       %caption= game.play_at_local.strftime('%A, %d. %B %Y')
       %tbody

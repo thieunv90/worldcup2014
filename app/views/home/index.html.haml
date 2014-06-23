@@ -1,6 +1,8 @@
 .page_schedule.page_trandau
   = render partial: 'money_for_final', locals: { total_money: @total_money_for_final }
-  = render partial: 'all_games', locals: { games: @all_games }
+  = render partial: 'current_games', locals: { games: @current_games }
+  = render partial: 'upcoming_games', locals: { current_games: @upcoming_games }
+  = render partial: 'past_games', locals: { games: @past_games }
   = render 'round_16'
   = render 'quarter_finals'
   = render 'match_for_third_place'
