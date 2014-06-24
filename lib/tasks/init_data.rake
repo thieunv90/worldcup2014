@@ -36,4 +36,18 @@ namespace :db do
       s.save
     end
   end
+
+  desc "Update games for round of 16"
+  task :update_games_round_16, [:role] => :environment do
+    # Round 1/16
+    # Game 49: 1A vs 2B
+    Game.create(round_id: 16, pos: 49, team1_id: 211, team2_id: 212, play_at: DateTime.parse("2014-06-28 6:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-06-28 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+    # Game 50: 1C vs 2D
+    # Game 51: 1B vs 2A
+    # Game 52: 1D vs 2C
+    # Game 53: 1E vs 2F
+    # Game 54: 1G vs 2H
+    # Game 55: 1F vs 2E
+    # Game 56: 1H vs 2G
+  end
 end
