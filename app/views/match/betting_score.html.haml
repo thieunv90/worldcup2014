@@ -1,4 +1,9 @@
 - if current_user.admin?
+  .col-md-8.col-md-offset-2
+    %table
+      %tr
+        %td{style: "min-width: 360px; text-align: right; font-weight: bold;"}
+          %span{style: "font-size: 160%;"}= "#{@game.team1.title} - #{@game.team2.title}"
   .col-md-10.col-md-offset-1.margin-20
     = form_tag match_betting_score_path(@game), :method => :post, :class => 'form-horizontal match_betting_score_form'
     - @users.each do |user|
