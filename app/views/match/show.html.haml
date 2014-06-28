@@ -6,7 +6,7 @@
     %table.tbl_main.width_common.space_box.m-t-10
       %thead
         %tr
-          %td#time-socre.time{:colspan => "3", :style => "color:#666666;"}= @game.group.title
+          %td#time-socre.time{:colspan => "3", :style => "color:#666666;"}= (1..48).to_a.include?(@game.id) ? @game.group.title : @game.round.title
         %tr
           %td#time-socre.time{:colspan => "3", :style => "color:#666666;"}= @game.play_at_local.strftime('%d/%m - %H:%S %p')
         %tr
