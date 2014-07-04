@@ -20,6 +20,7 @@ Worldcup2014::Application.routes.draw do
 
   post 'scores/:score_id/get_score', :to => 'scores#get_score', :as => :get_score
   get 'statistics', :to => 'statistics#index'
+  get 'statistics/summary', :to => 'statistics#summary', :as => :statistics_summary
   get 'users/:id/statistics', :to => 'users#statistics', :as => :user_statistics
   root :to => 'home#index'
 end

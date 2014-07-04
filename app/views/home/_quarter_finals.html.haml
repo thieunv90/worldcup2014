@@ -1,49 +1,21 @@
 .width_common.box.sub_guess.space_box
-  .title Tứ kết
+  .title Vòng tứ kết
   %a.ico{href: "#board"}
-  %table.width_common
-    %caption#04072014 Thứ sáu, 04/07/2014
-    %tr.now
-      %td.time 23:00
-      %td.group 57
-      %td.main_team
-        %strong Thắng trận 53 
-      %td.score
-        %strong -
-      %td.sub_team
-        %strong  Thắng trận 54
-        / <div class="txt_view_more"><a class="txt_666" href="#">Chi tiết</a></div>
-  %table.width_common
-    %caption#05072014 Thứ bảy, 05/07/2014
-    %tr.now
-      %td.time 03:00
-      %td.group 58
-      %td.main_team
-        %strong Thắng trận 49 
-      %td.score
-        %strong -
-      %td.sub_team
-        %strong  Thắng trận 50
-        / <div class="txt_view_more"><a class="txt_666" href="#">Chi tiết</a></div>
-    %tr.now
-      %td.time 23:00
-      %td.group 59
-      %td.main_team
-        %strong Thắng trận 55 
-      %td.score
-        %strong -
-      %td.sub_team
-        %strong  Thắng trận 56
-        / <div class="txt_view_more"><a class="txt_666" href="#">Chi tiết</a></div>
-  %table.width_common
-    %caption#06072014 Chủ nhật, 06/07/2014
-    %tr.now
-      %td.time 03:00
-      %td.group 60
-      %td.main_team
-        %strong Thắng trận 51 
-      %td.score
-        %strong -
-      %td.sub_team
-        %strong  Thắng trận 52
-        / <div class="txt_view_more"><a class="txt_666" href="#">Chi tiết</a></div>
+  - games.each do |game|
+    %table.width_common
+      %caption= game.play_at_local.strftime('%A, %d. %B %Y')
+      %tbody
+        %tr.now
+          %td.time= game.play_at_local.strftime('%H:%M')
+          %td.group= game.pos
+          %td.main_team
+            %span= game.team1.title
+            = logo_for_team(game.team1)
+          %td.score
+            %span{style: "font: 700 30px Arial !important;"}= display_score(game).blank? ? "-" : display_score(game)
+          %td.sub_team
+            = logo_for_team(game.team2)
+            %span= game.team2.title
+
+            .txt_view_more
+              %a.txt_666{href: match_game_path( game.id ), title: "Thống kê trận đấu #{game.team1.title} - #{game.team2.title}"} Chi tiết

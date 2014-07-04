@@ -65,4 +65,17 @@ namespace :db do
     # Game 56: 1H vs 2G
     Game.create(round_id: 16, pos: 56, team1_id: 125, team2_id: 191, play_at: DateTime.parse("2014-07-01 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-01 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
   end
+
+  desc "Update games for round of 8"
+  task :update_games_round_8, [:role] => :environment do
+    # Quarter Finals
+    # Game 57: Win 53 vs Win 54
+    Game.create(round_id: 17, pos: 57, team1_id: 131, team2_id: 127, play_at: DateTime.parse("2014-07-04 6:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-04 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+    # Game 58: Win 49 vs Win 50
+    Game.create(round_id: 17, pos: 58, team1_id: 211, team2_id: 215, play_at: DateTime.parse("2014-07-04 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-04 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+    # Game 59: Win 55 vs Win 56
+    Game.create(round_id: 17, pos: 59, team1_id: 210, team2_id: 125, play_at: DateTime.parse("2014-07-05 6:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-05 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+    # Game 60: Win 51 vs Win 52
+    Game.create(round_id: 17, pos: 60, team1_id: 137, team2_id: 118, play_at: DateTime.parse("2014-07-05 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-05 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+  end
 end
