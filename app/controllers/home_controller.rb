@@ -11,6 +11,7 @@ class HomeController < ApplicationController
 
     @games_round_16 = Game.where(id: (49..56)).order( 'play_at, pos')
     @games_round_8 = Game.where(id: [57, 58, 59, 60]).order( 'play_at, pos')
+    @games_round_4 = Game.where(id: [61, 62]).order( 'play_at, pos')
     @total_money_for_final = Investment.all.map(&:remaining).sum
   end
 end

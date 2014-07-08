@@ -78,4 +78,13 @@ namespace :db do
     # Game 60: Win 51 vs Win 52
     Game.create(round_id: 17, pos: 60, team1_id: 137, team2_id: 118, play_at: DateTime.parse("2014-07-05 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-05 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
   end
+
+  desc "Update games for semi final round"
+  task :update_games_semi_final, [:role] => :environment do
+    # Semi final
+    # Game 61: Win 57 vs Win 58
+    Game.create(round_id: 18, pos: 61, team1_id: 211, team2_id: 127, play_at: DateTime.parse("2014-07-08 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-08 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+    # Game 62: Win 59 vs Win 60
+    Game.create(round_id: 18, pos: 62, team1_id: 137, team2_id: 210, play_at: DateTime.parse("2014-07-09 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-09 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+  end
 end

@@ -1,27 +1,21 @@
 .width_common.box.sub_guess.space_box
-  .title Bán kết
+  .title Vòng bán kết
   %a.ico{href: "#board"}
-  %table.width_common
-    %caption#09072014 Thứ tư, 09/07/2014
-    %tr.now
-      %td.time 03:00
-      %td.group 61
-      %td.main_team
-        %strong Thắng trận 57 
-      %td.score
-        %strong -
-      %td.sub_team
-        %strong  Thắng trận 58
-        / <div class="txt_view_more"><a class="txt_666" href="#">Chi tiết</a></div>
-  %table.width_common
-    %caption#10072014 Thứ năm, 10/07/2014
-    %tr.now
-      %td.time 03:00
-      %td.group 62
-      %td.main_team
-        %strong Thắng trận 59 
-      %td.score
-        %strong -
-      %td.sub_team
-        %strong  Thắng trận 60
-        / <div class="txt_view_more"><a class="txt_666" href="#">Chi tiết</a></div>
+  - games.each do |game|
+    %table.width_common
+      %caption= game.play_at_local.strftime('%A, %d. %B %Y')
+      %tbody
+        %tr.now
+          %td.time= game.play_at_local.strftime('%H:%M')
+          %td.group= game.pos
+          %td.main_team
+            %span= game.team1.title
+            = logo_for_team(game.team1)
+          %td.score
+            %span{style: "font: 700 30px Arial !important;"}= display_score(game).blank? ? "-" : display_score(game)
+          %td.sub_team
+            = logo_for_team(game.team2)
+            %span= game.team2.title
+
+            .txt_view_more
+              %a.txt_666{href: match_game_path( game.id ), title: "Thống kê trận đấu #{game.team1.title} - #{game.team2.title}"} Chi tiết
