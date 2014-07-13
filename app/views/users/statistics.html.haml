@@ -2,6 +2,8 @@
   %strong THỐNG KÊ CHI TIẾT
 %p.text-center{style: "margin-bottom: 5px;"} (Đơn vị tiền tệ: VNĐ)
 %p.text-center.bold-text{style: "margin-bottom: 20px; color: green;"}= "Nhà đầu tư: #{@user.full_name}"
+- if @user.is_group
+  %p.text-center.bold-text{style: "margin: -15px 0 20px;"}= "Các thành viên: #{User.where(id: @user.members.pluck(:user_id).uniq).map(&:full_name).join(', ')}"
 %table.statistics-user-table.width-100
   %thead
     %tr
