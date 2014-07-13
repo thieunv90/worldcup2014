@@ -92,9 +92,9 @@ namespace :db do
   task :update_games_final, [:role] => :environment do
     # Semi final
     # Game 63: Lose 61 vs Lose 62
-    Game.create(round_id: 18, pos: 63, team1_id: 211, team2_id: 137, play_at: DateTime.parse("2014-07-12 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-12 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+    Game.create(round_id: 19, pos: 63, team1_id: 211, team2_id: 137, play_at: DateTime.parse("2014-07-12 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-12 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
     # Game 64: Win 61 vs Win 62
-    Game.create(round_id: 18, pos: 64, team1_id: 127, team2_id: 210, play_at: DateTime.parse("2014-07-13 9:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-13 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+    Game.create(round_id: 20, pos: 64, team1_id: 127, team2_id: 210, play_at: DateTime.parse("2014-07-13 9:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-13 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
   end
 
   desc "Update special users"

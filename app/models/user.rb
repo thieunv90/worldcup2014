@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   has_many :user_scores
+  has_many :members, foreign_key: :group_id, class_name: "UserGroup"
   has_and_belongs_to_many :scores, join_table: :user_scores
   has_many :budgets
 
