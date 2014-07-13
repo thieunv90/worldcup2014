@@ -97,8 +97,8 @@ namespace :db do
     Game.create(round_id: 18, pos: 64, team1_id: 127, team2_id: 210, play_at: DateTime.parse("2014-07-13 9:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-13 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
   end
 
-  desc "Update games for final round"
-  task :update_games_final, [:role] => :environment do
+  desc "Update special users"
+  task :update_special_user, [:role] => :environment do
     # Create group for specific user
     lienminh_win = User.find_by_username("lienminh_win")
     lienminh_thi_dai_hoc = User.find_by_username("lienminh_thi_dai_hoc")
