@@ -25,7 +25,7 @@ namespace :db do
     Round.where(pos: 16).update_all(amount: 20000)
     Round.where(pos: 17).update_all(amount: 30000)
     Round.where(pos: 18).update_all(amount: 40000)
-    Round.where(pos: 19).update_all(amount: 50000)
+    Round.where(pos: 19).update_all(amount: 40000)
     Round.where(pos: 20).update_all(amount: 50000)
   end
 
@@ -86,5 +86,37 @@ namespace :db do
     Game.create(round_id: 18, pos: 61, team1_id: 211, team2_id: 127, play_at: DateTime.parse("2014-07-08 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-08 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
     # Game 62: Win 59 vs Win 60
     Game.create(round_id: 18, pos: 62, team1_id: 137, team2_id: 210, play_at: DateTime.parse("2014-07-09 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-09 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+  end
+
+  desc "Update games for final round"
+  task :update_games_final, [:role] => :environment do
+    # Semi final
+    # Game 63: Lose 61 vs Lose 62
+    Game.create(round_id: 18, pos: 63, team1_id: 211, team2_id: 137, play_at: DateTime.parse("2014-07-12 10:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-12 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+    # Game 64: Win 61 vs Win 62
+    Game.create(round_id: 18, pos: 64, team1_id: 127, team2_id: 210, play_at: DateTime.parse("2014-07-13 9:00:00"), postponed: false, knockout: true, locked: false, calc: false, deadline: DateTime.parse("2014-07-13 9:00:00").in_time_zone('Hanoi'), time_zone: -3)
+  end
+
+  desc "Update games for final round"
+  task :update_games_final, [:role] => :environment do
+    # Create group for specific user
+    lienminh_win = User.find_by_username("lienminh_win")
+    lienminh_thi_dai_hoc = User.find_by_username("lienminh_thi_dai_hoc")
+    lienminh_minh_nhan = User.find_by_username("lienminh_minh_nhan")
+    if lienminh_win
+      User.where(username: ["huongdt", "hanght"]).each do |user|
+        UserGroup.create(group_id: lienminh_win.id, user_id: user.id)
+      end
+    end
+    if lienminh_thi_dai_hoc
+      User.where(username: ["sinhnt", "hoahm", "locnpq"]).each do |user|
+        UserGroup.create(group_id: lienminh_thi_dai_hoc.id, user_id: user.id)
+      end
+    end
+    if lienminh_minh_nhan
+      User.where(username: ["minhha", "nhannv"]).each do |user|
+        UserGroup.create(group_id: lienminh_minh_nhan.id, user_id: user.id)
+      end
+    end
   end
 end

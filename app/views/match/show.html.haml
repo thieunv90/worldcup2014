@@ -56,10 +56,16 @@
           %table.width_common
             %tbody
               %tr
-                %td
-                  Trận trước:
-                %td.play-font
-                  = "#{number_with_delimiter(@money_from_previous_match, delimiter: '.')} VNĐ"
+                - if @game.id == 64
+                  %td
+                    Tổng tiền các trận trước:
+                  %td.play-font
+                    = "#{number_with_delimiter(@total_money_for_final, delimiter: '.')} VNĐ"
+                - else
+                  %td
+                    Trận trước:
+                  %td.play-font
+                    = "#{number_with_delimiter(@money_from_previous_match, delimiter: '.')} VNĐ"
               %tr
                 %td
                   Trận này:

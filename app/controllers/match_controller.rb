@@ -20,6 +20,11 @@ class MatchController < ApplicationController
     @money_users_bet = total_budgets_bet
     @money_company_contribute = total_budgets_bet.zero? ? 0 : 3*@game.round.amount
     @total_money = @money_users_bet + @money_company_contribute + @money_from_previous_match
+    # Update money for final match
+    if @game.id == 64
+      @total_money_for_final = Investment.all.map(&:remaining).sum
+      @total_money = @total_money + @total_money_for_final
+    end
 
     # Winners of this match
     @no_winner = false
