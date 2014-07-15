@@ -93,6 +93,7 @@ class MatchController < ApplicationController
         # List winner of this match
         list_winners_arr = @game.user_scores.where(score_id: @game.score_id).group_by(&:user_id).keys
         investment = Investment.find_by_game_id(@game.id)
+        total_money_for_final = @game.id == 64 ? Investment.all.map(&:remaining).sum : 0
         # Find previous game
         games_ordered = Game.order(:play_at, :pos)
         index_current_game = games_ordered.index(@game)
@@ -101,12 +102,12 @@ class MatchController < ApplicationController
           # Reset total money win
           Budget.where(game_id: @game.id).update_all(total_money_win: 0)
           # Update total money win
-          money_for_each_people = ((investment.total + money_from_previous_match).to_f / list_winners_arr.size).round
+          money_for_each_people = ((investment.total + money_from_previous_match + total_money_for_final).to_f / list_winners_arr.size).round
           Budget.where(user_id: list_winners_arr, game_id: @game.id).update_all(total_money_win: money_for_each_people)
           investment.update_attributes(remaining: 0) if !investment.remaining.blank?
         else
           Budget.where(game_id: @game.id).update_all(total_money_win: 0)
-          investment.update_attributes(remaining: ((investment.total + money_from_previous_match).to_f / 2).round)
+          investment.update_attributes(remaining: ((investment.total + money_from_previous_match + total_money_for_final).to_f / 2).round)
         end
         flash[:notice] = "Update score successfully!"
       else
